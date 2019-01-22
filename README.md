@@ -2,6 +2,7 @@
 Course exercises in different languages about data structures, CI and testing.
 
 ## exercise 1
+- Code in C
 - Demo: https://youtu.be/8mKBWEocZ48
 - **Unit testing** with CUnit
 - **Memory profiling** with Valgrind and Docker

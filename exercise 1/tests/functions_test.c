@@ -1,3 +1,13 @@
+/*
+============================================================================
+Name        : functions_test.c
+Author      : Fernanda Gonzalez
+Description : Simple example of a CUnit unit test.
+============================================================================
+Compile (OSX Mojave in tests/): gcc -std=c99 -o functions_test functions_test.c -lcunit -v
+============================================================================
+*/
+
 #include "../src/functions.c"
 #include "CUnit/Basic.h"
 
@@ -5,7 +15,7 @@ void mySumN_test() {
    // Check if first param matches with second[2]
    CU_ASSERT_EQUAL(mySumN(0), 0);
    CU_ASSERT_EQUAL(mySumN(9), 45);
-   CU_ASSERT_EQUAL(mySumN(46340), 1073720970); //int max limit is 2147483647
+   CU_ASSERT_EQUAL(mySumN(46340), 1073720970); // int max limit is 2147483647
    return;
 }
 

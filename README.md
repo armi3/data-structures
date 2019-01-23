@@ -5,7 +5,8 @@ Course exercises in different languages about data structures, CI and testing.
 - Code in C
 - Demo: https://youtu.be/8mKBWEocZ48
 - **Unit testing** with CUnit
-- **Memory profiling** with Valgrind and Docker
+- **Profiling** with dockerized Valgrind:
+  - Memory profiling with Memcheck
 
 ### resources
 - https://medium.com/@marinalimeira/tdd-using-cunit-first-steps-5c4c2a8655e6

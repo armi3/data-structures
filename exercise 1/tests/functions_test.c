@@ -4,8 +4,14 @@ Name        : functions_test.c
 Author      : Fernanda Gonzalez
 Description : Simple example of a CUnit unit test.
 ============================================================================
-Compile (OSX Mojave in tests/): gcc -std=c99 -o functions_test functions_test.c -lcunit -v
+Compile (OSX Mojave at tests/): 
+gcc -std=c99 -o functions_test functions_test.c -lcunit -v
 ============================================================================
+Commands for profiling with Valgrind (OSX Mojave at "exercise 1"/):
+    1. docker build -t memory-test:0.1 .
+    2. docker run -ti -v $PWD:/test memory-test:0.1 bash -c \
+    "cd /test/; gcc -std=c99 -o tests/functions_test tests/functions_test.c \
+    -lcunit -v  && valgrind --leak-check=full -v tests/functions_test"
 */
 
 #include "../src/functions.c"

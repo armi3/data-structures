@@ -18,7 +18,7 @@ git clone https://github.com/armi3/data-structures.git; \
 cd exercise\ 1/src && cc -std=c99 -o app app.c functions.c && ./app
 ```
 
-Build container with Ubuntu 16, CUnit and Valgrind:
+Build Ubuntu 16 based container with CUnit and Valgrind:
 ```
 cd .. && docker build -t memory-test:0.1 .
 ```

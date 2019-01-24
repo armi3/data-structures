@@ -97,7 +97,7 @@ valgrind callgrind_annotate --tree=both --auto=yes profiling/callgrind_functions
 Get the program compiled and running:
 ```
 git clone https://github.com/armi3/data-structures.git; \
-cd exercise\ 1/src && cc -std=c99 -o app app.c functions.c && ./app
+cd exercise\ 2/src && 
 ```
 
 ### resources

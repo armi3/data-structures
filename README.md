@@ -1,6 +1,10 @@
 # data-structures
 Course exercises in different languages about data structures, CI and testing.
 
+# table of contents
+1. [exercise 1](#exercise-1)
+2. [exercise 2](#exercise-2)
+
 ## exercise 1
 - Algorithm to find the sum of the first N natural numbers.
 - Code in C
@@ -80,3 +84,21 @@ valgrind callgrind_annotate --tree=both --auto=yes profiling/callgrind_functions
 - https://www.gungorbudak.com/blog/2018/06/13/memory-leak-testing-with-valgrind-on-macos-using-docker-containers/
 - https://www.cs.cmu.edu/afs/cs.cmu.edu/project/cmt-40/Nice/RuleRefinement/bin/valgrind-3.2.0/docs/html/ms-manual.html
 - https://accu.org/index.php/journals/1884 
+
+
+## exercise 2
+- Algorithm to 
+- Code in Java
+- Demo: 
+- **Unit testing** with 
+- **Profiling** with 
+  
+### walkthrough
+Get the program compiled and running:
+```
+git clone https://github.com/armi3/data-structures.git; \
+cd exercise\ 1/src && cc -std=c99 -o app app.c functions.c && ./app
+```
+
+### resources
+- https://

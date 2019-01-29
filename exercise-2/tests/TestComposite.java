@@ -13,8 +13,8 @@ class TestComposite extends TestCase {
 		TestSuite suite = new TestSuite();
 		// add every test
 		suite.addTestSuite(TestStack.class);
-		// add only tests in suite
-		suite.addTestSuite(TestStack.suite());
+		// uncomment to add only tests in course requirements suite
+		// suite.addTest(TestStack.suiteCourserRequirements());
 		return suite;
 	}
 

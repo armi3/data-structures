@@ -1,21 +1,24 @@
 import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
+import org.junit.jupiter.api.*;
 import Model.Stack;
-import junit.framework.TestSuite;
+import java.util.Arrays;
+//import junit.framework.TestSuite;
+//import junit.framework.*;
+//import junit.framework.Test;
 
-class TestStack extends TestCase{
+//class TestStack extends TestCase{
+class TestStack {
 	
-	public TestStack(String method) {
-		super(method);
-	}
+//	public TestStack(String method) {
+//		super(method);
+//	}
 
 	@Test
 	void testGetContainedObjects() {
 		String[] containedObjects = {"a", "b", "c"};
-		Stack stack = new Stack(containedObjects, containedObjects.length);
-		assertEquals(containedObjects, stack.getContainedObjects());
+		Stack stack = new Stack(containedObjects, containedObjects.length); 
+		assertEquals(Arrays.toString(containedObjects), Arrays.toString(stack.getContainedObjects()));
+		//assertTrue(stack.getContainedObjects().equals(containedObjects)); 
 	}
 
 	@Test
@@ -23,7 +26,7 @@ class TestStack extends TestCase{
 		String[] containedObjects = {"a", "b", "c"};
 		Stack stack = new Stack(); // Load empty
 		stack.setContainedObjects(containedObjects);
-		assertEquals(containedObjects, stack.getContainedObjects());
+		assertEquals(Arrays.toString(containedObjects), Arrays.toString(stack.getContainedObjects()));
 	}
 
 	@Test
@@ -45,7 +48,7 @@ class TestStack extends TestCase{
 	void testIn() {
 		Stack stack = new Stack(); // Load empty
 		stack.in("a");
-		assertEquals("a", stack[1]);
+		assertEquals("a", stack.getContainedObjects()[1]);
 		assertEquals(1, stack.getDynamicSize());
 	}
 
@@ -91,20 +94,21 @@ class TestStack extends TestCase{
 	void testFillThenClear() {
 		String[] containedObjects = {"a", "b", "c"};
 		Stack stack = new Stack(containedObjects, containedObjects.length);
-		assertEquals(containedObjects, stack.getContainedObjects());
+		assertEquals(Arrays.toString(containedObjects), Arrays.toString(stack.getContainedObjects()));
 		stack.clear();
-		assertEquals({}, stack.getContainedObjects());
+		String[] emptyArray = {};
+		assertEquals(Arrays.toString(emptyArray), Arrays.toString(stack.getContainedObjects()));
 		// fail("Not yet implemented");
 	}
 	
 	
-	public static Test suiteCourseRequirements() {
-		TestSuite suite = new TestSuite();
-		suite.addTest(new TestStack("testStackOverflow"));
-		suite.addTest(new TestStack("testStackDynamicy"));
-		suite.addTest(new TestStack("testFillThenClear"));
-		suite.addTest(new TestStack("testClear"));
-		return suite;
-	}
+//	public static Test suiteCourseRequirements() {
+//		TestSuite suite = new TestSuite();
+//		//suite.addTest(new TestStack("testStackOverflow"));
+//		suite.addTest(new TestStack("testStackDynamicy"));
+//		suite.addTest(new TestStack("testFillThenClear"));
+//		suite.addTest(new TestStack("testClear"));
+//		return suite;
+//	}
 
 }

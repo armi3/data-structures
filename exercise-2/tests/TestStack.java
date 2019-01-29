@@ -79,12 +79,18 @@ class TestStack extends TestCase{
 	
 	@Test
 	void testStackDynamicy() {
-		fail("Not yet implemented");
+		String[] containedObjects = {"a", "b", "c"};
+		Stack stack = new Stack(containedObjects, containedObjects.length);
+		assertEquals(3, stack.getDynamicSize());
+		stack.in("d");
+		assertEquals(4, stack.getDynamicSize());
+		//fail("Not yet implemented");
 	}
 	
 	@Test
 	void testFillThenClear() {
-		fail("Not yet implemented");
+		
+		// fail("Not yet implemented");
 	}
 	
 	

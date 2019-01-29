@@ -89,7 +89,11 @@ class TestStack extends TestCase{
 	
 	@Test
 	void testFillThenClear() {
-		
+		String[] containedObjects = {"a", "b", "c"};
+		Stack stack = new Stack(containedObjects, containedObjects.length);
+		assertEquals(containedObjects, stack.getContainedObjects());
+		stack.clear();
+		assertEquals({}, stack.getContainedObjects());
 		// fail("Not yet implemented");
 	}
 	

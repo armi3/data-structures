@@ -74,17 +74,17 @@ class TestStack extends TestCase{
 	
 	@Test
 	void testStackOverflow() {
-		
+		fail("Not yet implemented");
 	}
 	
 	@Test
 	void testStackDynamicy() {
-		
+		fail("Not yet implemented");
 	}
 	
 	@Test
 	void testFillThenClear() {
-		
+		fail("Not yet implemented");
 	}
 	
 	

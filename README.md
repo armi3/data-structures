@@ -5,7 +5,7 @@ Course exercises in different languages about data structures, CI and testing.
 1. [exercise 1](#exercise-1)
 2. [exercise 2](#exercise-2)
 
-## exercise 1
+# exercise 1
 - Algorithm to find the sum of the first N natural numbers.
 - Code in C
 - Demo: https://youtu.be/8mKBWEocZ48
@@ -15,7 +15,7 @@ Course exercises in different languages about data structures, CI and testing.
   - Heap, allocation tree and stack profiling with Massif tool
   - Call profiling with Callgrind tool
   
-### walkthrough
+## walkthrough
 Get the program compiled and running:
 ```
 git clone https://github.com/armi3/data-structures.git; \
@@ -34,7 +34,7 @@ docker run -ti -v $PWD:/test memory-test:0.1 bash -c \
 tests/functions_test"
 ```
 
-##### Profile program with dockerized Valgrind
+## Profile program with dockerized Valgrind
 Heap, allocation tree and stack profiling:
 ```
 docker run -ti -v $PWD:/test memory-test:0.1 bash -c \
@@ -56,7 +56,7 @@ valgrind --tool=callgrind --callgrind-out-file=profiling/callgrind_app -v src/ap
 valgrind callgrind_annotate --tree=both --auto=yes profiling/callgrind_app"
 ```
 
-##### Profile test with dockerized Valgrind
+## Profile test with dockerized Valgrind
 Heap, allocation tree and stack profiling:
 ```
 docker run -ti -v $PWD:/test memory-test:0.1 bash -c \
@@ -78,7 +78,7 @@ valgrind --tool=callgrind --callgrind-out-file=profiling/callgrind_functions_tes
 valgrind callgrind_annotate --tree=both --auto=yes profiling/callgrind_functions_test"
 ```
 
-### resources
+## resources
 - https://medium.com/@marinalimeira/tdd-using-cunit-first-steps-5c4c2a8655e6
 - http://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/
 - https://www.gungorbudak.com/blog/2018/06/13/memory-leak-testing-with-valgrind-on-macos-using-docker-containers/
@@ -86,19 +86,14 @@ valgrind callgrind_annotate --tree=both --auto=yes profiling/callgrind_functions
 - https://accu.org/index.php/journals/1884 
 
 
-## exercise 2
-- Algorithm to 
+# exercise 2
+- Algorithm to implement a stack data structure.
 - Code in Java
-- Demo: 
-- **Unit testing** with 
-- **Profiling** with 
-  
-### walkthrough
-Get the program compiled and running:
-```
-git clone https://github.com/armi3/data-structures.git; \
-cd exercise\ 2/src && 
-```
+- Demo: https://youtu.be/9xWy4dNyj6g
+- **Unit testing** with JUnit 5
+- **Profiling** with JProfiler
 
-### resources
-- https://
+## resources
+- https://www.codejava.net/coding/java-getter-and-setter-tutorial-from-basics-to-best-practices
+- https://beginnersbook.com/2013/12/java-constructor-chaining-with-example/
+- https://medium.com/@isaacjumba/overview-of-inheritance-interfaces-and-abstract-classes-in-java-3fe22404baf8

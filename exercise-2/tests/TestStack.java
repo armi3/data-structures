@@ -1,19 +1,13 @@
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.*;
+
 import Model.Stack;
 import java.util.Arrays;
-//import junit.framework.TestSuite;
-//import junit.framework.*;
-//import junit.framework.Test;
 
-//class TestStack extends TestCase{
 class TestStack {
-	
-//	public TestStack(String method) {
-//		super(method);
-//	}
 
 	@Test
+	@Tag("development")
 	void testGetContainedObjects() {
 		String[] containedObjects = {"a", "b", "c"};
 		Stack stack = new Stack(containedObjects, containedObjects.length); 
@@ -22,6 +16,7 @@ class TestStack {
 	}
 
 	@Test
+	@Tag("development")
 	void testSetContainedObjects() {
 		String[] containedObjects = {"a", "b", "c"};
 		Stack stack = new Stack(); // Load empty
@@ -30,6 +25,7 @@ class TestStack {
 	}
 
 	@Test
+	@Tag("development")
 	void testGetDynamicSize() {
 		String[] containedObjects = {"a", "b", "c"};
 		Stack stack = new Stack(containedObjects, containedObjects.length);
@@ -37,6 +33,7 @@ class TestStack {
 	}
 
 	@Test
+	@Tag("development")
 	void testSetDynamicSize() {
 		String[] containedObjects = {"a", "b", "c"};
 		Stack stack = new Stack(); // Load empty
@@ -53,6 +50,7 @@ class TestStack {
 	}
 
 	@Test
+	@Tag("development")
 	void testOut() {
 		String[] containedObjects = {"a", "b", "c"};
 		Stack stack = new Stack(containedObjects, containedObjects.length);
@@ -60,6 +58,7 @@ class TestStack {
 	}
 
 	@Test
+	@Tag("development")
 	void testClear() {
 		String[] containedObjects = {"a", "b", "c"};
 		Stack stack = new Stack(containedObjects, containedObjects.length);
@@ -68,6 +67,7 @@ class TestStack {
 	}
 
 	@Test
+	@Tag("development")
 	void testLook() {
 		String[] containedObjects = {"a", "b", "c"};
 		Stack stack = new Stack(containedObjects, containedObjects.length);
@@ -76,21 +76,17 @@ class TestStack {
 	}
 	
 	@Test
-	void testStackOverflow() {
-		fail("Not yet implemented");
-	}
-	
-	@Test
+	@Tag("requirement")
 	void testStackDynamicy() {
 		String[] containedObjects = {"a", "b", "c"};
 		Stack stack = new Stack(containedObjects, containedObjects.length);
 		assertEquals(3, stack.getDynamicSize());
 		stack.in("d");
 		assertEquals(4, stack.getDynamicSize());
-		//fail("Not yet implemented");
 	}
 	
 	@Test
+	@Tag("requirement")
 	void testFillThenClear() {
 		String[] containedObjects = {"a", "b", "c"};
 		Stack stack = new Stack(containedObjects, containedObjects.length);
@@ -98,17 +94,6 @@ class TestStack {
 		stack.clear();
 		String[] emptyArray = {};
 		assertEquals(Arrays.toString(emptyArray), Arrays.toString(stack.getContainedObjects()));
-		// fail("Not yet implemented");
 	}
-	
-	
-//	public static Test suiteCourseRequirements() {
-//		TestSuite suite = new TestSuite();
-//		//suite.addTest(new TestStack("testStackOverflow"));
-//		suite.addTest(new TestStack("testStackDynamicy"));
-//		suite.addTest(new TestStack("testFillThenClear"));
-//		suite.addTest(new TestStack("testClear"));
-//		return suite;
-//	}
 
 }

@@ -1,3 +1,8 @@
+/**
+ * @author Fernanda González
+ *
+ */
+
 package Model;
 import java.util.Arrays;
 
@@ -17,14 +22,11 @@ public class Stack implements Container {
 	}
 	
 	public Stack() {
-		//super();
+		super();
 		this.dynamicSize = 0;
 		this.containedObjects = new String[dynamicSize];	
 	}
 
-	/* (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 */
 	@Override
 	public String toString() {
 		return "Stack [containedObjects=" + Arrays.toString(containedObjects) + ", dynamicSize=" + dynamicSize + "]";

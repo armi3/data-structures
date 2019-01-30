@@ -97,3 +97,4 @@ valgrind callgrind_annotate --tree=both --auto=yes profiling/callgrind_functions
 - https://www.codejava.net/coding/java-getter-and-setter-tutorial-from-basics-to-best-practices
 - https://beginnersbook.com/2013/12/java-constructor-chaining-with-example/
 - https://medium.com/@isaacjumba/overview-of-inheritance-interfaces-and-abstract-classes-in-java-3fe22404baf8
+- https://howtodoinjava.com/junit5/

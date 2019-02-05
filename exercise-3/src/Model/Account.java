@@ -59,7 +59,7 @@ public class Account implements AccountInterface {
 	public double getBalance() {
 		return balance;
 	}
-	public void setBalance(long balance) {
+	public void setBalance(double balance) {
 		this.balance = balance;
 	}
 	public String getCurrency() {
@@ -102,7 +102,7 @@ public class Account implements AccountInterface {
 	@Override
 	public long calcNegativeBalance() {
 		long balance = 0;
-		for (long i : this.debitHistory) {
+		for (long i : getDebitHistory()) {
 			balance +=i;
 		}
 		return balance;
@@ -114,7 +114,7 @@ public class Account implements AccountInterface {
 	@Override
 	public long calcPositiveBalance() {
 		long balance = 0;
-		for (long i : this.creditHistory) {
+		for (long i : getCreditHistory()) {
 			balance +=i;
 		}
 		return balance;
@@ -134,7 +134,14 @@ public class Account implements AccountInterface {
 	 */
 	@Override
 	public void makeDebit(long amount) {
+		// register the transaction
+		long[] updatedDebitHistory = new long[getDebitHistory().length +1];
+		System.arraycopy(getDebitHistory(), 0, updatedDebitHistory, 0, getDebitHistory().length);
+		updatedDebitHistory[getDebitHistory().length]=amount;
 		
+		// update balance
+		setDebitBalance(getDebitBalance()+amount);
+		setBalance(calcTotalBalance());
 	}
 	
 	/* (non-Javadoc)
@@ -142,7 +149,14 @@ public class Account implements AccountInterface {
 	 */
 	@Override
 	public void makeCredit(long amount) {
+		// register the transaction
+		long[] updatedCreditHistory = new long[getCreditHistory().length +1];
+		System.arraycopy(getCreditHistory(), 0, updatedCreditHistory, 0, getCreditHistory().length);
+		updatedCreditHistory[getCreditHistory().length]=amount;
 		
+		// update balance
+		setCreditBalance(getCreditBalance()+amount);
+		setBalance(calcTotalBalance());
 	}
 	
 	/* (non-Javadoc)
@@ -150,7 +164,7 @@ public class Account implements AccountInterface {
 	 */
 	@Override
 	public long calcAverageDebit() {
-		long average =0;
+		long average = calcNegativeBalance()/getDebitHistory().length;
 		return average;
 	}
 	
@@ -159,8 +173,13 @@ public class Account implements AccountInterface {
 	 */
 	@Override
 	public long calcHighestDebit() {
-		long max=0;
-		return max;
+		long max = getDebitHistory()[0]; 
+	    for(int i = 1; i < getDebitHistory().length; i++){ 
+	      if(getDebitHistory()[i] > max){ 
+	         max = getDebitHistory()[i]; 
+	      } 
+	    } 
+	    return max;
 	}
 
 

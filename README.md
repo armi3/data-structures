@@ -1,5 +1,5 @@
 # data-structures
-Course exercises in different languages about data structures, CI and testing.
+Course exercises implementing, testing and profiling data structures in Java, C and other languages.
 
 # table of contents
 1. [exercise 1](#exercise-1)

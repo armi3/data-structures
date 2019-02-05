@@ -5,15 +5,15 @@ package Model;
 
 import java.util.Arrays;
 
-public class Account {
+public class Account implements AccountInterface {
+
 	private long creditBalance; // positive
 	private long debitBalance;
-	private long balance;
+	private double balance;
+	
 	private String currency;
 	private long[] creditHistory;
 	private long[] debitHistory;
-	
-	
 	
 	/**
 	 * @param creditBalance
@@ -23,7 +23,7 @@ public class Account {
 	 * @param creditHistory
 	 * @param debitHistory
 	 */
-	public Account(long creditBalance, long debitBalance, long balance, String currency, long[] creditHistory,
+	public Account(long creditBalance, long debitBalance, double balance, String currency, long[] creditHistory,
 			long[] debitHistory) {
 		super();
 		this.creditBalance = creditBalance;
@@ -56,7 +56,7 @@ public class Account {
 	public void setDebitBalance(long debitBalance) {
 		this.debitBalance = debitBalance;
 	}
-	public long getBalance() {
+	public double getBalance() {
 		return balance;
 	}
 	public void setBalance(long balance) {
@@ -69,16 +69,24 @@ public class Account {
 		this.currency = currency;
 	}
 	public long[] getCreditHistory() {
-		return creditHistory;
+		long[] copy = new long[this.creditHistory.length];
+		System.arraycopy(this.creditHistory, 0, copy, 0, copy.length);
+		return copy;
 	}
+	
 	public void setCreditHistory(long[] creditHistory) {
-		this.creditHistory = creditHistory;
+		this.creditHistory = new long[creditHistory.length];
+		System.arraycopy(creditHistory, 0, this.creditHistory, 0, creditHistory.length);
 	}
+	
 	public long[] getDebitHistory() {
-		return debitHistory;
+		long[] copy = new long[this.debitHistory.length];
+		System.arraycopy(this.debitHistory, 0, copy, 0, copy.length);
+		return copy;
 	}
 	public void setDebitHistory(long[] debitHistory) {
-		this.debitHistory = debitHistory;
+		this.debitHistory = new long[debitHistory.length];
+		System.arraycopy(debitHistory, 0, this.debitHistory, 0, debitHistory.length);
 	}
 	@Override
 	public String toString() {
@@ -87,35 +95,70 @@ public class Account {
 				+ Arrays.toString(debitHistory) + "]";
 	}
 	
+	
+	/* (non-Javadoc)
+	 * @see Model.AccountInterface#calcNegativeBalance()
+	 */
+	@Override
+	public long calcNegativeBalance() {
+		long balance = 0;
+		for (long i : this.debitHistory) {
+			balance +=i;
+		}
+		return balance;
+	}
+	
+	/* (non-Javadoc)
+	 * @see Model.AccountInterface#calcPositiveBalance()
+	 */
+	@Override
+	public long calcPositiveBalance() {
+		long balance = 0;
+		for (long i : this.creditHistory) {
+			balance +=i;
+		}
+		return balance;
+	}
+	
+	/* (non-Javadoc)
+	 * @see Model.AccountInterface#calcTotalBalance()
+	 */
+	@Override
+	public double calcTotalBalance() {
+		double balance = (double) this.calcPositiveBalance() - (double) this.calcNegativeBalance();
+		return balance;
+	}
+	
+	/* (non-Javadoc)
+	 * @see Model.AccountInterface#makeDebit(long)
+	 */
+	@Override
 	public void makeDebit(long amount) {
 		
 	}
 	
+	/* (non-Javadoc)
+	 * @see Model.AccountInterface#makeCredit(long)
+	 */
+	@Override
 	public void makeCredit(long amount) {
 		
 	}
 	
-	public long countDebits() {
-		long count = 0;
-		return count;
-	}
-	
-	public long countCredits() {
-		long count = 0;
-		return count;
-	}
-	
-	public long countTransactions() {
-		long count = 0;
-		return count;
-	}
-	
-	public long averagingDebits() {
+	/* (non-Javadoc)
+	 * @see Model.AccountInterface#calcAverageDebit()
+	 */
+	@Override
+	public long calcAverageDebit() {
 		long average =0;
 		return average;
 	}
 	
-	public long maxDebit() {
+	/* (non-Javadoc)
+	 * @see Model.AccountInterface#calcHighestDebit()
+	 */
+	@Override
+	public long calcHighestDebit() {
 		long max=0;
 		return max;
 	}

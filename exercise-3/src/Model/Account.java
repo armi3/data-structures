@@ -127,6 +127,7 @@ public class Account implements AccountInterface {
 		double[] updatedDebitHistory = new double[getDebitHistory().length +1];
 		System.arraycopy(getDebitHistory(), 0, updatedDebitHistory, 0, getDebitHistory().length);
 		updatedDebitHistory[getDebitHistory().length]=amount;
+		setDebitHistory(updatedDebitHistory);
 		
 		// update balance
 		setDebitBalance(calcNegativeBalance());
@@ -142,6 +143,7 @@ public class Account implements AccountInterface {
 		double[] updatedCreditHistory = new double[getCreditHistory().length +1];
 		System.arraycopy(getCreditHistory(), 0, updatedCreditHistory, 0, getCreditHistory().length);
 		updatedCreditHistory[getCreditHistory().length]=amount;
+		setCreditHistory(updatedCreditHistory);
 		
 		// update balance
 		setCreditBalance(calcPositiveBalance());
@@ -157,6 +159,7 @@ public class Account implements AccountInterface {
 		double[] updatedDebitHistory = new double[getDebitHistory().length-1];
 		System.arraycopy(getDebitHistory(), 0, updatedDebitHistory, 0, debitId);
 		System.arraycopy(getDebitHistory(), debitId+1, updatedDebitHistory, debitId, updatedDebitHistory.length-debitId);
+		setDebitHistory(updatedDebitHistory);
 
 		// update balance
 		setDebitBalance(calcNegativeBalance());
@@ -172,6 +175,7 @@ public class Account implements AccountInterface {
 		double[] updatedCreditHistory = new double[getCreditHistory().length-1];
 		System.arraycopy(getCreditHistory(), 0, updatedCreditHistory, 0, creditId);
 		System.arraycopy(getCreditHistory(), creditId+1, updatedCreditHistory, creditId, updatedCreditHistory.length-creditId);
+		setCreditHistory(updatedCreditHistory);
 
 		// update balance
 		setCreditBalance(calcPositiveBalance());

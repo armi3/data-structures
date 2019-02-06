@@ -2,18 +2,22 @@ package Model;
 
 public interface AccountInterface {
 
-	long calcNegativeBalance();
+	double calcNegativeBalance();
 
-	long calcPositiveBalance();
+	double calcPositiveBalance();
 
 	double calcTotalBalance();
 
-	void makeDebit(long amount);
+	void makeDebit(double amount);
 
-	void makeCredit(long amount);
+	void makeCredit(double amount);
+	
+	void revertDebit(int debitId);
+	
+	void revertCredit(int creditId);
 
-	long calcAverageDebit();
+	double calcAverageDebit();
 
-	long calcHighestDebit();
-
+	double calcHighestDebit();
+	
 }

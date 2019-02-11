@@ -19,5 +19,9 @@ public interface AccountInterface {
 	double calcAverageDebit();
 
 	double calcHighestDebit();
+
+	double[] getDebitHistory();
+	
+	double[] getCreditHistory();
 	
 }

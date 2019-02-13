@@ -13,41 +13,38 @@ public class Main {
 				menuChoice = controller.getView().promptActionWithMenu();
 				break;
 			case 1:
-				menuChoice = controller.registerDebits();
+				menuChoice = controller.addToCart();
 				break;
 			case 2:
-				menuChoice = controller.registerCredits();
+				menuChoice = controller.registerPayment();
 				break;
 			case 3:
-				menuChoice = controller.showNegativeBalance();
+				menuChoice = controller.showCartTotal();
 				break;
 			case 4:
-				menuChoice = controller.showTotalBalance();
+				menuChoice = controller.showBalancePayable();
 				break;
 			case 5:
-				menuChoice = controller.showDebitAverage();
+				menuChoice = controller.showItemAverage();
 				break;
 			case 6:
-				menuChoice = controller.showDebitHighest();
+				menuChoice = controller.showItemHighest();
 				break;
 			case 7:
-				menuChoice = controller.showCounts();
+				menuChoice = controller.printReceipt();
 				break;
 			case 8:
-				menuChoice = controller.showHistories();
+				menuChoice = controller.revertItem();
 				break;
 			case 9:
-				menuChoice = controller.revertDebit();
+				menuChoice = controller.revertPayment();
 				break;
-			case 10:
-				menuChoice = controller.revertCredit();
-				break;
-			case 12:
+			case 11:
 				menuChoice = controller.getView().promptAction();
 				break;
 			}
 
-		} while(!String.valueOf(menuChoice).equals("11"));
+		} while(!String.valueOf(menuChoice).equals("10"));
 		System.exit(0);
 
 	}

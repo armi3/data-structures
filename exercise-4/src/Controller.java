@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 import Model.*;
 
 public class Controller implements ControllerInterface {
@@ -12,9 +14,6 @@ public class Controller implements ControllerInterface {
 	public void setFactory(Factory factory) {
 		this.factory = factory;
 	}
-	/* (non-Javadoc)
-	 * @see ControllerInterface#getModel()
-	 */
 	@Override
 	public AccountInterface getModel() {
 		return model;
@@ -22,9 +21,6 @@ public class Controller implements ControllerInterface {
 	public void setModel(AccountInterface model) {
 		this.model = model;
 	}
-	/* (non-Javadoc)
-	 * @see ControllerInterface#getView()
-	 */
 	@Override
 	public ViewInterface getView() {
 		return view;
@@ -32,20 +28,31 @@ public class Controller implements ControllerInterface {
 	public void setView(ViewInterface view) {
 		this.view = view;
 	}
+	public CatalogInterface getCatalog() {
+		return catalog;
+	}
+	public void setCatalog(CatalogInterface catalog) {
+		this.catalog = catalog;
+	}	
 
-	/* (non-Javadoc)
-	 * @see ControllerInterface#registerDebits()
-	 */
+
 	@Override
-	public int registerDebits() {
-		double amount;
+	public int addToCart() {
+		String itemCode ="";
+		double itemPrice=0;
+		boolean validCode = false;
+
 		do {
-			amount = getView().promptDebitAmount();
-			if (amount !=0) {
-				getModel().makeDebit(amount);
-				getView().showResults(getModel().calcTotalBalance());
+			itemCode = getView().promptItemCode();
+			if (!itemCode.equals("0")) {
+				for(int i =0; i < getCatalog().getProducts().length; i++) {
+					if (getCatalog().getProducts()[i][0].equals(itemCode)) {
+						getModel().makeDebit(Double.parseDouble(itemCode), Double.parseDouble(getCatalog().getProducts()[i][2]));
+						getView().showResults(getModel().calcTotalBalance());
+					}	
+				}
 			}
-		} while(amount != 0);
+		} while(!itemCode.equals("0"));
 		return getView().promptAction();
 	}
 
@@ -53,13 +60,32 @@ public class Controller implements ControllerInterface {
 	 * @see ControllerInterface#registerCredits()
 	 */
 	@Override
-	public int registerCredits() {
-		double amount;
+	//	public int registerPayment() {
+	//		double amount;
+	//		do {
+	//			amount = getView().promptCreditAmount();
+	//			if (amount !=0) {
+	//				getModel().makeCredit(amount);
+	//				getView().showResults(getModel().calcTotalBalance());
+	//			}
+	//		} while(amount != 0);
+	//		return getView().promptAction();
+	//	}
+
+	public int registerPayment() {
+		double amount =0;
+		double method =0;
+
 		do {
-			amount = getView().promptCreditAmount();
-			if (amount !=0) {
-				getModel().makeCredit(amount);
-				getView().showResults(getModel().calcTotalBalance());
+			method = getView().promptPaymentMethod();
+			if (method !=0) {
+				do {
+					amount = getView().promptCreditAmount();
+					if (amount !=0) {
+						getModel().makeCredit(method, amount);
+						getView().showResults(getModel().calcTotalBalance());
+					}
+				} while(amount != 0);
 			}
 		} while(amount != 0);
 		return getView().promptAction();
@@ -69,9 +95,8 @@ public class Controller implements ControllerInterface {
 	 * @see ControllerInterface#showNegativeBalance()
 	 */
 	@Override
-	public int showNegativeBalance() {
+	public int showCartTotal() {
 		getView().showNegativeBalance(getModel().calcNegativeBalance());
-		getView().promptAction();
 		return getView().promptAction();
 	}
 
@@ -79,7 +104,7 @@ public class Controller implements ControllerInterface {
 	 * @see ControllerInterface#showTotalBalance()
 	 */
 	@Override
-	public int showTotalBalance() {
+	public int showBalancePayable() {
 		getView().showNegativeBalance(getModel().calcNegativeBalance());
 		return getView().promptAction();
 	}
@@ -88,7 +113,7 @@ public class Controller implements ControllerInterface {
 	 * @see ControllerInterface#showDebitAverage()
 	 */
 	@Override
-	public int showDebitAverage() {
+	public int showItemAverage() {
 		getView().showDebitAverage(getModel().calcAverageDebit());
 		return getView().promptAction();
 	}
@@ -97,25 +122,16 @@ public class Controller implements ControllerInterface {
 	 * @see ControllerInterface#showDebitHighest()
 	 */
 	@Override
-	public int showDebitHighest() {
+	public int showItemHighest() {
 		getView().showDebitHighest(getModel().calcHighestDebit());
 		return getView().promptAction();
 	}
 
 	/* (non-Javadoc)
-	 * @see ControllerInterface#showCounts()
+	 * @see ControllerInterface#printReceipt()
 	 */
 	@Override
-	public int showCounts() {
-		getView().showCounts(getModel().getDebitHistory().length, getModel().getCreditHistory().length);
-		return getView().promptAction();
-	}
-
-	/* (non-Javadoc)
-	 * @see ControllerInterface#showHistories()
-	 */
-	@Override
-	public int showHistories() {
+	public int printReceipt() {
 		getView().showDebitHistory(getModel().getDebitHistory());
 		getView().showCreditHistory(getModel().getCreditHistory());
 		return getView().promptAction();
@@ -125,7 +141,7 @@ public class Controller implements ControllerInterface {
 	 * @see ControllerInterface#revertDebit()
 	 */
 	@Override
-	public int revertDebit() {
+	public int revertItem() {
 		int debitId;
 		do {
 			debitId = getView().promptDebitId(getModel().getDebitHistory());
@@ -139,7 +155,7 @@ public class Controller implements ControllerInterface {
 	 * @see ControllerInterface#revertCredit()
 	 */
 	@Override
-	public int revertCredit() {
+	public int revertPayment() {
 		int creditId;
 		do {
 			creditId = getView().promptCreditId(getModel().getCreditHistory());

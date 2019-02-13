@@ -79,7 +79,7 @@ public class View implements ViewInterface {
 		double amount =0;
 		Scanner sc = new Scanner(System.in);
 		try {
-			amount = Double.parseDouble(sc.next(Pattern.compile("^\\d+")));
+			amount = Double.parseDouble(sc.next(Pattern.compile("^\\d+([,\\.]\\d{1,2})?$")));
 		} 
 		catch (InputMismatchException e) {
 			System.out.print("\nInvalid input.");

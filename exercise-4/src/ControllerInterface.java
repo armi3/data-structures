@@ -6,24 +6,22 @@ public interface ControllerInterface {
 
 	ViewInterface getView();
 
-	int registerDebits();
+	int addToCart();
 
-	int registerCredits();
+	int registerPayment();
 
-	int showNegativeBalance();
+	int showCartTotal();
 
-	int showTotalBalance();
+	int showBalancePayable();
 
-	int showDebitAverage();
+	int showItemAverage();
 
-	int showDebitHighest();
+	int showItemHighest();
 
-	int showCounts();
+	int printReceipt();
 
-	int showHistories();
+	int revertItem();
 
-	int revertDebit();
-
-	int revertCredit();
+	int revertPayment();
 
 }

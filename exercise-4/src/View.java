@@ -20,33 +20,16 @@ public class View implements ViewInterface {
 			"10. Exit\n" +
 			"\nInput action (0-10): ";
 
-	/* (non-Javadoc)
-	 * @see ViewInterface#getMenu()
-	 */
-	/* (non-Javadoc)
-	 * @see ViewInterface#getMenu()
-	 */
 	@Override
 	public String getMenu() {
 		return menu;
 	}
-	/* (non-Javadoc)
-	 * @see ViewInterface#setMenu(java.lang.String)
-	 */
-	/* (non-Javadoc)
-	 * @see ViewInterface#setMenu(java.lang.String)
-	 */
+
 	@Override
 	public void setMenu(String menu) {
 		this.menu = menu;
 	}
 
-	/* (non-Javadoc)
-	 * @see ViewInterface#promptActionWithMenu()
-	 */
-	/* (non-Javadoc)
-	 * @see ViewInterface#promptActionWithMenu()
-	 */
 	@Override
 	public int promptActionWithMenu() {
 		int menuChoice =11;
@@ -61,12 +44,6 @@ public class View implements ViewInterface {
 		return menuChoice;
 	}
 
-	/* (non-Javadoc)
-	 * @see ViewInterface#promptAction()
-	 */
-	/* (non-Javadoc)
-	 * @see ViewInterface#promptAction()
-	 */
 	@Override
 	public int promptAction() {
 		int menuChoice;
@@ -82,12 +59,7 @@ public class View implements ViewInterface {
 		return menuChoice;
 	}
 
-	/* (non-Javadoc)
-	 * @see ViewInterface#promptGeneralAmount()
-	 */
-	/* (non-Javadoc)
-	 * @see ViewInterface#promptGeneralAmount()
-	 */
+
 	@Override
 	public double promptGeneralAmount() {
 		double amount =0;
@@ -101,19 +73,13 @@ public class View implements ViewInterface {
 		return amount;
 	}
 	
-	/* (non-Javadoc)
-	 * @see ViewInterface#promptDebitAmount()
-	 */
-	/* (non-Javadoc)
-	 * @see ViewInterface#promptItemCode()
-	 */
 	@Override
 	public String promptItemCode() {
 		System.out.print("\nEnter item ID (or '0' for summary): ");
 		String itemCode = "";
 		Scanner sc = new Scanner(System.in);
 		try {
-			itemCode = sc.next(Pattern.compile("(\\d{13}|0)"));
+			itemCode = sc.next(Pattern.compile("(\\d{9}|0{1})"));
 		}
 		catch (InputMismatchException e) {
 			System.out.print("\nInvalid input.");

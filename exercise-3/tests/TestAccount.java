@@ -56,10 +56,12 @@ class TestAccount {
 	@Tag("development")
 	void testMakeDebit() {
 		Account acct = new Account();
+		// before
 		assertEquals(0, acct.getDebitHistory().length);
 		assertEquals(0, acct.getDebitBalance());
 		assertEquals(0, acct.getGeneralBalance());
 		acct.makeDebit(5.33);
+		// after
 		assertEquals(1, acct.getDebitHistory().length);
 		assertEquals(5.33, acct.getDebitBalance());
 		assertEquals(-5.33, acct.getGeneralBalance());
@@ -68,11 +70,15 @@ class TestAccount {
 	@Test
 	@Tag("development")
 	void testMakeCredit() {
+		// before
 		Account acct = new Account();
 		assertEquals(0, acct.getCreditHistory().length);
 		assertEquals(0, acct.getCreditBalance());
 		assertEquals(0, acct.getGeneralBalance());
+		
 		acct.makeCredit(5.33);
+		
+		// after credit
 		assertEquals(1, acct.getCreditHistory().length);
 		assertEquals(5.33, acct.getCreditBalance());
 		assertEquals(5.33, acct.getGeneralBalance());

@@ -72,11 +72,6 @@ public class Account implements AccountInterface {
 	@Override
 	public double calcNegativeBalance() {
 		double balance = 0;
-//		for (double[] h : getDebitHistory()) {
-//			for (double i : h) {
-//				balance +=i;
-//			}
-//		}
 		for (int i = 0; i < getDebitHistory().length; i++) {
 			balance += getDebitHistory()[i][1];
 		}

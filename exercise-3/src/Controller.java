@@ -70,7 +70,7 @@ public class Controller implements ControllerInterface {
 	@Override
 	public int showNegativeBalance() {
 		getView().showNegativeBalance(getModel().calcNegativeBalance());
-		getView().promptAction();
+		//getView().promptAction();
 		return getView().promptAction();
 	}
 
@@ -79,7 +79,8 @@ public class Controller implements ControllerInterface {
 	 */
 	@Override
 	public int showTotalBalance() {
-		getView().showNegativeBalance(getModel().calcNegativeBalance());
+		getView().showTotalBalance(getModel().calcTotalBalance());
+		//getView().promptAction();
 		return getView().promptAction();
 	}
 
@@ -89,6 +90,7 @@ public class Controller implements ControllerInterface {
 	@Override
 	public int showDebitAverage() {
 		getView().showDebitAverage(getModel().calcAverageDebit());
+		//getView().promptAction();
 		return getView().promptAction();
 	}
 
@@ -98,6 +100,7 @@ public class Controller implements ControllerInterface {
 	@Override
 	public int showDebitHighest() {
 		getView().showDebitHighest(getModel().calcHighestDebit());
+		//getView().promptAction();
 		return getView().promptAction();
 	}
 
@@ -107,6 +110,7 @@ public class Controller implements ControllerInterface {
 	@Override
 	public int showCounts() {
 		getView().showCounts(getModel().getDebitHistory().length, getModel().getCreditHistory().length);
+		//getView().promptAction();
 		return getView().promptAction();
 	}
 
@@ -128,23 +132,24 @@ public class Controller implements ControllerInterface {
 		int debitId;
 		do {
 			debitId = getView().promptDebitId(getModel().getDebitHistory());
-		} while (!(0<=debitId || debitId<=(getModel().getDebitHistory().length-1)));
-		getModel().revertDebit(debitId);
-		getView().showDebitHistory(getModel().getDebitHistory());
+			if (debitId!=0) {
+				getModel().revertDebit(debitId-1);
+				getView().showResults(getModel().calcTotalBalance());
+			}
+		} while (debitId!=0);
 		return getView().promptAction();
 	}
 
-	/* (non-Javadoc)
-	 * @see ControllerInterface#revertCredit()
-	 */
 	@Override
 	public int revertCredit() {
 		int creditId;
 		do {
 			creditId = getView().promptCreditId(getModel().getCreditHistory());
-		} while (!(0<=creditId || creditId<=(getModel().getCreditHistory().length-1)));
-		getModel().revertCredit(creditId);
-		getView().showCreditHistory(getModel().getCreditHistory());
+			if (creditId!=0) {
+				getModel().revertCredit(creditId-1);
+				getView().showResults(getModel().calcTotalBalance());
+			}
+		} while (creditId!=0);
 		return getView().promptAction();
 	}
 

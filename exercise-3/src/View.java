@@ -41,7 +41,7 @@ public class View implements ViewInterface {
 	 */
 	@Override
 	public int promptActionWithMenu() {
-		int menuChoice =13;
+		int menuChoice =12;
 		Scanner sc = new Scanner(System.in);
 		System.out.print(getMenu());
 		try {
@@ -66,7 +66,7 @@ public class View implements ViewInterface {
 		} 
 		catch (InputMismatchException e) {
 			System.out.print("\nInput action (1-11) or 0 for menu: ");
-			menuChoice = 13;
+			menuChoice = 12;
 		}
 		return menuChoice;
 	}
@@ -93,8 +93,7 @@ public class View implements ViewInterface {
 	@Override
 	public double promptDebitAmount() {
 		System.out.print("\nEnter amount to debit (or '0' for summary): ");
-		double amount = promptGeneralAmount();
-		return amount;
+		return promptGeneralAmount();
 	}
 	
 	/* (non-Javadoc)
@@ -103,8 +102,7 @@ public class View implements ViewInterface {
 	@Override
 	public double promptCreditAmount() {
 		System.out.print("\nEnter amount to credit (or '0' for summary): ");
-		double amount = promptGeneralAmount();
-		return amount;
+		return promptGeneralAmount();
 	}
 	
 	/* (non-Javadoc)
@@ -178,19 +176,35 @@ public class View implements ViewInterface {
 	 */
 	@Override
 	public int promptDebitId(double[] historyDebits) {
-		showDebitHistory(historyDebits);
-		System.out.print("\nEnter index of debit to be reverted: ");
-		return (int) promptGeneralAmount();
+		int debitId=historyDebits.length+1;
+		Scanner sc = new Scanner(System.in);
+		try {
+			while (!(debitId==0 || debitId<(historyDebits.length+1))) {
+				showDebitHistory(historyDebits);
+				System.out.print("\nEnter index of debit to be reverted (starting 1, or 0 for menu): ");
+				debitId = Integer.parseInt(sc.next(Pattern.compile("([0-9])*")));
+			}
+		} 
+		catch (InputMismatchException e) {
+			System.out.print("\nInvalid input.");
+		}
+		return debitId;
 	}
 	
-	/* (non-Javadoc)
-	 * @see ViewInterface#promptCreditId(double[])
-	 */
 	@Override
 	public int promptCreditId(double[] historyCredits) {
-		showCreditHistory(historyCredits);
-		System.out.print("\nEnter index of credit to be reverted: ");
-		return (int) promptGeneralAmount();
+		int creditId=historyCredits.length+1;
+		Scanner sc = new Scanner(System.in);
+		try {
+			while (!(creditId==0 || creditId<(historyCredits.length+1))) {
+				showCreditHistory(historyCredits);
+				System.out.print("\nEnter index of credit to be reverted (starting 1, or 0 for menu): ");
+				creditId = Integer.parseInt(sc.next(Pattern.compile("([0-9])*")));
+			}
+		} 
+		catch (InputMismatchException e) {
+			System.out.print("\nInvalid input.");
+		}
+		return creditId;
 	}
-
 }

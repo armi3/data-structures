@@ -138,7 +138,7 @@ valgrind callgrind_annotate --tree=both --auto=yes profiling/callgrind_functions
 
 
 # exercise 6 (Structs)
-- Returns point quadrant implementing a struct (class without methods).
+- Returns point's quadrant implementing a struct (class without methods).
 - Code in Java
 - Demo: https://youtu.be/J9PImk7_7ho
 - **Unit testing** with JUnit 5

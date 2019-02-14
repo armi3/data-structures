@@ -3,11 +3,11 @@ Course exercises implementing, testing and profiling data structures in Java, C 
 
 # table of contents
 1. [exercise 1](#exercise-1)
-2. [exercise 2 (Stack)](#exercise-2)
-3. [exercise 3 (Arrays)](#exercise-3)
-4. [exercise 4 (Matrices)](#exercise-4)
-5. [exercise 5 (Strings)](#exercise-5)
-6. [exercise 6 (Structs)](#exercise-6)
+2. [exercise 2 (Stacks)](#exercise-2-stacks)
+3. [exercise 3 (Arrays)](#exercise-3-arrays)
+4. [exercise 4 (Matrices)](#exercise-4-matrices)
+5. [exercise 5 (Strings)](#exercise-5-strings)
+6. [exercise 6 (Structs)](#exercise-6-structs)
 
 # exercise 1
 - Algorithm to find the sum of the first N natural numbers.
@@ -90,7 +90,7 @@ valgrind callgrind_annotate --tree=both --auto=yes profiling/callgrind_functions
 - https://accu.org/index.php/journals/1884 
 
 
-# exercise 2 (Stack)
+# exercise 2 (Stacks)
 - Algorithm to implement a stack data structure.
 - Code in Java
 - Demo: https://youtu.be/9xWy4dNyj6g

@@ -65,7 +65,7 @@ public class View implements ViewInterface {
 			menuChoice = Integer.parseInt(sc.next(Pattern.compile("^([0-9]|10|11|12)$")));
 		} 
 		catch (InputMismatchException e) {
-			System.out.print("\nInput action (1-11) or 0 for menu: ");
+			//System.out.print("\nInput action (1-11) or 0 for menu: ");
 			menuChoice = 12;
 		}
 		return menuChoice;

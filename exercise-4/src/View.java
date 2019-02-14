@@ -53,7 +53,7 @@ public class View implements ViewInterface {
 			menuChoice = Integer.parseInt(sc.next(Pattern.compile("^([0-9]|10|11|12)$")));
 		} 
 		catch (InputMismatchException e) {
-			System.out.print("\nInput action (1-10) or 0 for menu: ");
+			//System.out.print("\nInput action (1-10) or 0 for menu: ");
 			menuChoice = 11;
 		}
 		return menuChoice;
@@ -72,13 +72,14 @@ public class View implements ViewInterface {
 		}
 		return amount;
 	}
-	
+
 	@Override
 	public String promptItemCode() {
-		System.out.print("\nEnter item ID (or '0' for summary): ");
+		System.out.print("\nEnter item code (or '0' for summary): ");
 		String itemCode = "";
 		Scanner sc = new Scanner(System.in);
 		try {
+
 			itemCode = sc.next(Pattern.compile("(\\d{9}|0{1})"));
 		}
 		catch (InputMismatchException e) {
@@ -86,23 +87,15 @@ public class View implements ViewInterface {
 		}
 		return itemCode;
 	}
-	
-	/* (non-Javadoc)
-	 * @see ViewInterface#promptCreditAmount()
-	 */
-	/* (non-Javadoc)
-	 * @see ViewInterface#promptCreditAmount()
-	 */
+
 	@Override
 	public double promptCreditAmount() {
 		System.out.print("\nEnter amount to credit (or '0' for summary): ");
 		double amount = promptGeneralAmount();
 		return amount;
 	}
-	
-	/* (non-Javadoc)
-	 * @see ViewInterface#promptPaymentMethod()
-	 */
+
+
 	@Override
 	public double promptPaymentMethod() {
 		System.out.print("\nAvailable methods: cash (1) credit card (2) paypal (3).");
@@ -117,121 +110,83 @@ public class View implements ViewInterface {
 		}
 		return method;
 	}
-	
-	/* (non-Javadoc)
-	 * @see ViewInterface#showResults(double)
-	 */
-	/* (non-Javadoc)
-	 * @see ViewInterface#showResults(double)
-	 */
+
 	@Override
 	public int showResults(double totalBalance) {
 		System.out.print("\nSuccesful transaction!" + "\nUpdated total balance: " + totalBalance);
 		int goBack = 0;
 		return goBack;
 	}
-	
-	/* (non-Javadoc)
-	 * @see ViewInterface#showNegativeBalance(double)
-	 */
-	/* (non-Javadoc)
-	 * @see ViewInterface#showNegativeBalance(double)
-	 */
+
 	@Override
 	public void showNegativeBalance(double negativeBalance) {
 		System.out.println("\nThis cart's total price is: " + negativeBalance);
 	}
-	
-	/* (non-Javadoc)
-	 * @see ViewInterface#showTotalBalance(double)
-	 */
-	/* (non-Javadoc)
-	 * @see ViewInterface#showTotalBalance(double)
-	 */
+
 	@Override
 	public void showTotalBalance(double totalBalance) {
 		System.out.print("\nThis account's current balance payable is: " + totalBalance);
 	}
-	
-	/* (non-Javadoc)
-	 * @see ViewInterface#showDebitAverage(double)
-	 */
-	/* (non-Javadoc)
-	 * @see ViewInterface#showDebitAverage(double)
-	 */
+
 	@Override
 	public void showDebitAverage(double average) {
 		System.out.print("\nThis cart's average item price is: " + average);
 	}
-	
-	/* (non-Javadoc)
-	 * @see ViewInterface#showDebitHighest(double)
-	 */
-	/* (non-Javadoc)
-	 * @see ViewInterface#showDebitHighest(double)
-	 */
+
 	@Override
 	public void showDebitHighest(double highest) {
 		System.out.print("\nThis cart's highest item price is: " + highest);
 	}
-	
-	/* (non-Javadoc)
-	 * @see ViewInterface#showCounts(double, double)
-	 */
-	/* (non-Javadoc)
-	 * @see ViewInterface#showCounts(double, double)
-	 */
+
+
 	@Override
 	public void showCounts(double countDebits, double countCredits) {
 		System.out.print("\nThis account has registered " + countDebits + " debits and " + countCredits + " credits.");
 	}
-	
-	/* (non-Javadoc)
-	 * @see ViewInterface#showDebitHistory(double[])
-	 */
-	/* (non-Javadoc)
-	 * @see ViewInterface#showDebitHistory(double[][])
-	 */
+
 	@Override
 	public void showDebitHistory(double[][] historyDebits) {
 		System.out.print("\nThis carts's current item history (code/price) is: " + Arrays.deepToString(historyDebits));
 	}
-	
-	/* (non-Javadoc)
-	 * @see ViewInterface#showCreditHistory(double[])
-	 */
-	/* (non-Javadoc)
-	 * @see ViewInterface#showCreditHistory(double[][])
-	 */
+
+
 	@Override
 	public void showCreditHistory(double[][] historyCredits) {
 		System.out.print("\nThis account's current credit history (amount/method) is: " + Arrays.deepToString(historyCredits));
 	}
-	
-	/* (non-Javadoc)
-	 * @see ViewInterface#promptDebitId(double[])
-	 */
-	/* (non-Javadoc)
-	 * @see ViewInterface#promptDebitId(double[][])
-	 */
+
 	@Override
 	public int promptDebitId(double[][] historyDebits) {
-		showDebitHistory(historyDebits);
-		System.out.print("\nEnter index of debit to be reverted: ");
-		return (int) promptGeneralAmount();
+		int debitId=historyDebits.length+1;
+		Scanner sc = new Scanner(System.in);
+		try {
+			while (!(debitId==0 || debitId<(historyDebits.length+1))) {
+				showDebitHistory(historyDebits);
+				System.out.print("\nEnter index of debit to be reverted (starting 1, or 0 for menu): ");
+				debitId = Integer.parseInt(sc.next(Pattern.compile("([0-9])*")));
+			}
+		} 
+		catch (InputMismatchException e) {
+			System.out.print("\nInvalid input.");
+		}
+		return debitId;
 	}
-	
-	/* (non-Javadoc)
-	 * @see ViewInterface#promptCreditId(double[])
-	 */
-	/* (non-Javadoc)
-	 * @see ViewInterface#promptCreditId(double[][])
-	 */
+
 	@Override
 	public int promptCreditId(double[][] historyCredits) {
-		showCreditHistory(historyCredits);
-		System.out.print("\nEnter index of credit to be reverted: ");
-		return (int) promptGeneralAmount();
+		int creditId=historyCredits.length+1;
+		Scanner sc = new Scanner(System.in);
+		try {
+			while (!(creditId==0 || creditId<(historyCredits.length+1))) {
+				showCreditHistory(historyCredits);
+				System.out.print("\nEnter index of credit to be reverted (starting 1, or 0 for menu): ");
+				creditId = Integer.parseInt(sc.next(Pattern.compile("([0-9])*")));
+			}
+		} 
+		catch (InputMismatchException e) {
+			System.out.print("\nInvalid input.");
+		}
+		return creditId;
 	}
 
 }

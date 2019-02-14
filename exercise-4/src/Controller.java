@@ -56,22 +56,8 @@ public class Controller implements ControllerInterface {
 		return getView().promptAction();
 	}
 
-	/* (non-Javadoc)
-	 * @see ControllerInterface#registerCredits()
-	 */
-	@Override
-	//	public int registerPayment() {
-	//		double amount;
-	//		do {
-	//			amount = getView().promptCreditAmount();
-	//			if (amount !=0) {
-	//				getModel().makeCredit(amount);
-	//				getView().showResults(getModel().calcTotalBalance());
-	//			}
-	//		} while(amount != 0);
-	//		return getView().promptAction();
-	//	}
 
+	@Override
 	public int registerPayment() {
 		double amount =0;
 		double method =0;
@@ -91,21 +77,15 @@ public class Controller implements ControllerInterface {
 		return getView().promptAction();
 	}
 
-	/* (non-Javadoc)
-	 * @see ControllerInterface#showNegativeBalance()
-	 */
 	@Override
 	public int showCartTotal() {
 		getView().showNegativeBalance(getModel().calcNegativeBalance());
 		return getView().promptAction();
 	}
 
-	/* (non-Javadoc)
-	 * @see ControllerInterface#showTotalBalance()
-	 */
 	@Override
 	public int showBalancePayable() {
-		getView().showNegativeBalance(getModel().calcNegativeBalance());
+		getView().showTotalBalance(getModel().calcTotalBalance());
 		return getView().promptAction();
 	}
 
@@ -145,23 +125,25 @@ public class Controller implements ControllerInterface {
 		int debitId;
 		do {
 			debitId = getView().promptDebitId(getModel().getDebitHistory());
-		} while (!(0<=debitId || debitId<=(getModel().getDebitHistory().length-1)));
-		getModel().revertDebit(debitId);
-		getView().showDebitHistory(getModel().getDebitHistory());
+			if (debitId!=0) {
+				getModel().revertDebit(debitId-1);
+				getView().showResults(getModel().calcTotalBalance());
+			}
+		} while (debitId!=0);
+		
 		return getView().promptAction();
 	}
 
-	/* (non-Javadoc)
-	 * @see ControllerInterface#revertCredit()
-	 */
 	@Override
 	public int revertPayment() {
 		int creditId;
 		do {
 			creditId = getView().promptCreditId(getModel().getCreditHistory());
-		} while (!(0<=creditId || creditId<=(getModel().getCreditHistory().length-1)));
-		getModel().revertCredit(creditId);
-		getView().showCreditHistory(getModel().getCreditHistory());
+			if (creditId!=0) {
+				getModel().revertCredit(creditId-1);
+				getView().showResults(getModel().calcTotalBalance());
+			}
+		} while (creditId!=0);
 		return getView().promptAction();
 	}
 

@@ -124,9 +124,9 @@ valgrind callgrind_annotate --tree=both --auto=yes profiling/callgrind_functions
 
 
 # exercise 5 (Strings)
-- Shopping cart and payment methods manager.
-- Code in 
-- Demo: 
+- Returns a histogram with the top 10 most repeated chars.
+- Code in Java
+- Demo: https://youtu.be/uZgNDzgXhUM
 - **Unit testing** with JUnit 5
 - **Profiling** with JProfiler
 

@@ -111,6 +111,9 @@ valgrind callgrind_annotate --tree=both --auto=yes profiling/callgrind_functions
 - **Unit testing** with JUnit 5
 - **Profiling** with JProfiler
 
+## resources
+- https://www.youtube.com/watch?v=LiiZnYbcliw
+
 
 # exercise 4 (Matrices)
 - Shopping cart and payment methods manager.

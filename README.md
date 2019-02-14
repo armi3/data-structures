@@ -130,6 +130,12 @@ valgrind callgrind_annotate --tree=both --auto=yes profiling/callgrind_functions
 - **Unit testing** with JUnit 5
 - **Profiling** with JProfiler
 
+## resources
+- https://www.geeksforgeeks.org/sorting-2d-array-according-values-given-column-java/
+- https://loremipsum.io/
+- https://www.programiz.com/java-programming/examples/frequency-character
+- https://docs.google.com/presentation/d/1UfxPAHc7W4U5hQYChK7INW4Pm5MANKBbGUI0gLfLj5M/edit#slide=id.g4eb1243f07_0_148
+
 
 # exercise 6 (Structs)
 - Debits and credits manager.
@@ -138,3 +144,5 @@ valgrind callgrind_annotate --tree=both --auto=yes profiling/callgrind_functions
 - **Unit testing** with JUnit 5
 - **Profiling** with JProfiler
 
+## resources
+- https://docs.google.com/presentation/d/1Is38TeAGZMuUgPuWvaB0-ltH3hd9G1y9TRDdYtVFI3o/edit#slide=id.g4ec0fab4d5_0_71

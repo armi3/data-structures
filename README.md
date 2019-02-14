@@ -3,7 +3,11 @@ Course exercises implementing, testing and profiling data structures in Java, C 
 
 # table of contents
 1. [exercise 1](#exercise-1)
-2. [exercise 2](#exercise-2)
+2. [exercise 2 (Stack)](#exercise-2)
+3. [exercise 3 (Arrays)](#exercise-3)
+4. [exercise 4 (Matrices)](#exercise-4)
+5. [exercise 5 (Strings)](#exercise-5)
+6. [exercise 6 (Structs)](#exercise-6)
 
 # exercise 1
 - Algorithm to find the sum of the first N natural numbers.
@@ -86,7 +90,7 @@ valgrind callgrind_annotate --tree=both --auto=yes profiling/callgrind_functions
 - https://accu.org/index.php/journals/1884 
 
 
-# exercise 2
+# exercise 2 (Stack)
 - Algorithm to implement a stack data structure.
 - Code in Java
 - Demo: https://youtu.be/9xWy4dNyj6g
@@ -98,3 +102,36 @@ valgrind callgrind_annotate --tree=both --auto=yes profiling/callgrind_functions
 - https://beginnersbook.com/2013/12/java-constructor-chaining-with-example/
 - https://medium.com/@isaacjumba/overview-of-inheritance-interfaces-and-abstract-classes-in-java-3fe22404baf8
 - https://howtodoinjava.com/junit5/
+
+
+# exercise 3 (Arrays)
+- Debits and credits manager.
+- Code in Java
+- Demo: https://youtu.be/w2oijZ4PeYE
+- **Unit testing** with JUnit 5
+- **Profiling** with JProfiler
+
+
+# exercise 4 (Matrices)
+- Shopping cart and payment methods manager.
+- Code in Java
+- Demo: 
+- **Unit testing** with JUnit 5
+- **Profiling** with JProfiler
+
+
+# exercise 5 (Strings)
+- Shopping cart and payment methods manager.
+- Code in 
+- Demo: 
+- **Unit testing** with JUnit 5
+- **Profiling** with JProfiler
+
+
+# exercise 6 (Structs)
+- Debits and credits manager.
+- Code in 
+- Demo: 
+- **Unit testing** with JUnit 5
+- **Profiling** with JProfiler
+

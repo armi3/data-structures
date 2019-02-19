@@ -1,18 +1,36 @@
 
-public class PlayQueue {
+public class PlayQueue implements PlayQueueInterface {
 	
 	private Song nowPlaying;
 	
-	public PlayQueue playNow(PlayQueue playQueue, Song song) {
+	@Override
+	public Song getNowPlaying() {
+		return nowPlaying;
+	}
+
+	@Override
+	public void setNowPlaying(Song nowPlaying) {
+		this.nowPlaying = nowPlaying;
+	}
+
+	@Override
+	public PlayQueueInterface playNow(PlayQueueInterface playQueue, Song song) {
 		return playQueue;
 	}
 	
-	public PlayQueue playNext(PlayQueue playQueue, Song song) {
+	@Override
+	public PlayQueueInterface playNext(PlayQueueInterface playQueue, Song song) {
 		return playQueue;
 	}
 	
-	public PlayQueue playLater(PlayQueue playQueue, Song song) {
+	@Override
+	public PlayQueueInterface playLater(PlayQueueInterface playQueue, Song song) {
 		return playQueue;
+	}
+
+	@Override
+	public String toString() {
+		return "PlayQueue [nowPlaying=" + nowPlaying + "]";
 	}
 
 }

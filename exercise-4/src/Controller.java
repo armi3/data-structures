@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 import Model.*;
 
 public class Controller implements ControllerInterface {
@@ -39,8 +37,6 @@ public class Controller implements ControllerInterface {
 	@Override
 	public int addToCart() {
 		String itemCode ="";
-		double itemPrice=0;
-		boolean validCode = false;
 
 		do {
 			itemCode = getView().promptItemCode();

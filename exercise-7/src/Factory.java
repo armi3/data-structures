@@ -1,4 +1,5 @@
 public class Factory {
+	
 	public SongInterface createSong() {
 		return new Song();
 	}
@@ -7,8 +8,12 @@ public class Factory {
 		return new PlayQueue(song);
 	}
 	
-//	public ControllerInterface createController(PlayQueueInterface playQueue) {
-//		return new Controller(playQueue);
-//	}
+	public ViewInterface createView() {
+		return new View();
+	}
+	
+	public ControllerInterface createController(PlayQueueInterface playQueue, ViewInterface view) {
+		return new Controller(playQueue, view);
+	}
 
 }

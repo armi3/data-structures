@@ -4,6 +4,13 @@ public class Song implements SongInterface {
 	private SongInterface nextSong;
 	private String[] songInfo = new String[3];
 	
+	public Song() {
+		super();
+		this.previousSong = null;
+		this.nextSong = null;
+		this.songInfo = new String[3];
+	}
+	
 	@Override
 	public SongInterface getPreviousSong() {
 		return previousSong;

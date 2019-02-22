@@ -1,36 +1,111 @@
 
 public class PlayQueue implements PlayQueueInterface {
 	
-	private Song nowPlaying;
-	
-	@Override
-	public Song getNowPlaying() {
-		return nowPlaying;
-	}
+	private SongInterface nowPlaying;
 
-	@Override
-	public void setNowPlaying(Song nowPlaying) {
+	public PlayQueue(SongInterface nowPlaying) {
+		super();
 		this.nowPlaying = nowPlaying;
 	}
 
 	@Override
-	public PlayQueueInterface playNow(PlayQueueInterface playQueue, Song song) {
-		return playQueue;
+	public SongInterface getNowPlaying() {
+		return nowPlaying;
+	}
+
+	@Override
+	public void setNowPlaying(SongInterface nowPlaying) {
+		this.nowPlaying = nowPlaying;
+	}
+
+	@Override
+	public void playNow(SongInterface song) {
+		if(getNowPlaying().getNextSong()==null) {
+			song.setNextSong(song);
+			song.setPreviousSong(song);
+			
+		} else if (getNowPlaying().getNextSong()==getNowPlaying()) {
+			song.setNextSong(getNowPlaying());
+			song.setPreviousSong(getNowPlaying());
+			
+			getNowPlaying().setNextSong(song);
+			getNowPlaying().setPreviousSong(song);
+			
+		} else {
+			getNowPlaying().getNextSong().setPreviousSong(song);
+			
+			song.setPreviousSong(getNowPlaying());
+			song.setNextSong(getNowPlaying().getNextSong());
+			
+			getNowPlaying().setNextSong(song);
+		}
+		setNowPlaying(song);		
 	}
 	
 	@Override
-	public PlayQueueInterface playNext(PlayQueueInterface playQueue, Song song) {
-		return playQueue;
+	public void playNext(SongInterface song) {
+		if(getNowPlaying().getNextSong()==null) {
+			song.setNextSong(song);
+			song.setPreviousSong(song);
+			
+		} else if (getNowPlaying().getNextSong()==getNowPlaying()) {
+			song.setNextSong(getNowPlaying());
+			song.setPreviousSong(getNowPlaying());
+			
+			getNowPlaying().setNextSong(song);
+			getNowPlaying().setPreviousSong(song);
+			
+		} else {
+			getNowPlaying().getNextSong().setPreviousSong(song);
+			
+			song.setPreviousSong(getNowPlaying());
+			song.setNextSong(getNowPlaying().getNextSong());
+			
+			getNowPlaying().setNextSong(song);
+		}
 	}
 	
 	@Override
-	public PlayQueueInterface playLater(PlayQueueInterface playQueue, Song song) {
-		return playQueue;
+	public void playLater(SongInterface song) {
+		if(getNowPlaying().getNextSong()==null) {
+			song.setNextSong(song);
+			song.setPreviousSong(song);
+			
+		} else if (getNowPlaying().getNextSong()==getNowPlaying()) {
+			song.setNextSong(getNowPlaying());
+			song.setPreviousSong(getNowPlaying());
+			
+			getNowPlaying().setNextSong(song);
+			getNowPlaying().setPreviousSong(song);
+			
+		} else {
+			song.setNextSong(getNowPlaying());
+			getNowPlaying().setPreviousSong(song);
+			
+			SongInterface previousSong = getNowPlaying().getNextSong();
+			while(previousSong!=getNowPlaying()) {
+				song.setPreviousSong(previousSong);
+				previousSong = previousSong.getNextSong();
+			}
+			previousSong.setNextSong(song);
+		}
 	}
 
 	@Override
 	public String toString() {
-		return "PlayQueue [nowPlaying=" + nowPlaying + "]";
+		return "PlayQueue [nowPlaying=" + getNowPlaying() + "]";
+	}
+
+	@Override
+	public void nextSong() {
+		this.setNowPlaying(this.getNowPlaying().getNextSong());
+		
+	}
+
+	@Override
+	public void previousSong() {
+		this.setNowPlaying(this.getNowPlaying().getPreviousSong());
+		
 	}
 
 }

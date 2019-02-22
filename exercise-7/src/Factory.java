@@ -1,9 +1,14 @@
 public class Factory {
-	public PlayQueueInterface createPlayQueue() {
-		return new PlayQueue();
-	}
 	public SongInterface createSong() {
 		return new Song();
 	}
+	
+	public PlayQueueInterface createPlayQueue(SongInterface song) {
+		return new PlayQueue(song);
+	}
+	
+//	public ControllerInterface createController(PlayQueueInterface playQueue) {
+//		return new Controller(playQueue);
+//	}
 
 }

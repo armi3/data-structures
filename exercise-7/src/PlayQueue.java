@@ -82,12 +82,12 @@ public class PlayQueue implements PlayQueueInterface {
 			song.setNextSong(getNowPlaying());
 			getNowPlaying().setPreviousSong(song);
 			
-			SongInterface previousSong = getNowPlaying().getNextSong();
-			while(previousSong!=getNowPlaying()) {
-				song.setPreviousSong(previousSong);
-				previousSong = previousSong.getNextSong();
+			SongInterface lastSong = getNowPlaying().getNextSong();
+			while(lastSong!=getNowPlaying()) {
+				song.setPreviousSong(lastSong);
+				lastSong = lastSong.getNextSong();
 			}
-			previousSong.setNextSong(song);
+			song.getPreviousSong().setNextSong(song);
 		}
 	}
 
@@ -98,14 +98,16 @@ public class PlayQueue implements PlayQueueInterface {
 
 	@Override
 	public void nextSong() {
-		this.setNowPlaying(this.getNowPlaying().getNextSong());
-		
+		if(getNowPlaying().getNextSong()!=null) {
+			this.setNowPlaying(this.getNowPlaying().getNextSong());
+		}
 	}
 
 	@Override
 	public void previousSong() {
-		this.setNowPlaying(this.getNowPlaying().getPreviousSong());
-		
+		if(getNowPlaying().getNextSong()!=null) {
+			this.setNowPlaying(this.getNowPlaying().getPreviousSong());
+		}
 	}
 
 }

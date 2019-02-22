@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.regex.Pattern;
@@ -56,9 +57,9 @@ public class View implements ViewInterface {
 		System.out.print("\nInput song name: ");
 		songInfo[0]=sc.nextLine();
 		System.out.print("\nInput song artist: ");
-		songInfo[0]=sc.nextLine();
+		songInfo[1]=sc.nextLine();
 		System.out.print("\nInput song album: ");
-		songInfo[0]=sc.nextLine();
+		songInfo[2]=sc.nextLine();
 		return songInfo;
 	}
 	
@@ -69,15 +70,15 @@ public class View implements ViewInterface {
 			System.out.print("\nPlay queue is empty.");
 			
 		} else if (playQueue.getNowPlaying().getNextSong()==playQueue.getNowPlaying()) {
-			System.out.print("\nNow playing: " + playQueue.getNowPlaying().getSongInfo().toString());
+			System.out.print("\nNow playing: " + Arrays.toString(playQueue.getNowPlaying().getSongInfo()));
 			System.out.print("\nPlay queue is empty.");
 			
 		} else {
-			System.out.print("\nNow playing: " + playQueue.getNowPlaying().getSongInfo().toString());
+			System.out.print("\nNow playing: " + Arrays.toString(playQueue.getNowPlaying().getSongInfo()));
 			SongInterface nextInQueue = playQueue.getNowPlaying().getNextSong();
 			int queuePosition = 1;
 			while(nextInQueue!=playQueue.getNowPlaying()) {
-				System.out.print("\nNo. " + queuePosition + " " + nextInQueue.getSongInfo().toString());
+				System.out.print("\nNo. " + queuePosition + " " + Arrays.toString(nextInQueue.getSongInfo()));
 				nextInQueue = nextInQueue.getNextSong();
 				queuePosition++;
 			}

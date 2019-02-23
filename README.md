@@ -8,6 +8,7 @@ Course exercises implementing, testing and profiling data structures in Java, C 
 4. [exercise 4 (Matrices)](#exercise-4-matrices)
 5. [exercise 5 (Strings)](#exercise-5-strings)
 6. [exercise 6 (Structs)](#exercise-6-structs)
+7. [exercise 7 (Circular Linked List)](#exercise-6-circular-linked-list)
 
 # exercise 1
 - Algorithm to find the sum of the first N natural numbers.
@@ -146,3 +147,10 @@ valgrind callgrind_annotate --tree=both --auto=yes profiling/callgrind_functions
 
 ## resources
 - https://docs.google.com/presentation/d/1Is38TeAGZMuUgPuWvaB0-ltH3hd9G1y9TRDdYtVFI3o/edit#slide=id.g4ec0fab4d5_0_71
+
+# exercise 7 (Circular Linked List)
+- Music player simulation implementing a circular linked list.
+- Code in Java
+- Demo: https://youtu.be/dOMIVKmkuMM
+- **Unit testing** with JUnit 5
+- **Profiling** with JProfiler

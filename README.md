@@ -8,7 +8,7 @@ Course exercises implementing, testing and profiling data structures in Java, C 
 4. [exercise 4 (Matrices)](#exercise-4-matrices)
 5. [exercise 5 (Strings)](#exercise-5-strings)
 6. [exercise 6 (Structs)](#exercise-6-structs)
-7. [exercise 7 (Circular Linked List)](#exercise-6-circular-linked-list)
+7. [exercise 7 (Circular Linked List)](#exercise-7-circular-linked-list)
 
 # exercise 1
 - Algorithm to find the sum of the first N natural numbers.

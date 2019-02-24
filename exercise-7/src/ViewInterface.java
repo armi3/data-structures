@@ -1,3 +1,4 @@
+import Model.PlayQueueInterface;
 
 public interface ViewInterface {
 

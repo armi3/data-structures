@@ -1,3 +1,8 @@
+import Model.PlayQueue;
+import Model.PlayQueueInterface;
+import Model.Song;
+import Model.SongInterface;
+
 public class Factory {
 	
 	public SongInterface createSong() {

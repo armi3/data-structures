@@ -1,3 +1,4 @@
+package Model;
 
 public class Song implements SongInterface {
 	private SongInterface previousSong;

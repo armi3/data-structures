@@ -1,3 +1,5 @@
+import Model.PlayQueueInterface;
+import Model.SongInterface;
 
 public class Controller implements ControllerInterface {
 	

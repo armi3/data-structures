@@ -1,3 +1,4 @@
+package Model;
 
 public class PlayQueue implements PlayQueueInterface {
 	
@@ -47,6 +48,7 @@ public class PlayQueue implements PlayQueueInterface {
 		if(getNowPlaying().getNextSong()==null) {
 			song.setNextSong(song);
 			song.setPreviousSong(song);
+			setNowPlaying(song);
 			
 		} else if (getNowPlaying().getNextSong()==getNowPlaying()) {
 			song.setNextSong(getNowPlaying());
@@ -56,11 +58,10 @@ public class PlayQueue implements PlayQueueInterface {
 			getNowPlaying().setPreviousSong(song);
 			
 		} else {
-			getNowPlaying().getNextSong().setPreviousSong(song);
-			
 			song.setPreviousSong(getNowPlaying());
 			song.setNextSong(getNowPlaying().getNextSong());
 			
+			getNowPlaying().getNextSong().setPreviousSong(song);
 			getNowPlaying().setNextSong(song);
 		}
 	}
@@ -70,6 +71,7 @@ public class PlayQueue implements PlayQueueInterface {
 		if(getNowPlaying().getNextSong()==null) {
 			song.setNextSong(song);
 			song.setPreviousSong(song);
+			setNowPlaying(song);
 			
 		} else if (getNowPlaying().getNextSong()==getNowPlaying()) {
 			song.setNextSong(getNowPlaying());

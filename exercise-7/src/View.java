@@ -3,6 +3,9 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
+import Model.PlayQueueInterface;
+import Model.SongInterface;
+
 public class View implements ViewInterface {
 	
 	private String menu = "\n" +

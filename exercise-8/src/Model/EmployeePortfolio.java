@@ -1,6 +1,6 @@
 package Model;
 
-public class EmployeePortfolio {
+public class EmployeePortfolio implements EmpoyeePortfolioInterface {
 	private EmployeeInterface head;
 
 	public EmployeePortfolio() {
@@ -8,14 +8,17 @@ public class EmployeePortfolio {
 		this.head = null;
 	}
 
+	@Override
 	public EmployeeInterface getHead() {
 		return head;
 	}
 
+	@Override
 	public void setHead(EmployeeInterface head) {
 		this.head = head;
 	}
 
+	@Override
 	public void addEmployee(EmployeeInterface newEmployee) {
 
 		// case a: empty portfolio
@@ -74,10 +77,12 @@ public class EmployeePortfolio {
 		}
 	}
 
+	@Override
 	public void updatePortfolio() {
 
 	}
 
+	@Override
 	public void loadPortfolio(){
 
 	}

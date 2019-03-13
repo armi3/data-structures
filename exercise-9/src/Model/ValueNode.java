@@ -16,5 +16,6 @@ public class ValueNode implements Node {
 	public void setValue(double value) {
 		this.value = value;
 	}
+
 	
 }

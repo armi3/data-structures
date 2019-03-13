@@ -1,8 +1,8 @@
 package Model;
 
 public interface Container {
-	void in(String object);
-	String out();
+	void in(Node node);
+	Node out();
 	void clear();
-	String look();
+	Node look();
 }

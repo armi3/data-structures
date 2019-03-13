@@ -2,30 +2,30 @@ package Model;
 
 public class StackContainer implements Container {
 	
-	private String[] containedObjects; 
+	private Node[] containedNodes; 
 	private int dynamicSize;
 
-	public StackContainer(String[] containedObjects, int dynamicSize) {
-		super();
-		this.containedObjects = containedObjects;
-		this.dynamicSize = dynamicSize;
-	}
+//	public StackContainer(String[] containedNodes, int dynamicSize) {
+//		super();
+//		this.containedNodes = containedNodes;
+//		this.dynamicSize = dynamicSize;
+//	}
 	
 	public StackContainer() {
 		super();
 		this.dynamicSize = 0;
-		this.containedObjects = new String[dynamicSize];	
+		this.containedNodes = new Node[dynamicSize];	
 	}
 
-	public String[] getContainedObjects() {
-		String[] copy = new String[this.containedObjects.length];
-		System.arraycopy(this.containedObjects, 0, copy, 0, copy.length);
+	public Node[] getContainedNodes() {
+		Node[] copy = new Node[this.containedNodes.length];
+		System.arraycopy(this.containedNodes, 0, copy, 0, copy.length);
 		return copy;
 	}
 
-	public void setContainedObjects(String[] containedObjects) {
-		this.containedObjects = new String[containedObjects.length];
-		System.arraycopy(containedObjects, 0, this.containedObjects, 0, containedObjects.length);
+	public void setContainedNodes(Node[] containedNodes) {
+		this.containedNodes = new Node[containedNodes.length];
+		System.arraycopy(containedNodes, 0, this.containedNodes, 0, containedNodes.length);
 	}
 
 	public int getDynamicSize() {
@@ -37,24 +37,24 @@ public class StackContainer implements Container {
 	}
 
 	@Override
-	public void in(String object) {
-		setDynamicSize(getContainedObjects().length + 1);
-		String[] updatedStack = new String[getDynamicSize()];
-		System.arraycopy(getContainedObjects(), 0, updatedStack, 0, getContainedObjects().length);
-		updatedStack[getDynamicSize()-1] = object;
-		setContainedObjects(updatedStack);
+	public void in(Node node) {
+		setDynamicSize(getContainedNodes().length + 1);
+		Node[] updatedStack = new Node[getDynamicSize()];
+		System.arraycopy(getContainedNodes(), 0, updatedStack, 0, getContainedNodes().length);
+		updatedStack[getDynamicSize()-1] = node;
+		setContainedNodes(updatedStack);
 	}
 
 	@Override
-	public String out() {
-		String popped ="";
+	public Node out() {
+		Node popped = null;
 		if (getDynamicSize() > 0) {
-			setDynamicSize(getContainedObjects().length - 1);
-			popped = getContainedObjects()[getDynamicSize()];
+			setDynamicSize(getContainedNodes().length - 1);
+			popped = getContainedNodes()[getDynamicSize()];
 			
-			String[] updatedStack = new String[getDynamicSize()];
-			System.arraycopy(getContainedObjects(), 0, updatedStack, 0, getDynamicSize());
-			setContainedObjects(updatedStack);
+			Node[] updatedStack = new Node[getDynamicSize()];
+			System.arraycopy(getContainedNodes(), 0, updatedStack, 0, getDynamicSize());
+			setContainedNodes(updatedStack);
 		}
 		return popped;
 	}
@@ -62,14 +62,14 @@ public class StackContainer implements Container {
 	@Override
 	public void clear() {
 		setDynamicSize(0);
-		setContainedObjects(new String[0]);
+		setContainedNodes(new Node[0]);
 	}
 
 	@Override
-	public String look() {
-		String lifo = "";
+	public Node look() {
+		Node lifo = null;
 		if (getDynamicSize() > 0) {
-			lifo = getContainedObjects()[getDynamicSize() - 1];
+			lifo = getContainedNodes()[getDynamicSize() - 1];
 		}
 		return lifo;
 	}

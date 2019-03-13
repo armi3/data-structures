@@ -1,6 +1,6 @@
 package Model;
 
-public abstract class OperationNode implements Node {
+public class OperationNode implements Node {
 	private Node parent;
 	private Node rightChild;
 	private Node leftChild; 
@@ -27,7 +27,7 @@ public abstract class OperationNode implements Node {
 	public void setLeftChild(Node leftChild) {
 		this.leftChild = leftChild;
 	}
-	public void setOperator(char operator) {
+	public void setValue(char operator) {
 		this.operator = operator;
 	}
 	

@@ -1,4 +1,4 @@
-package Model;
+
 
 public interface Container {
 	void in(Node node);

@@ -1,6 +1,7 @@
 package Model;
 
-public class EmployeePortfolio implements EmpoyeePortfolioInterface {
+public class EmployeePortfolio implements EmployeePortfolioInterface {
+	
 	private EmployeeInterface head;
 
 	public EmployeePortfolio() {

@@ -1,6 +1,6 @@
 package Model;
 
-public interface EmpoyeePortfolioInterface {
+public interface EmployeePortfolioInterface {
 
 	EmployeeInterface getHead();
 

@@ -1,5 +1,4 @@
 package Model;
-import java.util.Arrays;
 
 public class Schedule implements Container {
 
@@ -44,25 +43,28 @@ public class Schedule implements Container {
 	}
 
 	@Override
-	public void in(String object) {
-		// TODO Auto-generated method stub
+	public void in(String[] job) {
 		setDynamicSize(getJobs().length + 1);
-		String[] updatedSchedule = new String[getDynamicSize()];
-		System.arraycopy(getJobs(), 0, updatedSchedule, 0, getJobs().length);
-		updatedSchedule[getDynamicSize()-1] = object;
+		String[][] updatedSchedule = new String[getDynamicSize()][3];
+		
+		for (int i = 0; i < getJobs().length; i++) {
+			System.arraycopy(getJobs()[i], 0, updatedSchedule, 0, 3);
+		}
+		updatedSchedule[getDynamicSize()-1] = job;
 		setJobs(updatedSchedule);
 	}
 
 	@Override
-	public String out() {
-		// TODO Auto-generated method stub
-		String popped ="";
+	public String[] out() {
+		String[] popped = {""};
 		if (getDynamicSize() > 0) {
 			setDynamicSize(getJobs().length - 1);
-			popped = getJobs()[getDynamicSize()];
+			popped = getJobs()[0]; // FIFO
 
-			String[] updatedSchedule = new String[getDynamicSize()];
-			System.arraycopy(getJobs(), 0, updatedSchedule, 0, getDynamicSize());
+			String[][] updatedSchedule = new String[getDynamicSize()][3];
+			for (int i = 1; i < getDynamicSize(); i++) {
+				System.arraycopy(getJobs()[i], 0, updatedSchedule, 0, 3);
+			}
 			setJobs(updatedSchedule);
 		}
 		return popped;
@@ -70,19 +72,17 @@ public class Schedule implements Container {
 
 	@Override
 	public void clear() {
-		// TODO Auto-generated method stub
 		setDynamicSize(0);
-		setJobs(new String[0]);
+		setJobs(new String[0][3]);
 	}
 
 	@Override
-	public String look() {
-		// TODO Auto-generated method stub
-		String lifo = "";
+	public String[] look() {
+		String[] fifo = {""};
 		if (getDynamicSize() > 0) {
-			lifo = getJobs()[getDynamicSize() - 1];
+			fifo = getJobs()[0];
 		}
-		return lifo;
+		return fifo;
 	}
 
 }

@@ -1,8 +1,8 @@
 package Model;
 
 public interface Container {
-	void in(String[] job);
-	String[] out();
+	void in(String object);
+	String out();
 	void clear();
-	String[] look();
+	String look();
 }

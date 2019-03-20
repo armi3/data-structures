@@ -46,23 +46,39 @@ public class B_Tree {
                     medianIndex = (this.degree/2);
                 }
                 // push median to parent
-                String poppedKey = nodeToPlace.popSubnode(medianIndex);
-                pushToParent(poppedKey, nodeToPlace.getParent());
+                String poppedKey = nodeToPlace.popSubnodeKey(medianIndex);
+                Node[] brokenNodes = breakNode(nodeToPlace, medianIndex);
+                Subnode subnodeToPush = new Subnode(brokenNodes[0], poppedKey, brokenNodes[1]);
+                pushToParent(subnodeToPush, nodeToPlace);
             }
         }
     }
 
-    public void pushToParent(String key, Node node){
-        Subnode subnode = new Subnode(key);
-        if(node==null){
+    public Node[] breakNode(Node nodeToBreak, int medianIndex){
+        Subnode[] childrenLeft = new Subnode[medianIndex];
+        Subnode[] childrenRight = new Subnode[nodeToBreak.getChildren().length-medianIndex-1];
+        System.arraycopy(nodeToBreak.getChildren(), 0, childrenLeft, 0, medianIndex);
+        System.arraycopy(nodeToBreak.getChildren(), medianIndex+1, childrenRight, 0, nodeToBreak.getChildren().length-medianIndex-1);
+
+        Node left = new Node(nodeToBreak.getParent(), childrenLeft, nodeToBreak.isLeaf());
+        Node right = new Node(nodeToBreak.getParent(), childrenRight, nodeToBreak.isLeaf());
+
+        Node[] brokenNodes = {left, right};
+        return brokenNodes;
+    }
+
+    // receives subnode already with children
+    public void pushToParent(Subnode subnode, Node node){
+        if(node.getParent()==null){
             Subnode[] subnodes = new Subnode[1];
             subnodes[0] = subnode;
             Node newRoot = new Node(null, subnodes, false);
             this.root = newRoot;
+            node.setParent(this.root);
         }
         else {
-            int indexToPlace = searchIndexToPlace(key, node);
-            node.addSubnode(subnode, indexToPlace);
+            int indexToPlace = searchIndexToPlace(subnode.getKey(), node.getParent());
+            node.getParent().addSubnode(subnode, indexToPlace);
 
             if(!(node.getChildren().length < degree)){
                 // find median
@@ -73,8 +89,10 @@ public class B_Tree {
                     medianIndex = (this.degree/2);
                 }
                 // push median to parent
-                String poppedKey = node.popSubnode(medianIndex);
-                pushToParent(poppedKey, node.getParent());
+                String poppedKey = node.popSubnodeKey(medianIndex);
+                Node[] brokenNodes = breakNode(node, medianIndex);
+                Subnode subnodeToPush = new Subnode(brokenNodes[0], poppedKey, brokenNodes[1]);
+                pushToParent(subnodeToPush, node);
             }
 
 
@@ -104,7 +122,15 @@ public class B_Tree {
     }
 
     public int searchIndexToPlace(String key, Node node){
-        return 0;
+        int i = 0;
+        while(i < node.getChildren().length){
+            if(Interpreter.isGreater(key, node.getChildren()[i].getKey())){
+                i++;
+            } else{
+                return i;
+            }
+        }
+        return i;
     }
 
 }

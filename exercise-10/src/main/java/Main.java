@@ -19,12 +19,13 @@ public class Main {
             contentar[i] = contentar[i].replaceAll("[^\\w]", "");
         }
 
-        B_Tree mytree = new B_Tree(6);
+        B_Tree mytree = new B_Tree(4);
 
         for(String i: contentar){
-            System.out.println(i);
             mytree.insert(i);
         }
+
+        mytree.printInorder(mytree.getRoot());
 
     }
 

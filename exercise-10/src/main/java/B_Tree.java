@@ -150,4 +150,16 @@ public class B_Tree {
         return i;
     }
 
+    public void printInorder(Node node){
+
+        for(int i=0; i < node.getSubnodes().length; i++){
+            if(!node.isLeaf()){
+                printInorder(node.getSubnodes()[i].getLeftChild());
+            }
+            System.out.println(node.getSubnodes()[i].getKey());
+        }
+        if(!node.isLeaf()){
+            printInorder(node.getSubnodes()[node.getSubnodes().length-1].getRightChild());
+        }
+    }
 }

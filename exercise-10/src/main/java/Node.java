@@ -2,21 +2,21 @@
 public class Node {
 
     private Node parent;
-    private Subnode[] children;
+    private Subnode[] subnodes;
     private boolean isLeaf;
 
-    public Node(Node parent, Subnode[] children, boolean isLeaf) {
+    public Node(Node parent, Subnode[] subnodes, boolean isLeaf) {
         this.parent = parent;
-        this.children = children;
+        this.subnodes = subnodes;
         this.isLeaf = isLeaf;
     }
 
-    public Subnode[] getChildren() {
-        return children;
+    public Subnode[] getSubnodes() {
+        return subnodes;
     }
 
-    public void setChildren(Subnode[] children) {
-        this.children = children;
+    public void setSubnodes(Subnode[] subnodes) {
+        this.subnodes = subnodes;
     }
 
     public boolean isLeaf() {
@@ -36,38 +36,40 @@ public class Node {
     }
 
     public void addSubnode(Subnode subnode, int indexToPlace){
-        Subnode[] childrenUpdated = new Subnode[children.length+1];
+        Subnode[] childrenUpdated = new Subnode[getSubnodes().length+1];
 
-        if (indexToPlace==0){
-            System.arraycopy(getChildren(), 0, childrenUpdated, 1, getChildren().length-1);
+        if (indexToPlace==0){ // leftmost subnode
+            System.arraycopy(getSubnodes(), 0, childrenUpdated, 1, getSubnodes().length);
             childrenUpdated[0]=subnode;
-            setChildren(childrenUpdated);
-            if(!isLeaf()){
-                getChildren()[1].setLeft(subnode.getRight());
+            setSubnodes(childrenUpdated);
+            if(!isLeaf()&&(getSubnodes().length>1)){
+                getSubnodes()[1].setLeftChild(subnode.getRightChild());
             }
         }
-        else if(indexToPlace==getChildren().length) {
-            System.arraycopy(getChildren(), 0, childrenUpdated, 0, getChildren().length-1);
+        else if(indexToPlace== getSubnodes().length) { // rightmost subnode
+            System.arraycopy(getSubnodes(), 0, childrenUpdated, 0, getSubnodes().length);
             childrenUpdated[indexToPlace]=subnode;
-            setChildren(childrenUpdated);
+            setSubnodes(childrenUpdated);
             if(!isLeaf()){
-
+                getSubnodes()[indexToPlace-1].setRightChild(getSubnodes()[indexToPlace].getLeftChild());
             }
-        } else {
-            System.arraycopy(getChildren(), 0, childrenUpdated, 0, indexToPlace+1);
+        } else { // in between subnode
+            System.arraycopy(getSubnodes(), 0, childrenUpdated, 0, indexToPlace);
             childrenUpdated[indexToPlace]=subnode;
-            System.arraycopy(getChildren(), indexToPlace, childrenUpdated, indexToPlace+1, childrenUpdated.length-(indexToPlace+1));
-            setChildren(childrenUpdated);
+            System.arraycopy(getSubnodes(), indexToPlace, childrenUpdated, indexToPlace+1, childrenUpdated.length-(indexToPlace+1));
+            setSubnodes(childrenUpdated);
             if(!isLeaf()){
-                getChildren()[getChildren().length-2].setRight(subnode.getLeft());
+                getSubnodes()[indexToPlace-1].setRightChild(subnode.getLeftChild());
+                getSubnodes()[indexToPlace+1].setLeftChild(subnode.getRightChild());
+
             }
         }
     }
 
 
-    // won't reduce children array size
+    // won't reduce subnodes array size
     public String popSubnodeKey(int indexToPop){
-        return children[indexToPop].getKey();
+        return subnodes[indexToPop].getKey();
     }
 
 }

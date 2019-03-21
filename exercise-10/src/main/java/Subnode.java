@@ -1,26 +1,28 @@
 public class Subnode {
-    private Node right;
+    private Node leftChild;
     private String key;
-    private Node left;
+    private Node rightChild;
 
-    public Subnode(Node right, String key, Node left) {
-        this.right = right;
+
+
+    public Subnode(Node leftChild, String key, Node rightChild) {
+        this.rightChild = rightChild;
         this.key = key;
-        this.left = left;
+        this.leftChild = leftChild;
     }
 
     public Subnode(String key) {
-        this.right = null;
+        this.rightChild = null;
         this.key = key;
-        this.left = null;
+        this.leftChild = null;
     }
 
-    public Node getRight() {
-        return right;
+    public Node getRightChild() {
+        return rightChild;
     }
 
-    public void setRight(Node right) {
-        this.right = right;
+    public void setRightChild(Node rightChild) {
+        this.rightChild = rightChild;
     }
 
     public String getKey() {
@@ -31,11 +33,11 @@ public class Subnode {
         this.key = key;
     }
 
-    public Node getLeft() {
-        return left;
+    public Node getLeftChild() {
+        return leftChild;
     }
 
-    public void setLeft(Node left) {
-        this.left = left;
+    public void setLeftChild(Node leftChild) {
+        this.leftChild = leftChild;
     }
 }

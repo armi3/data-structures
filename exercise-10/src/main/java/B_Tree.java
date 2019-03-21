@@ -26,29 +26,31 @@ public class B_Tree {
 
     public void insert(String key){
         Subnode subnode = new Subnode(key);
-        if (root==null){
+        if (getRoot()==null){
             Subnode[] subnodes = new Subnode[1];
             subnodes[0] = subnode;
-            this.root = new Node(null, subnodes, true);
+            Node newRoot = new Node(null, subnodes, true);
+            setRoot(newRoot);
 
         }
         else {
-            Node nodeToPlace = searchNodeToPlace(key, root);
+            Node nodeToPlace = searchNodeToPlace(key, getRoot());
             int indexToPlace = searchIndexToPlace(key, nodeToPlace);
             nodeToPlace.addSubnode(subnode, indexToPlace);
 
-            if(!(nodeToPlace.getChildren().length < degree)){
+            if(!(nodeToPlace.getSubnodes().length < degree)){
                 // find median
                 int medianIndex;
-                if((this.degree&1)==0){ // even degree
-                    medianIndex = (this.degree/2)-1;
+                if((getDegree()&1)==0){ // even degree
+                    medianIndex = (getDegree()/2)-1;
                 } else{ // odd degree
-                    medianIndex = (this.degree/2);
+                    medianIndex = (getDegree()/2);
                 }
                 // push median to parent
                 String poppedKey = nodeToPlace.popSubnodeKey(medianIndex);
-                Node[] brokenNodes = breakNode(nodeToPlace, medianIndex);
+                Node[] brokenNodes = breakNode(nodeToPlace, medianIndex); // left, right
                 Subnode subnodeToPush = new Subnode(brokenNodes[0], poppedKey, brokenNodes[1]);
+                // assing parent somewhere in here ?
                 pushToParent(subnodeToPush, nodeToPlace);
             }
         }
@@ -56,9 +58,9 @@ public class B_Tree {
 
     public Node[] breakNode(Node nodeToBreak, int medianIndex){
         Subnode[] childrenLeft = new Subnode[medianIndex];
-        Subnode[] childrenRight = new Subnode[nodeToBreak.getChildren().length-medianIndex-1];
-        System.arraycopy(nodeToBreak.getChildren(), 0, childrenLeft, 0, medianIndex);
-        System.arraycopy(nodeToBreak.getChildren(), medianIndex+1, childrenRight, 0, nodeToBreak.getChildren().length-medianIndex-1);
+        Subnode[] childrenRight = new Subnode[nodeToBreak.getSubnodes().length-medianIndex-1];
+        System.arraycopy(nodeToBreak.getSubnodes(), 0, childrenLeft, 0, medianIndex);
+        System.arraycopy(nodeToBreak.getSubnodes(), medianIndex+1, childrenRight, 0, nodeToBreak.getSubnodes().length-medianIndex-1);
 
         Node left = new Node(nodeToBreak.getParent(), childrenLeft, nodeToBreak.isLeaf());
         Node right = new Node(nodeToBreak.getParent(), childrenRight, nodeToBreak.isLeaf());
@@ -67,32 +69,36 @@ public class B_Tree {
         return brokenNodes;
     }
 
-    // receives subnode already with children
-    public void pushToParent(Subnode subnode, Node node){
-        if(node.getParent()==null){
-            Subnode[] subnodes = new Subnode[1];
-            subnodes[0] = subnode;
-            Node newRoot = new Node(null, subnodes, false);
-            this.root = newRoot;
-            node.setParent(this.root);
+    // receives subnode already with children (broken nodes)
+    public void pushToParent(Subnode subnode, Node nodeOverflowed){
+        if(nodeOverflowed.getParent()==null){
+            Subnode[] onlySubnode = new Subnode[1];
+            onlySubnode[0] = subnode;
+            Node newRoot = new Node(null, onlySubnode, false);
+
+            onlySubnode[0].getRightChild().setParent(newRoot);
+            onlySubnode[0].getLeftChild().setParent(newRoot);
+
+            setRoot(newRoot);
+            nodeOverflowed.setParent(getRoot());
         }
         else {
-            int indexToPlace = searchIndexToPlace(subnode.getKey(), node.getParent());
-            node.getParent().addSubnode(subnode, indexToPlace);
+            int indexToPlace = searchIndexToPlace(subnode.getKey(), nodeOverflowed.getParent());
+            nodeOverflowed.getParent().addSubnode(subnode, indexToPlace);
 
-            if(!(node.getChildren().length < degree)){
+            if(!(nodeOverflowed.getSubnodes().length < degree)){
                 // find median
                 int medianIndex;
-                if((this.degree&1)==0){ // even degree
-                    medianIndex = (this.degree/2)-1;
+                if((getDegree()&1)==0){ // even degree
+                    medianIndex = (getDegree()/2)-1;
                 } else{ // odd degree
-                    medianIndex = (this.degree/2);
+                    medianIndex = (getDegree()/2);
                 }
                 // push median to parent
-                String poppedKey = node.popSubnodeKey(medianIndex);
-                Node[] brokenNodes = breakNode(node, medianIndex);
+                String poppedKey = nodeOverflowed.popSubnodeKey(medianIndex);
+                Node[] brokenNodes = breakNode(nodeOverflowed, medianIndex);
                 Subnode subnodeToPush = new Subnode(brokenNodes[0], poppedKey, brokenNodes[1]);
-                pushToParent(subnodeToPush, node);
+                pushToParent(subnodeToPush, nodeOverflowed);
             }
 
 
@@ -103,28 +109,31 @@ public class B_Tree {
     // returns node where key goes
     public Node searchNodeToPlace(String key, Node node){
         int i = 0;
-        while(i < node.getChildren().length){
-            if(Interpreter.isGreater(key, node.getChildren()[i].getKey())){
+        while(i < node.getSubnodes().length-1){
+            if(Interpreter.isGreater(key, node.getSubnodes()[i].getKey())){
                 i++;
             } else{
                 if(!node.isLeaf()){
-                    searchNodeToPlace(key, node.getChildren()[i].getLeft());
+                    return searchNodeToPlace(key, node.getSubnodes()[i].getLeftChild());
                 }
                 else{
                     return node;
                 }
             }
         }
-        if(!node.isLeaf()){
-            searchNodeToPlace(key, node.getChildren()[i-1].getRight());
+        if((!node.isLeaf())&&i==0){
+            return searchNodeToPlace(key, node.getSubnodes()[i].getLeftChild());
+        }
+        else if(!node.isLeaf()){
+            return searchNodeToPlace(key, node.getSubnodes()[i].getRightChild());
         }
         return node;
     }
 
     public int searchIndexToPlace(String key, Node node){
         int i = 0;
-        while(i < node.getChildren().length){
-            if(Interpreter.isGreater(key, node.getChildren()[i].getKey())){
+        while(i < node.getSubnodes().length){
+            if(Interpreter.isGreater(key, node.getSubnodes()[i].getKey())){
                 i++;
             } else{
                 return i;

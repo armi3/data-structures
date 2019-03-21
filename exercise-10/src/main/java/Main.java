@@ -1,41 +1,32 @@
-import java.util.Arrays;
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
 
 public class Main {
-    public static void main(String[] args){
-        B_Tree mytree = new B_Tree(6);
-        String s = "Que soy su nene que soy su bebe Se pone loquita cuando me ve en la TV";
-        String[] words = s.split("\\s+");
-        for (int i = 0; i < words.length; i++) {
-            words[i] = words[i].replaceAll("[^\\w]", "");
+
+    public static String readFile(String path, Charset utf8) throws IOException {
+        byte[] encoded = Files.readAllBytes(Paths.get(path));
+        return new String(encoded, utf8);
+    }
+
+    public static void main(String[] args) throws IOException {
+        String content = readFile("./src/main/resources/words_alpha.txt", StandardCharsets.UTF_8);
+        String[] contentar = content.split("\\s+");
+        for (int i = 0; i < contentar.length; i++) {
+            contentar[i] = contentar[i].replaceAll("[^\\w]", "");
         }
-        String[] words2 = {"a", "b", "c", "d"};
-        System.out.println(Arrays.toString(words));
-        System.out.println("bbcita");
 
-//        for(String i: words){
-//            mytree.insert(i);
-//        }
+        B_Tree mytree = new B_Tree(6);
 
-        mytree.insert("c");
-        mytree.insert("c");
-        mytree.insert("c");
-        mytree.insert("c");
-        mytree.insert("c");
-        mytree.insert("c");
-        mytree.insert("b"); // 7 first after new root pushed
-        mytree.insert("a"); //8
-        mytree.insert("A");
-//        mytree.insert(words[3]);
-//        mytree.insert(words[4]);
-//        mytree.insert(words[5]);
-//        mytree.insert(words[0]);
-//        mytree.insert(words[3]);
-
-        if(Interpreter.isGreater("soy", "Que")){
-            System.out.println("bbcita is greater");
-        } else {
-            System.out.println("bbcita is NOT greater");
+        for(String i: contentar){
+            System.out.println(i);
+            mytree.insert(i);
         }
 
     }
+
+
 }

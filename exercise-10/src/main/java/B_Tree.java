@@ -98,7 +98,7 @@ public class B_Tree {
                 String poppedKey = nodeOverflowed.popSubnodeKey(medianIndex);
                 Node[] brokenNodes = breakNode(nodeOverflowed, medianIndex);
                 Subnode subnodeToPush = new Subnode(brokenNodes[0], poppedKey, brokenNodes[1]);
-                pushToParent(subnodeToPush, nodeOverflowed);
+                pushToParent(subnodeToPush, nodeOverflowed.getParent());
             }
 
 
@@ -122,7 +122,15 @@ public class B_Tree {
             }
         }
         if((!node.isLeaf())&&i==0){
-            return searchNodeToPlace(key, node.getSubnodes()[i].getLeftChild());
+            if(Interpreter.isGreater(key, node.getSubnodes()[0].getKey())){
+                return searchNodeToPlace(key, node.getSubnodes()[i].getRightChild());
+
+            }
+            else{
+                return searchNodeToPlace(key, node.getSubnodes()[i].getLeftChild());
+
+            }
+
         }
         else if(!node.isLeaf()){
             return searchNodeToPlace(key, node.getSubnodes()[i].getRightChild());

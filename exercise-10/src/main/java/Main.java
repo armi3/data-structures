@@ -7,6 +7,8 @@ import java.nio.file.Paths;
 
 public class Main {
 
+
+
     public static String readFile(String path, Charset utf8) throws IOException {
         byte[] encoded = Files.readAllBytes(Paths.get(path));
         return new String(encoded, utf8);
@@ -19,13 +21,13 @@ public class Main {
             contentar[i] = contentar[i].replaceAll("[^\\w]", "");
         }
 
-        B_Tree mytree = new B_Tree(4);
+        B_Tree mytree = new B_Tree(10);
 
         for(String i: contentar){
             mytree.insert(i);
         }
 
-        mytree.printInorder(mytree.getRoot());
+        mytree.printInorder(mytree.root);
 
     }
 

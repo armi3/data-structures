@@ -1,147 +1,116 @@
 public class B_Tree {
 
-    private Node root;
-    private int degree;
+    public Node root;
+    public int degree;
+    public int median;
 
-    public B_Tree(int degree) {
+    public B_Tree(int m) {
         this.root = null;
-        this.degree = degree;
-    }
-
-    public Node getRoot() {
-        return root;
-    }
-
-    public void setRoot(Node root) {
-        this.root = root;
-    }
-
-    public int getDegree() {
-        return degree;
-    }
-
-    public void setDegree(int degree) {
-        this.degree = degree;
+        this.degree = m;
+        if((degree&1)==0){ // even degree
+            this.median = (degree/2)-1;
+        } else{ // odd degree
+            this.median = (degree/2);
+        }
     }
 
     public void insert(String key){
-        Subnode subnode = new Subnode(key);
-        if (getRoot()==null){
-            Subnode[] subnodes = new Subnode[1];
-            subnodes[0] = subnode;
-            Node newRoot = new Node(null, subnodes, true);
-            setRoot(newRoot);
-
+        if (root==null){ // first insert case
+            root = new Node(degree);
+            root.keys[0] = key;
         }
         else {
-            Node nodeToPlace = searchNodeToPlace(key, getRoot());
-            int indexToPlace = searchIndexToPlace(key, nodeToPlace);
-            nodeToPlace.addSubnode(subnode, indexToPlace);
+            Node leafToPlaceKey = getLeafToPlaceKey(key, root);
 
-            if(!(nodeToPlace.getSubnodes().length < degree)){
-                // find median
-                int medianIndex;
-                if((getDegree()&1)==0){ // even degree
-                    medianIndex = (getDegree()/2)-1;
-                } else{ // odd degree
-                    medianIndex = (getDegree()/2);
-                }
-                // push median to parent
-                String poppedKey = nodeToPlace.popSubnodeKey(medianIndex);
-                Node[] brokenNodes = breakNode(nodeToPlace, medianIndex); // left, right
-                Subnode subnodeToPush = new Subnode(brokenNodes[0], poppedKey, brokenNodes[1]);
-                // assing parent somewhere in here ?
-                pushToParent(subnodeToPush, nodeToPlace);
+
+            int indexToPlaceKey = getIndexToPlaceKey(key, leafToPlaceKey);
+            leafToPlaceKey.addKey(key, indexToPlaceKey);
+
+            overflowFixer(leafToPlaceKey);
+        }
+    }
+
+    public void overflowFixer(Node node){
+        if(node.keys[degree-1]!=null){ // check if node overflowed
+            // split node
+            Node[] splitNodes = splitNode(node);
+            // make split nodes parent to their children (if node isn't leaf)
+            if(!node.isLeaf){
+                updateParentInChildren(splitNodes[0]);
+                updateParentInChildren(splitNodes[1]);
+            }
+            // push median key to parent
+                // node isn't root  ->  push to existing parent
+            if(node.parent!=null){
+                int indexToPlaceKey = getIndexToPlaceKey(node.keys[median], node.parent);
+                node.parent.addKey(node.keys[median], indexToPlaceKey);
+                // make split nodes children to node's parent
+                node.parent.addChildren(splitNodes, indexToPlaceKey);
+                overflowFixer(node.parent);
+            }
+                // node is root     ->  create parent, make new root
+            else {
+                root = new Node(degree);
+                root.keys[0] = node.keys[median];
+                // make split nodes children to node's parent
+                splitNodes[0].parent = root;
+                splitNodes[1].parent = root;
+                root.isLeaf = false;
+                root.addChildren(splitNodes, 0);
+            }
+            // check if parent overflowed (only if root)
+            //overflowFixer(node.parent);
+        }
+    }
+
+    public Node[] splitNode(Node node){
+        Node left = new Node(degree);
+        left.parent = node.parent;
+        left.isLeaf = node.isLeaf;
+        System.arraycopy(node.keys, 0, left.keys, 0, median);
+        System.arraycopy(node.children, 0, left.children, 0, median+1);
+
+        Node right = new Node(degree);
+        right.parent = node.parent;
+        right.isLeaf = node.isLeaf;
+        System.arraycopy(node.keys, median+1, right.keys, 0, degree-median);
+        System.arraycopy(node.children, median+1, right.children, 0, degree-median);
+
+        Node[] splitNodes = {left, right};
+        return splitNodes;
+    }
+
+    public void updateParentInChildren(Node node){
+        for (Node i : node.children){
+            if(i!=null){
+                i.parent = node;
             }
         }
     }
 
-    public Node[] breakNode(Node nodeToBreak, int medianIndex){
-        Subnode[] childrenLeft = new Subnode[medianIndex];
-        Subnode[] childrenRight = new Subnode[nodeToBreak.getSubnodes().length-medianIndex-1];
-        System.arraycopy(nodeToBreak.getSubnodes(), 0, childrenLeft, 0, medianIndex);
-        System.arraycopy(nodeToBreak.getSubnodes(), medianIndex+1, childrenRight, 0, nodeToBreak.getSubnodes().length-medianIndex-1);
-
-        Node left = new Node(nodeToBreak.getParent(), childrenLeft, nodeToBreak.isLeaf());
-        Node right = new Node(nodeToBreak.getParent(), childrenRight, nodeToBreak.isLeaf());
-
-        Node[] brokenNodes = {left, right};
-        return brokenNodes;
-    }
-
-    // receives subnode already with children (broken nodes)
-    public void pushToParent(Subnode subnode, Node nodeOverflowed){
-        if(nodeOverflowed.getParent()==null){
-            Subnode[] onlySubnode = new Subnode[1];
-            onlySubnode[0] = subnode;
-            Node newRoot = new Node(null, onlySubnode, false);
-
-            onlySubnode[0].getRightChild().setParent(newRoot);
-            onlySubnode[0].getLeftChild().setParent(newRoot);
-
-            setRoot(newRoot);
-            nodeOverflowed.setParent(getRoot());
-        }
-        else {
-            int indexToPlace = searchIndexToPlace(subnode.getKey(), nodeOverflowed.getParent());
-            nodeOverflowed.getParent().addSubnode(subnode, indexToPlace);
-
-            if(!(nodeOverflowed.getSubnodes().length < degree)){
-                // find median
-                int medianIndex;
-                if((getDegree()&1)==0){ // even degree
-                    medianIndex = (getDegree()/2)-1;
-                } else{ // odd degree
-                    medianIndex = (getDegree()/2);
-                }
-                // push median to parent
-                String poppedKey = nodeOverflowed.popSubnodeKey(medianIndex);
-                Node[] brokenNodes = breakNode(nodeOverflowed, medianIndex);
-                Subnode subnodeToPush = new Subnode(brokenNodes[0], poppedKey, brokenNodes[1]);
-                pushToParent(subnodeToPush, nodeOverflowed.getParent());
-            }
-
-
-        }
-
-    }
-
-    // returns node where key goes
-    public Node searchNodeToPlace(String key, Node node){
+    public Node getLeafToPlaceKey(String key, Node node){
         int i = 0;
-        while(i < node.getSubnodes().length-1){
-            if(Interpreter.isGreater(key, node.getSubnodes()[i].getKey())){
+        while(node.keys[i]!=null && i<(degree-1)){
+            if(Interpreter.isGreater(key, node.keys[i])){
                 i++;
-            } else{
-                if(!node.isLeaf()){
-                    return searchNodeToPlace(key, node.getSubnodes()[i].getLeftChild());
-                }
-                else{
+            } else {
+                if(!node.isLeaf && (i+1)<node.keys.length){
+                    return getLeafToPlaceKey(key, node.children[i]);
+                } else {
                     return node;
                 }
             }
         }
-        if((!node.isLeaf())&&i==0){
-            if(Interpreter.isGreater(key, node.getSubnodes()[0].getKey())){
-                return searchNodeToPlace(key, node.getSubnodes()[i].getRightChild());
-
-            }
-            else{
-                return searchNodeToPlace(key, node.getSubnodes()[i].getLeftChild());
-
-            }
-
-        }
-        else if(!node.isLeaf()){
-            return searchNodeToPlace(key, node.getSubnodes()[i].getRightChild());
+        if(!node.isLeaf){
+            return getLeafToPlaceKey(key, node.children[i]);
         }
         return node;
     }
 
-    public int searchIndexToPlace(String key, Node node){
+    public int getIndexToPlaceKey(String key, Node node){
         int i = 0;
-        while(i < node.getSubnodes().length){
-            if(Interpreter.isGreater(key, node.getSubnodes()[i].getKey())){
+        while(node.keys[i]!=null && (i < degree)){
+            if(Interpreter.isGreater(key, node.keys[i])){
                 i++;
             } else{
                 return i;
@@ -150,16 +119,17 @@ public class B_Tree {
         return i;
     }
 
-    public void printInorder(Node node){
 
-        for(int i=0; i < node.getSubnodes().length; i++){
-            if(!node.isLeaf()){
-                printInorder(node.getSubnodes()[i].getLeftChild());
+    public void printInorder(Node node){
+        int i = 0;
+        while(node.children[i]!=null && i<(degree-1)){
+            if(!node.isLeaf){
+                printInorder(node.children[i]);
+                i++;
+            } else {
+                System.out.println(node.toString());
             }
-            System.out.println(node.getSubnodes()[i].getKey());
         }
-        if(!node.isLeaf()){
-            printInorder(node.getSubnodes()[node.getSubnodes().length-1].getRightChild());
-        }
+        System.out.println(node.toString());
     }
 }

@@ -80,7 +80,7 @@ public class B_Tree {
         return splitNodes;
     }
 
-    public void updateParentInChildren(Node node){
+    public static void updateParentInChildren(Node node){
         for (Node i : node.children){
             if(i!=null){
                 i.parent = node;
@@ -132,4 +132,24 @@ public class B_Tree {
         }
         System.out.println(node.toString());
     }
+
+    public boolean search(String key, Node node){
+        int i = 0;
+        while(node.keys[i]!=null && i<(degree-1)){
+            if(Interpreter.isGreater(key, node.keys[i])){
+                i++;
+            } else {
+                if(!node.isLeaf && (i+1)<node.keys.length){
+                    return search(key, node.children[i]);
+                } else {
+                    return true;
+                }
+            }
+        }
+        if(!node.isLeaf){
+            return search(key, node.children[i]);
+        }
+        return true;
+    }
+
 }

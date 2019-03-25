@@ -9,6 +9,10 @@ Course exercises implementing, testing and profiling data structures in Java, C 
 5. [exercise 5 (Strings)](#exercise-5-strings)
 6. [exercise 6 (Structs)](#exercise-6-structs)
 7. [exercise 7 (Circular Linked List)](#exercise-7-circular-linked-list)
+8. [exercise 8 (Queue and Simply Linked List)](#exercise-8-queue-and-simply-linked-list)
+9. [exercise 9 (Parse Tree)](#exercise-9-parse-tree)
+10. [exercise 10 (B-tree)](#exercise-10-b-tree)
+
 
 # exercise 1
 - Algorithm to find the sum of the first N natural numbers.
@@ -154,3 +158,17 @@ valgrind callgrind_annotate --tree=both --auto=yes profiling/callgrind_functions
 - Demo: https://youtu.be/dOMIVKmkuMM
 - **Unit testing** with JUnit 5
 - **Profiling** with JProfiler
+
+# exercise 8 (Queue and Simply Linked List)
+
+# exercise 9 (Parse Tree)
+
+# exercise 10 (B-tree)
+- Compares linked list performance versus b-tree.
+- Code in Java
+- Demo: https://youtu.be/1zJ_lNlY4vg
+- **Unit testing** with TestNG
+- **Profiling** with JProfiler
+
+## resources
+- https://www.cs.usfca.edu/~galles/visualization/BTree.html

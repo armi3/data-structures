@@ -59,13 +59,13 @@ public class Main {
         System.out.println("\nNodes traversed in linked list: " + list.search(answer2));
         long endTimeS1 = System.nanoTime();
         long timeElapsedS1 = endTimeS1 - startTimeS1;
-        System.out.println("\nSearch time in linked list, in seconds: " + timeElapsedS1/1000000000);
+        System.out.println("\nSearch time in linked list, in miliseconds: " + timeElapsedS1/1000000);
 
         long startTimeS2 = System.nanoTime();
         System.out.println("\nWord found in b-tree: " + tree.search(answer2, tree.root));
         long endTimeS2 = System.nanoTime();
         long timeElapsedS2 = endTimeS2 - startTimeS2;
-        System.out.println("\nSearch time in b-tree, in seconds: " + timeElapsedS2/1000000000);
+        System.out.println("\nSearch time in b-tree, in miliseconds: " + timeElapsedS2/1000000);
 
     }
 

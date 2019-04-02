@@ -2,37 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca66b5dd-a3a8-49ac-b9e6-5c3d7e9944b3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ControllerInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Factory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Container.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/EmployeeInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/EmployeePortfolio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/EmployeePortfolioInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Schedule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/View.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ViewInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/database.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Model/EmployeeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/database.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise-8/src/Factory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Container.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise-8/src/Model/Container.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise-8/src/Model/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/EmployeeInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise-8/src/Model/EmployeeInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/EmployeePortfolio.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise-8/src/Model/EmployeePortfolio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/EmployeePortfolioInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise-8/src/Model/EmployeePortfolioInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Schedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise-8/src/Model/Schedule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise-10/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise-10/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -54,7 +24,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+              <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -115,8 +85,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -175,6 +143,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -280,7 +250,10 @@
       <option name="presentableId" value="Default" />
       <updated>1553562171891</updated>
       <workItem from="1554089478702" duration="1039000" />
-      <workItem from="1554090573320" duration="691000" />
+      <workItem from="1554090573320" duration="1249000" />
+      <workItem from="1554172254956" duration="519000" />
+      <workItem from="1554172801857" duration="40000" />
+      <workItem from="1554172871337" duration="312000" />
     </task>
     <servers />
   </component>
@@ -299,13 +272,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1730000" />
+    <option name="totallyTimeSpent" value="3159000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="756" extended-state="6" />
+    <frame x="0" y="0" width="1280" height="756" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25767368" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26979" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -313,8 +286,6 @@
       <window_info id="Image Layers" order="5" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Learn" order="7" />
-      <window_info anchor="bottom" id="Run with VisualVM" />
-      <window_info anchor="bottom" id="Debug with VisualVM" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3298193" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3298193" />
@@ -323,13 +294,15 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Inspection Results" order="7" weight="0.3298193" />
-      <window_info anchor="bottom" id="JProfiler" order="8" weight="0.3298193" />
+      <window_info anchor="bottom" id="JProfiler" order="8" sideWeight="0.49919224" weight="0.3298193" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3298193" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" visible="true" weight="0.3298193" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50080776" side_tool="true" visible="true" weight="0.3298193" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3298193" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
+      <window_info anchor="bottom" id="Run with VisualVM" order="15" />
+      <window_info anchor="bottom" id="Debug with VisualVM" order="16" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -488,11 +461,12 @@
           <nodes />
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="459.5" y="197.0" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="460.0" y="197.0" />
           <SelectedNodes />
           <Categories>
             <Category>All</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
           <VISIBILITY>Details</VISIBILITY>
         </state>
       </provider>
@@ -512,7 +486,7 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="138.5" y="160.0" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="139.0" y="160.0" />
           <SelectedNodes />
           <Categories />
           <SCOPE>All</SCOPE>
@@ -541,7 +515,7 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="0.8090349075975359" x="215.5" y="233.5" />
+          <settings layout="Hierarchic Group" zoom="0.8090349075975359" x="216.0" y="234.0" />
           <SelectedNodes />
           <Categories />
           <SCOPE>All</SCOPE>
@@ -557,11 +531,12 @@
           <nodes />
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="459.5" y="197.0" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="460.0" y="197.0" />
           <SelectedNodes />
           <Categories>
             <Category>All</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
           <VISIBILITY>Details</VISIBILITY>
         </state>
       </provider>
@@ -569,7 +544,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

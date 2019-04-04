@@ -160,6 +160,11 @@ valgrind callgrind_annotate --tree=both --auto=yes profiling/callgrind_functions
 - **Profiling** with JProfiler
 
 # exercise 8 (Queue and Simply Linked List)
+- Stores scheduled jobs in queue and updates linked list of employees.
+- Code in Java
+- **Unit testing** with TestNG
+- **Profiling** with JProfiler
+- Demo: https://youtu.be/9Br9xS27suI
 
 # exercise 9 (Parse Tree)
 

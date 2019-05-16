@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="main_anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1280.0" style="-fx-background-color: #3d3d49#3d3d49;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane fx:id="menu_anchor" layoutX="35.0" layoutY="33.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #41414c#41414c;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="spotlight_btn" mnemonicParsing="false" prefHeight="84.0" prefWidth="200.0" style="-fx-background-radius: 0; -fx-background-color: #505060#505060;" text="Spotlight" textAlignment="CENTER" textFill="#141414" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="Myriad Hebrew Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="lab_btn" layoutX="-2.0" layoutY="91.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="397.0" style="-fx-background-radius: 0; -fx-background-color: #505060#505060;" text="Lab" textAlignment="CENTER" textFill="#141414" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="84.0">
+               <font>
+                  <Font name="Myriad Hebrew Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="subs_btn" layoutX="20.0" layoutY="208.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="200.0" style="-fx-background-radius: 0; -fx-background-color: #505060#505060;" text="Subscriptions" textAlignment="CENTER" textFill="#141414" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="168.0">
+               <font>
+                  <Font name="Myriad Hebrew Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="hist_btn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="200.0" style="-fx-background-radius: 0; -fx-background-color: #505060#505060;" text="History" textAlignment="CENTER" textFill="#141414" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="252.0">
+               <font>
+                  <Font name="Myriad Hebrew Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="work_anchor" layoutX="210.0" layoutY="253.0" prefWidth="1080.0" style="-fx-background-color: #33333a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="flow_anchor" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fx:id="next_img" fitHeight="80.0" fitWidth="80.0" layoutX="940.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <image>
+                        <Image url="@assets/next.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="prev_img" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" rotate="180.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <image>
+                        <Image url="@assets/next.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="work_anchor" prefHeight="200.0" prefWidth="800.0" style="-fx-background-color: #33333a#33333a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
+               <children>
+                  <Pane fx:id="spotlight_pane" style="-fx-background-color: #33333a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fx:id="spot_img1" fitHeight="300.0" fitWidth="300.0" layoutX="184.0" layoutY="2.0" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/90s.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="spot_img2" fitHeight="300.0" fitWidth="300.0" layoutX="580.0" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/poets.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="spot_img3" fitHeight="300.0" fitWidth="300.0" layoutX="184.0" layoutY="330.0" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/emf.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="spot_img4" fitHeight="300.0" fitWidth="300.0" layoutX="580.0" layoutY="330.0" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/zodiac.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="subs_pane" layoutX="10.0" layoutY="10.0" style="-fx-background-color: #33333a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fx:id="upsubs_img" fitHeight="68.0" fitWidth="60.0" layoutX="495.0" layoutY="-16.0" pickOnBounds="true" preserveRatio="true" rotate="270.0">
+                           <image>
+                              <Image url="@assets/next.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="downsubs_img" fitHeight="68.0" fitWidth="60.0" layoutX="497.0" layoutY="632.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+                           <image>
+                              <Image url="@assets/next.png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="subs1_txt" fill="WHITE" layoutX="409.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Next boxit arriving in: 3 days" textAlignment="CENTER" wrappingWidth="231.83999633789074">
+                           <font>
+                              <Font name="MyriadPro-Semibold" size="13.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="save_btn" layoutX="841.0" layoutY="100.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="141.0" style="-fx-background-color: #444444; -fx-background-radius: 0;" text="Save and boxit!" textFill="WHITE">
+                           <font>
+                              <Font name="Myriad Arabic Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <AnchorPane fx:id="subs1" layoutX="244.0" layoutY="58.0" prefHeight="144.0" prefWidth="567.0" style="-fx-background-color: #b9b7bc;">
+                           <children>
+                              <Pane layoutX="298.0" layoutY="57.0" prefHeight="73.0" prefWidth="238.0" style="-fx-background-color: #d2d1d6;" />
+                              <Text fx:id="name1" fill="#a1a1a1" layoutX="28.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OOOOOOOOOOOOOOOOOOOOOOOOO27" wrappingWidth="506.0346374511719">
+                                 <font>
+                                    <Font name="Myriad Arabic Bold" size="36.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="WHITE" layoutX="26.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unit price:" textAlignment="CENTER" wrappingWidth="119.99999999999994" AnchorPane.topAnchor="64.1071424484253">
+                                 <font>
+                                    <Font name="Myriad Arabic Bold" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="WHITE" layoutX="159.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subscription:" textAlignment="CENTER" wrappingWidth="119.99999999999994" AnchorPane.topAnchor="64.1071424484253">
+                                 <font>
+                                    <Font name="Myriad Arabic Bold" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="WHITE" layoutX="292.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total:" textAlignment="CENTER" wrappingWidth="119.99999999999994" AnchorPane.topAnchor="64.1071424484253">
+                                 <font>
+                                    <Font name="Myriad Arabic Bold" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="WHITE" layoutX="421.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saving:" textAlignment="CENTER" wrappingWidth="119.99999999999994" AnchorPane.topAnchor="64.1071424484253">
+                                 <font>
+                                    <Font name="Myriad Arabic Bold" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="price1" fill="#6d607c" layoutX="26.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unit price:" textAlignment="CENTER" wrappingWidth="119.99999999999994">
+                                 <font>
+                                    <Font name="Myriad Arabic" size="27.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="subsmode1" fill="#6d607c" layoutX="159.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subscription:" textAlignment="CENTER" wrappingWidth="119.99999999999994">
+                                 <font>
+                                    <Font name="Myriad Arabic" size="27.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="tot1" fill="#6d607c" layoutX="292.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total:" textAlignment="CENTER" wrappingWidth="119.99999999999994">
+                                 <font>
+                                    <Font name="Myriad Arabic" size="27.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="saving1" fill="#6d607c" layoutX="421.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saving:" textAlignment="CENTER" wrappingWidth="119.99999999999994">
+                                 <font>
+                                    <Font name="Myriad Arabic" size="27.0" />
+                                 </font>
+                              </Text>
+                              <ChoiceBox fx:id="subsmode_cbox" layoutX="146.0" layoutY="91.0" prefHeight="35.0" prefWidth="141.0" style="-fx-background-color: #444444;" />
+                           </children>
+                        </AnchorPane>
+                        <Circle fx:id="subs2_circle" fill="#4a464f" layoutX="527.0" layoutY="227.0" radius="10.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                        <Text fx:id="subs2_txt" fill="WHITE" layoutX="410.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Next boxit arriving in: 3 days" textAlignment="CENTER" wrappingWidth="231.83999633789074">
+                           <font>
+                              <Font name="MyriadPro-Semibold" size="13.0" />
+                           </font>
+                        </Text>
+                        <AnchorPane fx:id="subs2" layoutX="245.0" layoutY="272.0" prefHeight="144.0" prefWidth="567.0" style="-fx-background-color: #b9b7bc;">
+                           <children>
+                              <Pane layoutX="298.0" layoutY="57.0" prefHeight="73.0" prefWidth="238.0" style="-fx-background-color: #d2d1d6;" />
+                              <Text fx:id="name2" fill="#a1a1a1" layoutX="28.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OOOOOOOOOOOOOOOOOOOOOOOOO27" wrappingWidth="506.0346374511719">
+                                 <font>
+                                    <Font name="Myriad Arabic Bold" size="36.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="WHITE" layoutX="26.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unit price:" textAlignment="CENTER" wrappingWidth="119.99999999999994" AnchorPane.topAnchor="64.1071424484253">
+                                 <font>
+                                    <Font name="Myriad Arabic Bold" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="WHITE" layoutX="159.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subscription:" textAlignment="CENTER" wrappingWidth="119.99999999999994" AnchorPane.topAnchor="64.1071424484253">
+                                 <font>
+                                    <Font name="Myriad Arabic Bold" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="WHITE" layoutX="292.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total:" textAlignment="CENTER" wrappingWidth="119.99999999999994" AnchorPane.topAnchor="64.1071424484253">
+                                 <font>
+                                    <Font name="Myriad Arabic Bold" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="WHITE" layoutX="421.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saving:" textAlignment="CENTER" wrappingWidth="119.99999999999994" AnchorPane.topAnchor="64.1071424484253">
+                                 <font>
+                                    <Font name="Myriad Arabic Bold" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="price2" fill="#6d607c" layoutX="26.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unit price:" textAlignment="CENTER" wrappingWidth="119.99999999999994">
+                                 <font>
+                                    <Font name="Myriad Arabic" size="27.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="subsmode2" fill="#6d607c" layoutX="159.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subscription:" textAlignment="CENTER" wrappingWidth="119.99999999999994">
+                                 <font>
+                                    <Font name="Myriad Arabic" size="27.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="tot2" fill="#6d607c" layoutX="292.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total:" textAlignment="CENTER" wrappingWidth="119.99999999999994">
+                                 <font>
+                                    <Font name="Myriad Arabic" size="27.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="saving2" fill="#6d607c" layoutX="421.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saving:" textAlignment="CENTER" wrappingWidth="119.99999999999994">
+                                 <font>
+                                    <Font name="Myriad Arabic" size="27.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                        <Circle fx:id="subs3_circle" fill="#4a464f" layoutX="527.0" layoutY="442.0" radius="10.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                        <Text fx:id="subs3_txt" fill="WHITE" layoutX="412.0" layoutY="476.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Next boxit arriving in: 3 days" textAlignment="CENTER" wrappingWidth="231.83999633789074">
+                           <font>
+                              <Font name="MyriadPro-Semibold" size="13.0" />
+                           </font>
+                        </Text>
+                        <AnchorPane fx:id="subs3" layoutX="246.0" layoutY="483.0" prefHeight="144.0" prefWidth="567.0" style="-fx-background-color: #b9b7bc;">
+                           <children>
+                              <Pane layoutX="298.0" layoutY="57.0" prefHeight="73.0" prefWidth="238.0" style="-fx-background-color: #d2d1d6;" />
+                              <Text fx:id="name3" fill="#a1a1a1" layoutX="28.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OOOOOOOOOOOOOOOOOOOOOOOOO27" wrappingWidth="506.0346374511719">
+                                 <font>
+                                    <Font name="Myriad Arabic Bold" size="36.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="WHITE" layoutX="26.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unit price:" textAlignment="CENTER" wrappingWidth="119.99999999999994" AnchorPane.topAnchor="64.1071424484253">
+                                 <font>
+                                    <Font name="Myriad Arabic Bold" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="WHITE" layoutX="159.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subscription:" textAlignment="CENTER" wrappingWidth="119.99999999999994" AnchorPane.topAnchor="64.1071424484253">
+                                 <font>
+                                    <Font name="Myriad Arabic Bold" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="WHITE" layoutX="292.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total:" textAlignment="CENTER" wrappingWidth="119.99999999999994" AnchorPane.topAnchor="64.1071424484253">
+                                 <font>
+                                    <Font name="Myriad Arabic Bold" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="WHITE" layoutX="421.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saving:" textAlignment="CENTER" wrappingWidth="119.99999999999994" AnchorPane.topAnchor="64.1071424484253">
+                                 <font>
+                                    <Font name="Myriad Arabic Bold" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="price3" fill="#6d607c" layoutX="26.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unit price:" textAlignment="CENTER" wrappingWidth="119.99999999999994">
+                                 <font>
+                                    <Font name="Myriad Arabic" size="27.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="subsmode3" fill="#6d607c" layoutX="159.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subscription:" textAlignment="CENTER" wrappingWidth="119.99999999999994">
+                                 <font>
+                                    <Font name="Myriad Arabic" size="27.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="tot3" fill="#6d607c" layoutX="292.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total:" textAlignment="CENTER" wrappingWidth="119.99999999999994">
+                                 <font>
+                                    <Font name="Myriad Arabic" size="27.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="saving3" fill="#6d607c" layoutX="421.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saving:" textAlignment="CENTER" wrappingWidth="119.99999999999994">
+                                 <font>
+                                    <Font name="Myriad Arabic" size="27.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="lab_pane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #33333a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Group fx:id="area_group1" layoutX="35.900001525878906">
+                           <children>
+                              <Label fx:id="mold_lbl" layoutX="74.0999984741211" layoutY="50.0" prefHeight="50.0" prefWidth="100.0" text="Mold" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="Myriad Hebrew Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox fx:id="mold_cbox" layoutX="4.099998474121094" layoutY="100.0" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #444444;" />
+                              <Button fx:id="random_btn" layoutX="4.099998474121094" layoutY="180.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #444444; -fx-background-radius: 0;" text="Randomize!" textFill="WHITE">
+                                 <font>
+                                    <Font name="Myriad Arabic Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <ImageView fx:id="preview_img" fitHeight="250.0" fitWidth="500.0" layoutX="254.0999984741211" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../../Dropbox/diario%20en%20capturas%20y%20wallpapers/0EDDA4323.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Group>
+                        <Group fx:id="area_group2" layoutX="825.0" layoutY="90.0">
+                           <children>
+                              <Pane fx:id="unitprice_pane" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                                 <children>
+                                    <Text fx:id="unitprice_txt" fill="#b1b1b1" layoutX="10.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unit price">
+                                       <font>
+                                          <Font name="Myriad Arabic Bold" size="21.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="unitpriceoutput_txt" fill="#5b536b" layoutX="100.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unit price">
+                                       <font>
+                                          <Font name="Myriad Arabic Bold" size="21.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </Pane>
+                              <Pane fx:id="quantity_pane" layoutY="39.0" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                                 <children>
+                                    <TextField fx:id="quantityinput_txtf" layoutX="85.0" layoutY="4.0" prefWidth="100.0" />
+                                    <Text fx:id="quantity_txt" fill="#b1b1b1" layoutX="10.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity">
+                                       <font>
+                                          <Font name="Myriad Arabic Bold" size="21.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </Pane>
+                              <Pane fx:id="subtotal_pane" layoutY="78.0" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #e2e2e2;">
+                                 <children>
+                                    <Text fx:id="subtotal_txt" fill="#b1b1b1" layoutX="9.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subtotal*">
+                                       <font>
+                                          <Font name="Myriad Arabic Bold" size="21.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="subtotaloutput_txt" fill="#5b536b" layoutX="100.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unit price">
+                                       <font>
+                                          <Font name="Myriad Arabic Bold" size="21.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </Pane>
+                              <Text fx:id="deliveryfee_txt" fill="WHITE" layoutX="74.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* plus Q15.00 delivery fee">
+                                 <font>
+                                    <Font name="Myriad Hebrew" size="12.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Group>
+                        <Pane fx:id="recipe_pane" layoutX="50.0" layoutY="279.0" prefHeight="380.0" prefWidth="470.0" style="-fx-background-color: #3b3b42;">
+                           <children>
+                              <Group layoutX="24.0">
+                                 <children>
+                                    <Label fx:id="palette_lbl" layoutX="73.0" prefHeight="50.0" prefWidth="120.0" text="Palette" textAlignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font name="Myriad Hebrew Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="categories_lbl" layoutX="277.0" prefHeight="50.0" prefWidth="120.0" text="Categories" textAlignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font name="Myriad Hebrew Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="ceiling_lbl" layoutY="305.0" prefHeight="50.0" prefWidth="200.0" text="Ceiling   Q.                      .00" textAlignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font name="Myriad Hebrew Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="ceilinginput_txtf" layoutX="93.0" layoutY="313.0" prefHeight="26.0" prefWidth="64.0" />
+                                    <Button fx:id="boxit_btn" layoutX="220.0" layoutY="312.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #444444; -fx-background-radius: 0;" text="Boxit!" textFill="WHITE">
+                                       <font>
+                                          <Font name="Myriad Arabic Bold" size="18.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </Group>
+                              <Pane fx:id="palette_pane" layoutX="23.0" layoutY="50.0" prefHeight="243.0" prefWidth="200.0" style="-fx-background-color: #33333a #33333a;">
+                                 <children>
+                                    <ImageView fx:id="prevpalette_img" fitHeight="43.0" fitWidth="43.0" layoutX="79.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true" rotate="270.0">
+                                       <image>
+                                          <Image url="@assets/next.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="nextpalette_img" fitHeight="43.0" fitWidth="43.0" layoutX="79.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+                                       <image>
+                                          <Image url="@assets/next.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="palette_img1" fitHeight="50.0" fitWidth="166.0" layoutX="18.0" layoutY="36.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@assets/warm.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="palette_img2" fitHeight="50.0" fitWidth="166.0" layoutX="18.0" layoutY="96.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@assets/cold.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="palette_img3" fitHeight="50.0" fitWidth="166.0" layoutX="17.0" layoutY="157.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@assets/neutral.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fx:id="palette_lbl1" layoutX="80.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Warm">
+                                       <font>
+                                          <Font name="Myriad Arabic Bold" size="21.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="palette_lbl2" layoutX="85.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cold">
+                                       <font>
+                                          <Font name="Myriad Arabic Bold" size="21.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="palette_lbl3" layoutX="76.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Neutral">
+                                       <font>
+                                          <Font name="Myriad Arabic Bold" size="21.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </Pane>
+                              <Pane fx:id="categories_pane" layoutX="244.0" layoutY="50.0" prefHeight="243.0" prefWidth="200.0" style="-fx-background-color: #33333a #33333a;">
+                                 <children>
+                                    <ImageView fx:id="prevcategories_img" fitHeight="43.0" fitWidth="43.0" layoutX="79.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true" rotate="270.0">
+                                       <image>
+                                          <Image url="@assets/next.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="nextcategories_img" fitHeight="43.0" fitWidth="43.0" layoutX="79.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+                                       <image>
+                                          <Image url="@assets/next.png" />
+                                       </image>
+                                    </ImageView>
+                                    <CheckBox fx:id="cb1" layoutX="35.0" layoutY="39.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="135.0" text="CheckBox">
+                                       <font>
+                                          <Font name="Myriad Arabic" size="20.0" />
+                                       </font>
+                                    </CheckBox>
+                                    <CheckBox fx:id="cb2" layoutX="35.0" layoutY="74.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="135.0" text="CheckBox">
+                                       <font>
+                                          <Font name="Myriad Arabic" size="20.0" />
+                                       </font>
+                                    </CheckBox>
+                                    <CheckBox fx:id="cb3" layoutX="35.0" layoutY="109.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="135.0" text="CheckBox">
+                                       <font>
+                                          <Font name="Myriad Arabic" size="20.0" />
+                                       </font>
+                                    </CheckBox>
+                                    <CheckBox fx:id="cb4" layoutX="35.0" layoutY="144.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="135.0" text="CheckBox">
+                                       <font>
+                                          <Font name="Myriad Arabic" size="20.0" />
+                                       </font>
+                                    </CheckBox>
+                                    <CheckBox fx:id="cb5" layoutX="35.0" layoutY="179.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="135.0" text="CheckBox">
+                                       <font>
+                                          <Font name="Myriad Arabic" size="20.0" />
+                                       </font>
+                                    </CheckBox>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="altbig_pane" layoutX="560.0" layoutY="279.0" prefHeight="380.0" prefWidth="470.0" style="-fx-background-color: #3b3b42;">
+                           <children>
+                              <Label fx:id="alt_lbl" layoutX="151.0" prefHeight="50.0" prefWidth="192.0" text="Alternatives for you" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="Myriad Hebrew Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Pane fx:id="alt_pane" layoutX="27.0" layoutY="52.0" prefHeight="300.0" prefWidth="416.0" style="-fx-background-color: #33333a #33333a;">
+                                 <children>
+                                    <ImageView fx:id="prevalt_img" fitHeight="43.0" fitWidth="43.0" layoutX="187.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true" rotate="270.0">
+                                       <image>
+                                          <Image url="@assets/next.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="nextalt_img" fitHeight="43.0" fitWidth="43.0" layoutX="187.0" layoutY="265.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+                                       <image>
+                                          <Image url="@assets/next.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="alt_img1" fitHeight="71.0" fitWidth="389.0" layoutX="14.0" layoutY="36.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@assets/alt_beret.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="alt_img2" fitHeight="71.0" fitWidth="389.0" layoutX="14.0" layoutY="115.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@assets/alt_beret.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="alt_img3" fitHeight="71.0" fitWidth="389.0" layoutX="14.0" layoutY="194.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@assets/alt_beret.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fx:id="alt_txt1" fill="WHITE" layoutX="32.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Warm" wrappingWidth="231.83999633789062">
+                                       <font>
+                                          <Font name="Myriad Arabic Bold" size="21.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="altprice_txt1" layoutX="314.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Warm" textAlignment="CENTER" wrappingWidth="73.83999633789062">
+                                       <font>
+                                          <Font name="Myriad Arabic Bold" size="21.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="alt_txt2" fill="WHITE" layoutX="31.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Warm" wrappingWidth="231.83999633789062">
+                                       <font>
+                                          <Font name="Myriad Arabic Bold" size="21.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="altprice_txt2" layoutX="313.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Warm" textAlignment="CENTER" wrappingWidth="73.83999633789062">
+                                       <font>
+                                          <Font name="Myriad Arabic Bold" size="21.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="alt_txt3" fill="WHITE" layoutX="31.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Warm" wrappingWidth="231.83999633789062">
+                                       <font>
+                                          <Font name="Myriad Arabic Bold" size="21.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="altprice_txt3" layoutX="313.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Warm" textAlignment="CENTER" wrappingWidth="73.83999633789062">
+                                       <font>
+                                          <Font name="Myriad Arabic Bold" size="21.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </Pane>
+                           </children></Pane>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

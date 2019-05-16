@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.CardPane?>
+<?import com.gluonhq.charm.glisten.control.Icon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="codes.fer.PrimaryController">
+   <children>
+      <BorderPane maxHeight="650.0" maxWidth="650.0" minHeight="650.0" minWidth="650.0" prefHeight="650.0" prefWidth="650.0">
+         <left>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <CardPane>
+                      <Label style="-fx-padding:10;" text="label1" />
+                      <Label style="-fx-padding:10;" text="label2" />
+                      <Label style="-fx-padding:10;" text="label3" />
+                  </CardPane>
+                  <Icon content="HELP_OUTLINE" />
+               </children>
+            </VBox>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>

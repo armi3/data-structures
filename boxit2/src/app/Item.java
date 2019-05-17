@@ -31,8 +31,8 @@ public class Item {
         //getClass().getResource("za.jpg").toExternalForm()
         //this.image = new Image(getClass().getResource("./src/app/assets/inventory/" + id + ".png").toExternalForm());
         //this.alt_image = new Image(getClass().getResource("./src/app/assets/alts/" + id + ".png").toExternalForm());
-        this.image = new Image(new File("./src/app/assets/inventory/" + id + ".png").toURI().toString());
-        this.alt_image = new Image(new File("./src/app/assets/alts/" + id + ".png").toURI().toString());
+        //this.image = new Image(new File("./src/app/assets/inventory/" + id + ".png").toURI().toString());
+        //this.alt_image = new Image(new File("./src/app/assets/alts/" + id + ".png").toURI().toString());
     }
 
     public String getId() {

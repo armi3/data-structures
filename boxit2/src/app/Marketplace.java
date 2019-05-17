@@ -60,25 +60,25 @@ public class Marketplace {
         String[] beautySeed = {"SQ36I87", "OC17I77", "SF96B32", "EZ37H86"};
         String[] zodiacSeed = {"NK60V60", "UK23H37", "BY70O82", "QT46J70", "OQ37M78"};
         molds = new Box[3];
-        molds[0] = buildMold(emfSeed, true);
-        molds[1] = buildMold(beautySeed, false);
-        molds[2] = buildMold(zodiacSeed, true);
+        molds[0] = buildMold(emfSeed, true, inventory);
+        molds[1] = buildMold(beautySeed, false, inventory);
+        molds[2] = buildMold(zodiacSeed, true, inventory);
     }
 
-    public Box buildMold(String[] seed, boolean curated){
+    public Box buildMold(String[] seed, boolean curated, Item[] inventory){
         // Box(boolean curated, Item[] items, Item[][] alts)
         Item[] items = new Item[seed.length];
         Item[][] alts = new Item[seed.length][];
         int i = 0;
         for(String a: seed){
-            items[i] = linearSearch(a);
-            alts[i] = findAlts(items[i], curated);
+            items[i] = linearSearch(a, inventory);
+            alts[i] = findAlts(items[i], curated, inventory);
             i++;
         }
         return new Box(curated, items, alts);
     }
 
-    public Item[] findAlts(Item item, boolean curated){
+    public Item[] findAlts(Item item, boolean curated, Item[] inventory){
         Item[] alts = Arrays.stream(inventory).filter(x -> x.getX() == item.getX()).toArray(Item[]::new);
         alts = Arrays.stream(alts).filter(x -> x.getY() == item.getY()).toArray(Item[]::new);
 
@@ -88,7 +88,7 @@ public class Marketplace {
         return alts;
     }
 
-    public Item linearSearch(String id){
+    public Item linearSearch(String id, Item[] inventory){
         int i =0;
         while (i<inventory.length){
             if(inventory[i].getId().equals(id)){
@@ -188,5 +188,13 @@ public class Marketplace {
 
     public void setWip(Box wip) {
         this.wip = wip;
+    }
+
+    public Item[] getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(Item[] inventory) {
+        this.inventory = inventory;
     }
 }

@@ -14,21 +14,21 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="main_anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1280.0" style="-fx-background-color: #3d3d49#3d3d49;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="main_anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1280.0" style="-fx-background-color: #3d3d49#3d3d49;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.AppUIController">
    <children>
       <AnchorPane fx:id="menu_anchor" layoutX="35.0" layoutY="33.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #41414c#41414c;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Button fx:id="spotlight_btn" mnemonicParsing="false" prefHeight="84.0" prefWidth="200.0" style="-fx-background-radius: 0; -fx-background-color: #505060#505060;" text="Spotlight" textAlignment="CENTER" textFill="#141414" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <Button fx:id="spotlight_btn" mnemonicParsing="false" onMouseClicked="#handleFlowAction" prefHeight="84.0" prefWidth="200.0" style="-fx-background-radius: 0; -fx-background-color: #505060#505060;" text="Spotlight" textAlignment="CENTER" textFill="#141414" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                <font>
                   <Font name="Myriad Hebrew Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="lab_btn" layoutX="-2.0" layoutY="91.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="397.0" style="-fx-background-radius: 0; -fx-background-color: #505060#505060;" text="Lab" textAlignment="CENTER" textFill="#141414" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="84.0">
+            <Button fx:id="lab_btn" layoutX="-2.0" layoutY="91.0" mnemonicParsing="false" onMouseClicked="#handleFlowAction" prefHeight="84.0" prefWidth="397.0" style="-fx-background-radius: 0; -fx-background-color: #505060#505060;" text="Lab" textAlignment="CENTER" textFill="#141414" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="84.0">
                <font>
                   <Font name="Myriad Hebrew Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="subs_btn" layoutX="20.0" layoutY="208.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="200.0" style="-fx-background-radius: 0; -fx-background-color: #505060#505060;" text="Subscriptions" textAlignment="CENTER" textFill="#141414" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="168.0">
+            <Button fx:id="subs_btn" layoutX="20.0" layoutY="208.0" mnemonicParsing="false" onMouseClicked="#handleFlowAction" prefHeight="84.0" prefWidth="200.0" style="-fx-background-radius: 0; -fx-background-color: #505060#505060;" text="Subscriptions" textAlignment="CENTER" textFill="#141414" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="168.0">
                <font>
                   <Font name="Myriad Hebrew Bold" size="18.0" />
                </font>
@@ -44,19 +44,19 @@
          <children>
             <AnchorPane fx:id="flow_anchor" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <ImageView fx:id="next_img" fitHeight="80.0" fitWidth="80.0" layoutX="940.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <ImageView fx:id="next_img" fitHeight="80.0" fitWidth="80.0" layoutX="940.0" onMouseClicked="#handleFlowAction" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <image>
                         <Image url="@assets/next.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="prev_img" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" rotate="180.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <ImageView fx:id="prev_img" fitHeight="80.0" fitWidth="80.0" onMouseClicked="#handleFlowAction" pickOnBounds="true" preserveRatio="true" rotate="180.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <image>
                         <Image url="@assets/next.png" />
                      </image>
                   </ImageView>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="work_anchor" prefHeight="200.0" prefWidth="800.0" style="-fx-background-color: #33333a#33333a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
+            <AnchorPane fx:id="subwork_anchor" prefHeight="200.0" prefWidth="800.0" style="-fx-background-color: #33333a#33333a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
                <children>
                   <Pane fx:id="spotlight_pane" style="-fx-background-color: #33333a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
@@ -82,7 +82,7 @@
                         </ImageView>
                      </children>
                   </Pane>
-                  <Pane fx:id="subs_pane" layoutX="10.0" layoutY="10.0" style="-fx-background-color: #33333a;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <Pane fx:id="subs_pane" layoutX="10.0" layoutY="10.0" style="-fx-background-color: #33333a;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
                         <ImageView fx:id="upsubs_img" fitHeight="68.0" fitWidth="60.0" layoutX="495.0" layoutY="-16.0" pickOnBounds="true" preserveRatio="true" rotate="270.0">
                            <image>
@@ -284,11 +284,37 @@
                                     <Font name="Myriad Arabic Bold" size="18.0" />
                                  </font>
                               </Button>
-                              <ImageView fx:id="preview_img" fitHeight="250.0" fitWidth="500.0" layoutX="254.0999984741211" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="preview_img" fitHeight="250.0" fitWidth="500.0" layoutX="250.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../../../../../../Dropbox/diario%20en%20capturas%20y%20wallpapers/0EDDA4323.jpg" />
+                                    <Image url="@assets/grid.png" />
                                  </image>
                               </ImageView>
+                              <AnchorPane fx:id="mold1" layoutX="250.0" prefHeight="250.0" prefWidth="500.0">
+                                 <children>
+                                    <ImageView fx:id="a1" fitHeight="250.0" fitWidth="215.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="b1" fitHeight="250.0" fitWidth="151.0" layoutX="258.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="c1" fitHeight="150.0" fitWidth="93.0" layoutX="407.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="d1" fitHeight="103.0" fitWidth="93.0" layoutX="407.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="mold2" layoutX="250.0" prefHeight="250.0" prefWidth="500.0">
+                                 <children>
+                                    <ImageView fx:id="a2" fitHeight="50.0" fitWidth="200.0" layoutY="-14.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="b2" fitHeight="202.0" fitWidth="200.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="c2" fitHeight="250.0" fitWidth="100.0" layoutX="200.0" layoutY="-13.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="d2" fitHeight="103.0" fitWidth="200.0" layoutX="300.0" layoutY="-13.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="e2" fitHeight="150.0" fitWidth="200.0" layoutX="300.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="mold3" layoutX="250.0" prefHeight="250.0" prefWidth="500.0">
+                                 <children>
+                                    <ImageView fx:id="a21" fitHeight="50.0" fitWidth="200.0" layoutY="-14.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="b21" fitHeight="202.0" fitWidth="200.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="c21" fitHeight="250.0" fitWidth="100.0" layoutX="200.0" layoutY="-13.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="d21" fitHeight="103.0" fitWidth="200.0" layoutX="300.0" layoutY="-13.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="e21" fitHeight="150.0" fitWidth="200.0" layoutX="300.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </AnchorPane>
                            </children>
                         </Group>
                         <Group fx:id="area_group2" layoutX="825.0" layoutY="90.0">
@@ -338,7 +364,7 @@
                               </Text>
                            </children>
                         </Group>
-                        <Pane fx:id="recipe_pane" layoutX="50.0" layoutY="279.0" prefHeight="380.0" prefWidth="470.0" style="-fx-background-color: #3b3b42;">
+                        <Pane fx:id="recipe_pane" disable="true" layoutX="50.0" layoutY="279.0" prefHeight="380.0" prefWidth="470.0" style="-fx-background-color: #3b3b42;">
                            <children>
                               <Group layoutX="24.0">
                                  <children>

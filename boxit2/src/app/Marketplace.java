@@ -1,9 +1,8 @@
 package app;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import javafx.scene.image.Image;
+
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -51,18 +50,29 @@ public class Marketplace {
         }
         inventory = updatedInventory;
         System.out.print(inventory[48].getName());
+        associateImages(inventory);
 
+    }
+
+    public void associateImages(Item[] inventory){
+        for(Item a: inventory){
+            a.setImage(new Image(new File("./src/app/assets/inventory/" + a.getId() + ".png").toURI().toString()));
+            a.setAlt_image(new Image(new File("./src/app/assets/alts/" + a.getId() + ".png").toURI().toString()));
+        }
     }
 
     public void buildMolds(){
         //Item[] emf = new Item[0];
         String[] emfSeed = {"MM51F94", "WD22R83", "IV45Y29", "XI41S33", "OE67K77"};
-        String[] beautySeed = {"SQ36I87", "OC17I77", "SF96B32", "EZ37H86"};
+        String[] beautySeed = {"AA11C19", "OC17I77", "SF96B32", "EZ37H86"};
         String[] zodiacSeed = {"NK60V60", "UK23H37", "BY70O82", "QT46J70", "OQ37M78"};
         molds = new Box[3];
         molds[0] = buildMold(emfSeed, true, inventory);
+        molds[0].setName("EMF premium attendee box");
         molds[1] = buildMold(beautySeed, false, inventory);
+        molds[1].setName("Beauty box");
         molds[2] = buildMold(zodiacSeed, true, inventory);
+        molds[2].setName("Astrology box");
     }
 
     public Box buildMold(String[] seed, boolean curated, Item[] inventory){
@@ -80,10 +90,11 @@ public class Marketplace {
 
     public Item[] findAlts(Item item, boolean curated, Item[] inventory){
         Item[] alts = Arrays.stream(inventory).filter(x -> x.getX() == item.getX()).toArray(Item[]::new);
-        alts = Arrays.stream(alts).filter(x -> x.getY() == item.getY()).toArray(Item[]::new);
-
-        if (curated){
-            alts = Arrays.stream(alts).filter(x -> x.getCategory() == item.getCategory()).toArray(Item[]::new);
+        if(alts.length!=0){
+            alts = Arrays.stream(alts).filter(x -> x.getY() == item.getY()).toArray(Item[]::new);
+            if (curated){
+                alts = Arrays.stream(alts).filter(x -> x.getCategory() == item.getCategory()).toArray(Item[]::new);
+            }
         }
         return alts;
     }

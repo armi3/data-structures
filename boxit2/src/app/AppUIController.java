@@ -7,6 +7,7 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
@@ -15,60 +16,79 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class AppUIController implements Initializable {
+    Marketplace mp = new Marketplace();
 
     @FXML
     private AnchorPane main_anchor;
-    private Button spotlight_btn;
-    private Button lab_btn;
-    private Button subs_btn;
-    private Button hist_btn;
-    private ImageView next_img;
-    private ImageView prev_img;
-    private Pane spotlight_pane;
-    private Pane lab_pane;
-    private Pane subs_pane;
-    private Pane hist_pane;
-    private ImageView spot_img1;
-    private ImageView spot_img2;
-    private ImageView spot_img3;
-    private ImageView spot_img4;
+    @FXML
+    private Button spotlight_btn, lab_btn, subs_btn, hist_btn, random_btn, boxit_btn;
+    @FXML
+    private ImageView next_img, prev_img;
+    @FXML
+    private Pane spotlight_pane, lab_pane, subs_pane, hist_pane, current;
+    @FXML
+    private ImageView spot_img1, spot_img2, spot_img3, spot_img4, prevpalette_img, nextpalette_img, palette_img1, palette_img2;
+    @FXML
+    private ImageView palette_img3, prevcategories_img, nextcategories_imgprevalt_img, nextalt_img, alt_img1, alt_img2, alt_img3;
+    @FXML
     private ChoiceBox mold_cbox;
-    private Button random_btn;
-    private Text unitpriceoutput_txt;
-    private TextField quantityinput_txtf;
-    private Text subtotaloutput_txt;
-    private TextField ceilinginput_txtf;
-    private ImageView prevpalette_img;
-    private ImageView nextpalette_img;
-    private ImageView palette_img1;
-    private ImageView palette_img2;
-    private ImageView palette_img3;
-    private ImageView prevcategories_img;
-    private ImageView nextcategories_img;
-    private CheckBox cb1;
-    private CheckBox cb2;
-    private CheckBox cb3;
-    private CheckBox cb4;
-    private CheckBox cb5;
-    private Button boxit_btn;
-    private ImageView prevalt_img;
-    private ImageView nextalt_img;
-    private ImageView alt_img1;
-    private ImageView alt_img2;
-    private ImageView alt_img3;
-    private Text alt_txt1;
-    private Text alt_txt2;
-    private Text alt_txt3;
-    private Text altprice_txt1;
-    private Text altprice_txt2;
-    private Text altprice_txt3;
+    @FXML
+    private Text unitpriceoutput_txt, subtotaloutput_txt, alt_txt1, alt_txt2, alt_txt3, altprice_txt1, altprice_txt2, altprice_txt3;
+    @FXML
+    private CheckBox cb1, cb2, cb3, cb4, cb5;
+    @FXML
+    private TextField quantityinput_txtf, ceilinginput_txtf;
+
+    @FXML
+    private void handleFlowAction(MouseEvent event){
+        if (event.getTarget()== prev_img && lab_pane.isVisible()){
+            //current = spotlight_pane;
+            lab_pane.setVisible(false);
+            spotlight_pane.setVisible(true);
+        } else if (event.getTarget()== prev_img && subs_pane.isVisible()){
+            //current = lab_pane;
+            subs_pane.setVisible(false);
+            lab_pane.setVisible(true);
+        } else if (event.getTarget()== next_img && spotlight_pane.isVisible()){
+            //current = lab_pane;
+            spotlight_pane.setVisible(false);
+            lab_pane.setVisible(true);
+        } else if (event.getTarget()== next_img && lab_pane.isVisible()){
+            //current = lab_pane;
+            lab_pane.setVisible(false);
+            subs_pane.setVisible(true);
+        } else if (event.getTarget()== spotlight_btn){
+            //current = lab_pane;
+            spotlight_pane.setVisible(true);
+            lab_pane.setVisible(false);
+            subs_pane.setVisible(false);
+        } else if (event.getTarget()== lab_btn){
+            //current = lab_pane;
+            spotlight_pane.setVisible(false);
+            lab_pane.setVisible(true);
+            subs_pane.setVisible(false);
+        } else if (event.getTarget()== subs_btn){
+            //current = lab_pane;
+            spotlight_pane.setVisible(false);
+            lab_pane.setVisible(false);
+            subs_pane.setVisible(true);
+        }
+        //mold_cbox.getSelectionModel().selectedItemProperty().addListener((v, oldValue, newValue) -> System.out.print("---"+newValue));
 
 
+    }
 
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        mp.uploadInventory();
+        mp.updateInventory();
+        mp.buildMolds();
+        System.out.print("---"+mp.getMolds()[0].getItems()[0].getName());
+        for(Box a: mp.getMolds()){
+            mold_cbox.getItems().add(a.getName());
+        }
 
     }
 }

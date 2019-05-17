@@ -19,6 +19,12 @@ public class Main extends Application {
 
 
     public static void main(String[] args) {
+        Marketplace mp = new Marketplace();
+        mp.uploadInventory();
+        mp.updateInventory();
+        mp.buildMolds();
+        System.out.print("---"+mp.getMolds()[0].getName());
+
         launch(args);
     }
 }

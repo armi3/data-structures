@@ -1,28 +1,78 @@
 package app;
 
+import javafx.scene.image.Image;
+
+import java.io.File;
+
 public class Item {
-    private int[] xy;
+
+    private String id;
     private String name;
     private String palette;
     private String category;
     private double price;
     private int popularity;
+    private int x;
+    private int y;
+    private Image image;
+    private Image alt_image;
 
-    public Item(int[] xy, String name, String palette, String category, double price, int popularity) {
-        this.xy = xy;
+    public Item(String id, String name, String palette, String category, double price, int popularity, int x, int y) {
+        this.x = x;
+        this.y = y;
         this.name = name;
         this.palette = palette;
         this.category = category;
         this.price = price;
         this.popularity = popularity;
+        this.id = id;
+        //this.image = new Image("app/assets/inventory/" + id + ".png");
+        // app/assets/inventory/AA11C19.png
+        //getClass().getResource("za.jpg").toExternalForm()
+        //this.image = new Image(getClass().getResource("./src/app/assets/inventory/" + id + ".png").toExternalForm());
+        //this.alt_image = new Image(getClass().getResource("./src/app/assets/alts/" + id + ".png").toExternalForm());
+        this.image = new Image(new File("./src/app/assets/inventory/" + id + ".png").toURI().toString());
+        this.alt_image = new Image(new File("./src/app/assets/alts/" + id + ".png").toURI().toString());
     }
 
-    public int[] getXy() {
-        return xy;
+    public String getId() {
+        return id;
     }
 
-    public void setXy(int[] xy) {
-        this.xy = xy;
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public Image getImage() {
+        return image;
+    }
+
+    public void setImage(Image image) {
+        this.image = image;
+    }
+
+    public Image getAlt_image() {
+        return alt_image;
+    }
+
+    public void setAlt_image(Image alt_image) {
+        this.alt_image = alt_image;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
     }
 
     public String getName() {

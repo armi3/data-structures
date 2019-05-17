@@ -1,8 +1,14 @@
 package app;
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.io.IOException;
 
 import javafx.scene.image.Image;
 
 import java.io.*;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -206,4 +212,22 @@ public class Marketplace {
     public void setInventory(Item[] inventory) {
         this.inventory = inventory;
     }
+
+    public void writeGraphs(Item[] inventory, int num) throws IOException {
+        String[] lines = new String[inventory.length];
+        int i=0;
+        for(Item a: inventory){
+            String s = a.getPopularity() + " -> ";
+            lines[i] = s;
+            i++;
+        }
+        if (num==1){
+            Files.write(Paths.get("./src/app/assets/graphviz1.txt"), Arrays.asList(lines), Charset.forName("UTF-8"));
+        } else{
+            Files.write(Paths.get("./src/app/assets/graphviz2.txt"), Arrays.asList(lines), Charset.forName("UTF-8"));
+
+        }
+
+    }
+
 }

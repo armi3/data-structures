@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/assets/graphviz1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/assets/graphviz2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/AppUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/AppUI.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/AppUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/AppUIController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Box.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Box.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/Marketplace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Marketplace.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -67,40 +67,60 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/Marketplace.java">
+        <entry file="file://$PROJECT_DIR$/src/app/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="63" column="15" lean-forward="true" selection-start-line="63" selection-start-column="15" selection-end-line="63" selection-end-column="15" />
+            <state relative-caret-position="195">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#uploadInventory#0;class#Marketplace#0" />
-                <element signature="method#associateImages#0;class#Marketplace#0" />
-                <element signature="method#buildMolds#0;class#Marketplace#0" />
-                <element signature="method#buildMold#0;class#Marketplace#0" />
-                <element signature="method#findAlts#0;class#Marketplace#0" />
-                <element signature="method#linearSearch#0;class#Marketplace#0" />
-                <element signature="method#updateInventory#0;class#Marketplace#0" />
-                <element signature="method#heapify#0;class#Marketplace#0" />
-                <element signature="method#saveBox#0;class#Marketplace#0" />
-                <element signature="e#5633#5662#1" />
-                <element signature="e#6030#6031#0" expanded="true" />
-                <element signature="e#6105#6106#0" expanded="true" />
-                <element signature="e#6174#6175#0" expanded="true" />
-                <element signature="e#6269#6270#0" expanded="true" />
-                <element signature="e#6322#6323#0" expanded="true" />
-                <element signature="e#6387#6388#0" expanded="true" />
-                <element signature="e#6455#6456#0" expanded="true" />
-                <element signature="e#6547#6548#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/Marketplace.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="219" column="40" selection-start-line="219" selection-start-column="40" selection-end-line="219" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#uploadInventory#0;class#Marketplace#0" />
+                <element signature="method#buildMolds#0;class#Marketplace#0" />
+                <element signature="method#buildMold#0;class#Marketplace#0" />
+                <element signature="method#findAlts#0;class#Marketplace#0" />
+                <element signature="method#linearSearch#0;class#Marketplace#0" />
+                <element signature="method#heapify#0;class#Marketplace#0" />
+                <element signature="method#saveBox#0;class#Marketplace#0" />
+                <element signature="e#5633#5662#1" />
+                <element signature="e#6202#6203#0" expanded="true" />
+                <element signature="e#6277#6278#0" expanded="true" />
+                <element signature="e#6346#6347#0" expanded="true" />
+                <element signature="e#6441#6442#0" expanded="true" />
+                <element signature="e#6494#6495#0" expanded="true" />
+                <element signature="e#6559#6560#0" expanded="true" />
+                <element signature="e#6627#6628#0" expanded="true" />
+                <element signature="e#6719#6720#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/assets/graphviz2.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/assets/graphviz1.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tests/MarketplaceTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="390">
-              <caret line="33" column="52" lean-forward="true" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
+              <caret line="33" column="52" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -111,14 +131,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/AppUIController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="255" column="9" selection-start-line="255" selection-start-column="9" selection-end-line="255" selection-end-column="9" />
+            <state relative-caret-position="117">
+              <caret line="263" column="5" selection-start-line="263" selection-start-column="5" selection-end-line="263" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1390#2421#0" />
                 <element signature="e#3140#3205#0" />
-                <element signature="e#5393#6213#0" />
-                <element signature="e#7986#9293#0" />
               </folding>
             </state>
           </provider>
@@ -450,7 +468,7 @@
       <workItem from="1359379250712" duration="1302000" />
       <workItem from="1557723989463" duration="34130000" />
       <workItem from="1558058649355" duration="191000" />
-      <workItem from="1558058865251" duration="29649000" />
+      <workItem from="1558058865251" duration="31501000" />
     </task>
     <servers />
   </component>
@@ -487,7 +505,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65272000" />
+    <option name="totallyTimeSpent" value="67124000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -502,7 +520,7 @@
     <frame x="0" y="0" width="1280" height="756" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.21728595" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.21728595" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -511,7 +529,7 @@
       <window_info anchor="bottom" id="JProfiler" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26506025" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26506025" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3990964" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -550,7 +568,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/app/Marketplace.java</url>
-          <line>91</line>
+          <line>97</line>
           <properties>
             <option name="lambda-ordinal" value="-1" />
           </properties>
@@ -666,20 +684,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/tests/MarketplaceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="390">
+          <caret line="33" column="52" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/MarketplaceTest.java">
+    <entry file="file://$PROJECT_DIR$/src/app/assets/graphviz1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/assets/graphviz2.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="33" column="52" lean-forward="true" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
+        <state relative-caret-position="195">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -688,42 +712,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/Marketplace.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="63" column="15" lean-forward="true" selection-start-line="63" selection-start-column="15" selection-end-line="63" selection-end-column="15" />
+        <state relative-caret-position="154">
+          <caret line="219" column="40" selection-start-line="219" selection-start-column="40" selection-end-line="219" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#uploadInventory#0;class#Marketplace#0" />
-            <element signature="method#associateImages#0;class#Marketplace#0" />
             <element signature="method#buildMolds#0;class#Marketplace#0" />
             <element signature="method#buildMold#0;class#Marketplace#0" />
             <element signature="method#findAlts#0;class#Marketplace#0" />
             <element signature="method#linearSearch#0;class#Marketplace#0" />
-            <element signature="method#updateInventory#0;class#Marketplace#0" />
             <element signature="method#heapify#0;class#Marketplace#0" />
             <element signature="method#saveBox#0;class#Marketplace#0" />
             <element signature="e#5633#5662#1" />
-            <element signature="e#6030#6031#0" expanded="true" />
-            <element signature="e#6105#6106#0" expanded="true" />
-            <element signature="e#6174#6175#0" expanded="true" />
-            <element signature="e#6269#6270#0" expanded="true" />
-            <element signature="e#6322#6323#0" expanded="true" />
-            <element signature="e#6387#6388#0" expanded="true" />
-            <element signature="e#6455#6456#0" expanded="true" />
-            <element signature="e#6547#6548#0" expanded="true" />
+            <element signature="e#6202#6203#0" expanded="true" />
+            <element signature="e#6277#6278#0" expanded="true" />
+            <element signature="e#6346#6347#0" expanded="true" />
+            <element signature="e#6441#6442#0" expanded="true" />
+            <element signature="e#6494#6495#0" expanded="true" />
+            <element signature="e#6559#6560#0" expanded="true" />
+            <element signature="e#6627#6628#0" expanded="true" />
+            <element signature="e#6719#6720#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/AppUIController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="255" column="9" selection-start-line="255" selection-start-column="9" selection-end-line="255" selection-end-column="9" />
+        <state relative-caret-position="117">
+          <caret line="263" column="5" selection-start-line="263" selection-start-column="5" selection-end-line="263" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1390#2421#0" />
             <element signature="e#3140#3205#0" />
-            <element signature="e#5393#6213#0" />
-            <element signature="e#7986#9293#0" />
           </folding>
         </state>
       </provider>

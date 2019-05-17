@@ -1,7 +1,4 @@
 package app;
-
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -14,6 +11,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -269,7 +267,17 @@ public class AppUIController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         mp.uploadInventory();
+        try {
+            mp.writeGraphs(mp.getInventory(), 1);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         mp.updateInventory();
+        try {
+            mp.writeGraphs(mp.getInventory(), 2);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         mp.buildMolds();
         System.out.print("---"+mp.getMolds()[0].getItems()[0].getName());
         for(Box a: mp.getMolds()){
@@ -277,6 +285,7 @@ public class AppUIController implements Initializable {
         }
 
         mold_cbox.getSelectionModel().selectedItemProperty().addListener((v, oldValue, newValue) -> preview(newValue));
+
 
     }
 

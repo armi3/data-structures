@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/AppUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/AppUI.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/AppUIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/AppUIController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Box.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Box.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/Marketplace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Marketplace.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -65,35 +66,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/Marketplace.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="74" column="15" selection-start-line="74" selection-start-column="15" selection-end-line="74" selection-end-column="15" />
+            <state relative-caret-position="158">
+              <caret line="63" column="15" lean-forward="true" selection-start-line="63" selection-start-column="15" selection-end-line="63" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#uploadInventory#0;class#Marketplace#0" />
+                <element signature="method#associateImages#0;class#Marketplace#0" />
+                <element signature="method#buildMolds#0;class#Marketplace#0" />
+                <element signature="method#buildMold#0;class#Marketplace#0" />
+                <element signature="method#findAlts#0;class#Marketplace#0" />
+                <element signature="method#linearSearch#0;class#Marketplace#0" />
                 <element signature="method#updateInventory#0;class#Marketplace#0" />
                 <element signature="method#heapify#0;class#Marketplace#0" />
-                <element signature="e#5599#5600#0" expanded="true" />
-                <element signature="e#5625#5626#0" expanded="true" />
-                <element signature="e#6130#6131#0" expanded="true" />
-                <element signature="e#6205#6206#0" expanded="true" />
-                <element signature="e#6274#6275#0" expanded="true" />
-                <element signature="e#6369#6370#0" expanded="true" />
-                <element signature="e#6422#6423#0" expanded="true" />
-                <element signature="e#6487#6488#0" expanded="true" />
-                <element signature="e#6555#6556#0" expanded="true" />
-                <element signature="e#6647#6648#0" expanded="true" />
+                <element signature="method#saveBox#0;class#Marketplace#0" />
+                <element signature="e#5633#5662#1" />
+                <element signature="e#6030#6031#0" expanded="true" />
+                <element signature="e#6105#6106#0" expanded="true" />
+                <element signature="e#6174#6175#0" expanded="true" />
+                <element signature="e#6269#6270#0" expanded="true" />
+                <element signature="e#6322#6323#0" expanded="true" />
+                <element signature="e#6387#6388#0" expanded="true" />
+                <element signature="e#6455#6456#0" expanded="true" />
+                <element signature="e#6547#6548#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/tests/MarketplaceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="390">
+              <caret line="33" column="52" lean-forward="true" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -101,13 +108,17 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/AppUIController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="86" column="11" selection-start-line="86" selection-start-column="11" selection-end-line="86" selection-end-column="11" />
+            <state relative-caret-position="32">
+              <caret line="255" column="9" selection-start-line="255" selection-start-column="9" selection-end-line="255" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1390#2421#0" />
+                <element signature="e#3140#3205#0" />
+                <element signature="e#5393#6213#0" />
+                <element signature="e#7986#9293#0" />
               </folding>
             </state>
           </provider>
@@ -149,15 +160,15 @@
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
         <option value="$PROJECT_DIR$/src/sample/AppUIController.java" />
         <option value="$PROJECT_DIR$/src/app/Lab.java" />
-        <option value="$PROJECT_DIR$/src/app/Box.java" />
         <option value="$PROJECT_DIR$/src/app/Item.java" />
         <option value="$PROJECT_DIR$/src/module-info.java" />
         <option value="$PROJECT_DIR$/TheBoxit.iml" />
         <option value="$PROJECT_DIR$/src/tests/MarketplaceTest.java" />
         <option value="$PROJECT_DIR$/src/app/AppUI.fxml" />
         <option value="$PROJECT_DIR$/src/app/Main.java" />
-        <option value="$PROJECT_DIR$/src/app/AppUIController.java" />
+        <option value="$PROJECT_DIR$/src/app/Box.java" />
         <option value="$PROJECT_DIR$/src/app/Marketplace.java" />
+        <option value="$PROJECT_DIR$/src/app/AppUIController.java" />
       </list>
     </option>
   </component>
@@ -439,7 +450,7 @@
       <workItem from="1359379250712" duration="1302000" />
       <workItem from="1557723989463" duration="34130000" />
       <workItem from="1558058649355" duration="191000" />
-      <workItem from="1558058865251" duration="23941000" />
+      <workItem from="1558058865251" duration="29649000" />
     </task>
     <servers />
   </component>
@@ -476,7 +487,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59564000" />
+    <option name="totallyTimeSpent" value="65272000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -491,7 +502,7 @@
     <frame x="0" y="0" width="1280" height="756" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.20597738" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.21728595" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -500,7 +511,7 @@
       <window_info anchor="bottom" id="JProfiler" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26506025" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26506025" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3990964" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -620,16 +631,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Box.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="81" column="85" selection-start-line="81" selection-start-column="22" selection-end-line="81" selection-end-column="85" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/util/stream/ReferencePipeline.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -637,9 +638,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/AppUI.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/Item.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
+        <state relative-caret-position="495">
           <caret line="33" column="106" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="106" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -647,10 +656,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/MarketplaceTest.java">
+    <entry file="file://$PROJECT_DIR$/src/app/Box.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="20" column="94" selection-start-line="20" selection-start-column="94" selection-end-line="20" selection-end-column="94" />
+        <state relative-caret-position="120">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -667,18 +676,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/AppUI.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
+    <entry file="file://$PROJECT_DIR$/src/tests/MarketplaceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/AppUIController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="86" column="11" selection-start-line="86" selection-start-column="11" selection-end-line="86" selection-end-column="11" />
+        <state relative-caret-position="390">
+          <caret line="33" column="52" lean-forward="true" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -687,22 +688,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/Marketplace.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="74" column="15" selection-start-line="74" selection-start-column="15" selection-end-line="74" selection-end-column="15" />
+        <state relative-caret-position="158">
+          <caret line="63" column="15" lean-forward="true" selection-start-line="63" selection-start-column="15" selection-end-line="63" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#uploadInventory#0;class#Marketplace#0" />
+            <element signature="method#associateImages#0;class#Marketplace#0" />
+            <element signature="method#buildMolds#0;class#Marketplace#0" />
+            <element signature="method#buildMold#0;class#Marketplace#0" />
+            <element signature="method#findAlts#0;class#Marketplace#0" />
+            <element signature="method#linearSearch#0;class#Marketplace#0" />
             <element signature="method#updateInventory#0;class#Marketplace#0" />
             <element signature="method#heapify#0;class#Marketplace#0" />
-            <element signature="e#5599#5600#0" expanded="true" />
-            <element signature="e#5625#5626#0" expanded="true" />
-            <element signature="e#6130#6131#0" expanded="true" />
-            <element signature="e#6205#6206#0" expanded="true" />
-            <element signature="e#6274#6275#0" expanded="true" />
-            <element signature="e#6369#6370#0" expanded="true" />
-            <element signature="e#6422#6423#0" expanded="true" />
-            <element signature="e#6487#6488#0" expanded="true" />
-            <element signature="e#6555#6556#0" expanded="true" />
-            <element signature="e#6647#6648#0" expanded="true" />
+            <element signature="method#saveBox#0;class#Marketplace#0" />
+            <element signature="e#5633#5662#1" />
+            <element signature="e#6030#6031#0" expanded="true" />
+            <element signature="e#6105#6106#0" expanded="true" />
+            <element signature="e#6174#6175#0" expanded="true" />
+            <element signature="e#6269#6270#0" expanded="true" />
+            <element signature="e#6322#6323#0" expanded="true" />
+            <element signature="e#6387#6388#0" expanded="true" />
+            <element signature="e#6455#6456#0" expanded="true" />
+            <element signature="e#6547#6548#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/AppUIController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="255" column="9" selection-start-line="255" selection-start-column="9" selection-end-line="255" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1390#2421#0" />
+            <element signature="e#3140#3205#0" />
+            <element signature="e#5393#6213#0" />
+            <element signature="e#7986#9293#0" />
           </folding>
         </state>
       </provider>

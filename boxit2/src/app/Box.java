@@ -5,8 +5,8 @@ import java.util.Date;
 
 public class Box {
     private boolean curated;
-    private Item[] items; //arr de objetos
-    private Item[][] alts; //arr de arrs de objetos
+    private Item[] items;
+    private Item[][] alts;
     private String name;
     private Date[] deliveryDates;
     private int subscription;

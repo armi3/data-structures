@@ -291,28 +291,28 @@
                               </ImageView>
                               <AnchorPane fx:id="mold1" layoutX="250.0" prefHeight="250.0" prefWidth="500.0">
                                  <children>
-                                    <ImageView fx:id="a1" fitHeight="250.0" fitWidth="215.0" pickOnBounds="true" preserveRatio="true" />
-                                    <ImageView fx:id="b1" fitHeight="250.0" fitWidth="151.0" layoutX="258.0" pickOnBounds="true" preserveRatio="true" />
-                                    <ImageView fx:id="c1" fitHeight="150.0" fitWidth="93.0" layoutX="407.0" pickOnBounds="true" preserveRatio="true" />
-                                    <ImageView fx:id="d1" fitHeight="103.0" fitWidth="93.0" layoutX="407.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="a1" fitHeight="250.0" fitWidth="250.0" onMouseClicked="#editItem" pickOnBounds="true" />
+                                    <ImageView fx:id="b1" fitHeight="250.0" fitWidth="151.0" layoutX="250.0" onMouseClicked="#editItem" pickOnBounds="true" />
+                                    <ImageView fx:id="c1" fitHeight="150.0" fitWidth="107.0" layoutX="393.0" onMouseClicked="#editItem" pickOnBounds="true" />
+                                    <ImageView fx:id="d1" fitHeight="103.0" fitWidth="107.0" layoutX="393.0" layoutY="147.0" onMouseClicked="#editItem" pickOnBounds="true" />
                                  </children>
                               </AnchorPane>
                               <AnchorPane fx:id="mold2" layoutX="250.0" prefHeight="250.0" prefWidth="500.0">
                                  <children>
-                                    <ImageView fx:id="a2" fitHeight="50.0" fitWidth="200.0" layoutY="-14.0" pickOnBounds="true" preserveRatio="true" />
-                                    <ImageView fx:id="b2" fitHeight="202.0" fitWidth="200.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true" />
-                                    <ImageView fx:id="c2" fitHeight="250.0" fitWidth="100.0" layoutX="200.0" layoutY="-13.0" pickOnBounds="true" preserveRatio="true" />
-                                    <ImageView fx:id="d2" fitHeight="103.0" fitWidth="200.0" layoutX="300.0" layoutY="-13.0" pickOnBounds="true" preserveRatio="true" />
-                                    <ImageView fx:id="e2" fitHeight="150.0" fitWidth="200.0" layoutX="300.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="a2" fitHeight="50.0" fitWidth="200.0" onMouseClicked="#editItem" pickOnBounds="true" />
+                                    <ImageView fx:id="b2" fitHeight="202.0" fitWidth="200.0" layoutY="46.0" onMouseClicked="#editItem" pickOnBounds="true" />
+                                    <ImageView fx:id="c2" fitHeight="250.0" fitWidth="100.0" layoutX="200.0" onMouseClicked="#editItem" pickOnBounds="true" />
+                                    <ImageView fx:id="d2" fitHeight="103.0" fitWidth="200.0" layoutX="300.0" onMouseClicked="#editItem" pickOnBounds="true" />
+                                    <ImageView fx:id="e2" fitHeight="150.0" fitWidth="207.0" layoutX="293.0" layoutY="97.0" onMouseClicked="#editItem" pickOnBounds="true" />
                                  </children>
                               </AnchorPane>
                               <AnchorPane fx:id="mold3" layoutX="250.0" prefHeight="250.0" prefWidth="500.0">
                                  <children>
-                                    <ImageView fx:id="a21" fitHeight="50.0" fitWidth="200.0" layoutY="-14.0" pickOnBounds="true" preserveRatio="true" />
-                                    <ImageView fx:id="b21" fitHeight="202.0" fitWidth="200.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true" />
-                                    <ImageView fx:id="c21" fitHeight="250.0" fitWidth="100.0" layoutX="200.0" layoutY="-13.0" pickOnBounds="true" preserveRatio="true" />
-                                    <ImageView fx:id="d21" fitHeight="103.0" fitWidth="200.0" layoutX="300.0" layoutY="-13.0" pickOnBounds="true" preserveRatio="true" />
-                                    <ImageView fx:id="e21" fitHeight="150.0" fitWidth="200.0" layoutX="300.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="a3" fitHeight="250.0" fitWidth="200.0" layoutY="1.0" onMouseClicked="#editItem" pickOnBounds="true" />
+                                    <ImageView fx:id="b3" fitHeight="250.0" fitWidth="100.0" layoutX="199.0" layoutY="1.0" onMouseClicked="#editItem" pickOnBounds="true" />
+                                    <ImageView fx:id="c3" fitHeight="250.0" fitWidth="107.0" layoutX="293.0" onMouseClicked="#editItem" pickOnBounds="true" />
+                                    <ImageView fx:id="d3" fitHeight="110.0" fitWidth="107.0" layoutX="393.0" layoutY="-4.0" onMouseClicked="#editItem" pickOnBounds="true" />
+                                    <ImageView fx:id="e3" fitHeight="156.0" fitWidth="107.0" layoutX="393.0" layoutY="97.0" onMouseClicked="#editItem" pickOnBounds="true" />
                                  </children>
                               </AnchorPane>
                            </children>
@@ -485,57 +485,42 @@
                               </Label>
                               <Pane fx:id="alt_pane" layoutX="27.0" layoutY="52.0" prefHeight="300.0" prefWidth="416.0" style="-fx-background-color: #33333a #33333a;">
                                  <children>
-                                    <ImageView fx:id="prevalt_img" fitHeight="43.0" fitWidth="43.0" layoutX="187.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true" rotate="270.0">
+                                    <ImageView fx:id="prevalt_img" fitHeight="43.0" fitWidth="43.0" layoutX="187.0" layoutY="-7.0" onMouseClicked="#handleFlowAlts" pickOnBounds="true" preserveRatio="true" rotate="270.0" visible="false">
                                        <image>
                                           <Image url="@assets/next.png" />
                                        </image>
                                     </ImageView>
-                                    <ImageView fx:id="nextalt_img" fitHeight="43.0" fitWidth="43.0" layoutX="187.0" layoutY="265.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+                                    <ImageView fx:id="nextalt_img" fitHeight="43.0" fitWidth="43.0" layoutX="187.0" layoutY="265.0" onMouseClicked="#handleFlowAlts" pickOnBounds="true" preserveRatio="true" rotate="90.0" visible="false">
                                        <image>
                                           <Image url="@assets/next.png" />
                                        </image>
                                     </ImageView>
-                                    <ImageView fx:id="alt_img1" fitHeight="71.0" fitWidth="389.0" layoutX="14.0" layoutY="36.0" pickOnBounds="true">
+                                    <ImageView fx:id="alt_img1" fitHeight="71.0" fitWidth="389.0" layoutX="14.0" layoutY="36.0" pickOnBounds="true" visible="false">
                                        <image>
                                           <Image url="@assets/alt_beret.png" />
                                        </image>
                                     </ImageView>
-                                    <ImageView fx:id="alt_img2" fitHeight="71.0" fitWidth="389.0" layoutX="14.0" layoutY="115.0" pickOnBounds="true">
+                                    <ImageView fx:id="alt_img2" fitHeight="71.0" fitWidth="389.0" layoutX="14.0" layoutY="115.0" pickOnBounds="true" visible="false">
                                        <image>
                                           <Image url="@assets/alt_beret.png" />
                                        </image>
                                     </ImageView>
-                                    <ImageView fx:id="alt_img3" fitHeight="71.0" fitWidth="389.0" layoutX="14.0" layoutY="194.0" pickOnBounds="true">
+                                    <ImageView fx:id="alt_img3" fitHeight="71.0" fitWidth="389.0" layoutX="14.0" layoutY="194.0" pickOnBounds="true" visible="false">
                                        <image>
                                           <Image url="@assets/alt_beret.png" />
                                        </image>
                                     </ImageView>
-                                    <Text fx:id="alt_txt1" fill="WHITE" layoutX="32.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Warm" wrappingWidth="231.83999633789062">
+                                    <Text fx:id="altprice_txt1" layoutX="314.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Warm" textAlignment="CENTER" visible="false" wrappingWidth="73.83999633789062">
                                        <font>
                                           <Font name="Myriad Arabic Bold" size="21.0" />
                                        </font>
                                     </Text>
-                                    <Text fx:id="altprice_txt1" layoutX="314.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Warm" textAlignment="CENTER" wrappingWidth="73.83999633789062">
+                                    <Text fx:id="altprice_txt2" layoutX="313.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Warm" textAlignment="CENTER" visible="false" wrappingWidth="73.83999633789062">
                                        <font>
                                           <Font name="Myriad Arabic Bold" size="21.0" />
                                        </font>
                                     </Text>
-                                    <Text fx:id="alt_txt2" fill="WHITE" layoutX="31.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Warm" wrappingWidth="231.83999633789062">
-                                       <font>
-                                          <Font name="Myriad Arabic Bold" size="21.0" />
-                                       </font>
-                                    </Text>
-                                    <Text fx:id="altprice_txt2" layoutX="313.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Warm" textAlignment="CENTER" wrappingWidth="73.83999633789062">
-                                       <font>
-                                          <Font name="Myriad Arabic Bold" size="21.0" />
-                                       </font>
-                                    </Text>
-                                    <Text fx:id="alt_txt3" fill="WHITE" layoutX="31.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Warm" wrappingWidth="231.83999633789062">
-                                       <font>
-                                          <Font name="Myriad Arabic Bold" size="21.0" />
-                                       </font>
-                                    </Text>
-                                    <Text fx:id="altprice_txt3" layoutX="313.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Warm" textAlignment="CENTER" wrappingWidth="73.83999633789062">
+                                    <Text fx:id="altprice_txt3" layoutX="313.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Warm" textAlignment="CENTER" visible="false" wrappingWidth="73.83999633789062">
                                        <font>
                                           <Font name="Myriad Arabic Bold" size="21.0" />
                                        </font>

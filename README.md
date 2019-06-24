@@ -177,7 +177,7 @@ valgrind callgrind_annotate --tree=both --auto=yes profiling/callgrind_functions
 ## resources
 - https://www.cs.usfca.edu/~galles/visualization/BTree.html
 
-# lab: Dijkstra's SPF algorithm 💷
+# laboratory (Dijkstra's SPF algorithm) 💷
 - Uses the shortest path first algorithm to find exchange rates.
 - Code in Python
 

@@ -1,0 +1,856 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../Boxit/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Boxit/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Boxit/.idea/libraries/javafx_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Boxit/.idea/libraries/jfoenix_9_0_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Boxit/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Boxit/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Boxit/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Boxit/Boxit.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Boxit/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Boxit/src/main/java/codes/fer/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Boxit/src/main/java/codes/fer/PrimaryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Boxit/src/main/java/codes/fer/SecondaryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Boxit/src/main/resources/codes/fer/primary.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Boxit/src/main/resources/codes/fer/secondary.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Boxit/target/classes/codes/fer/primary.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Boxit/target/classes/codes/fer/secondary.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Boxit/target/maven-status/maven-compiler-plugin/compile/null/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Boxit/target/maven-status/maven-compiler-plugin/compile/null/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoxitApp/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoxitApp/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoxitApp/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoxitApp/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoxitApp/.idea/libraries/javafx_swt.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoxitApp/.idea/libraries/jfoenix_9_0_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoxitApp/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoxitApp/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoxitApp/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoxitApp/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoxitApp/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoxitApp/BoxitApp.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoxitApp/src/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoxitApp/src/sample/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoxitApp/src/sample/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoxitApp/src/sample/sample.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoxitDesktop/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoxitDesktop/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoxitDesktop/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoxitDesktop/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoxitDesktop/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoxitDesktop/BoxitDesktop.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoxitDesktop/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoxitDesktop/src/main/java/codes/fer/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoxitDesktop/src/main/java/codes/fer/Box.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoxitDesktop/src/main/java/codes/fer/Item.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoxitDesktop/src/main/java/codes/fer/Marketplace.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoxitDesktop/src/main/java/codes/fer/MarketplaceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoxitDesktop/src/main/java/codes/fer/PrimaryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoxitDesktop/src/main/java/codes/fer/SecondaryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoxitDesktop/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoxitDesktop/src/main/java/tests/MarketplaceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoxitDesktop/src/main/java/tests/MarketplaceTest2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoxitDesktop/src/main/resources/codes/fer/primary.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoxitDesktop/src/main/resources/codes/fer/secondary.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoxitDesktop/target/classes/codes/fer/primary.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BoxitDesktop/target/classes/codes/fer/secondary.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/JavaFXApp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/JavaFXApp.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TheBoxit.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Boxit.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/assets/graphviz1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/assets/graphviz1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/assets/graphviz2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/assets/graphviz2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../search-and-sort/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../search-and-sort/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../search-and-sort/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../search-and-sort/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../search-and-sort/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../search-and-sort/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../search-and-sort/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../search-and-sort/search-and-sort.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../search-and-sort/src/Main.java" beforeDir="false" />
+    </list>
+    <ignored path="JavaFxApplication.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DebuggerManager">
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true" converted="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
+    <ui_properties converted="true" />
+    <breakpoint_rules converted="true" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="JavaFxApplication" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/Marketplace.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="81" column="5" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#uploadInventory#0;class#Marketplace#0" />
+                <element signature="method#buildMolds#0;class#Marketplace#0" />
+                <element signature="method#buildMold#0;class#Marketplace#0" />
+                <element signature="method#linearSearch#0;class#Marketplace#0" />
+                <element signature="method#heapify#0;class#Marketplace#0" />
+                <element signature="method#saveBox#0;class#Marketplace#0" />
+                <element signature="e#6174#6175#0" expanded="true" />
+                <element signature="e#6202#6203#0" expanded="true" />
+                <element signature="e#6243#6244#0" expanded="true" />
+                <element signature="e#6277#6278#0" expanded="true" />
+                <element signature="e#6313#6314#0" expanded="true" />
+                <element signature="e#6346#6347#0" expanded="true" />
+                <element signature="e#6397#6398#0" expanded="true" />
+                <element signature="e#6441#6442#0" expanded="true" />
+                <element signature="e#6468#6469#0" expanded="true" />
+                <element signature="e#6494#6495#0" expanded="true" />
+                <element signature="e#6529#6530#0" expanded="true" />
+                <element signature="e#6559#6560#0" expanded="true" />
+                <element signature="e#6595#6596#0" expanded="true" />
+                <element signature="e#6627#6628#0" expanded="true" />
+                <element signature="e#6677#6678#0" expanded="true" />
+                <element signature="e#6719#6720#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/module-info.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tests/MarketplaceTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="33" column="52" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/AppUIController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3735">
+              <caret line="263" column="5" selection-start-line="263" selection-start-column="5" selection-end-line="263" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="TestNG Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/sample/Main.java" />
+        <option value="$PROJECT_DIR$/src/sample/sample.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/Controller.java" />
+        <option value="$PROJECT_DIR$/src/sample/AppUIController.java" />
+        <option value="$PROJECT_DIR$/src/app/Lab.java" />
+        <option value="$PROJECT_DIR$/src/app/Item.java" />
+        <option value="$PROJECT_DIR$/src/module-info.java" />
+        <option value="$PROJECT_DIR$/TheBoxit.iml" />
+        <option value="$PROJECT_DIR$/src/tests/MarketplaceTest.java" />
+        <option value="$PROJECT_DIR$/src/app/AppUI.fxml" />
+        <option value="$PROJECT_DIR$/src/app/Main.java" />
+        <option value="$PROJECT_DIR$/src/app/Box.java" />
+        <option value="$PROJECT_DIR$/src/app/Marketplace.java" />
+        <option value="$PROJECT_DIR$/src/app/AppUIController.java" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="boxit2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boxit2" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="OverrideImplement.combined" value="false" />
+    <property name="Repository.Attach.Annotations" value="true" />
+    <property name="Repository.Attach.JavaDocs" value="true" />
+    <property name="Repository.Attach.Sources" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="TestNG" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.32413793" />
+    <property name="recentsLimit" value="5" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="tests" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
+    <configuration default="true" type="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="app.Main" />
+      <module name="Boxit" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MarketplaceTest" type="TestNG" nameIsGenerated="true">
+      <module name="Boxit" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.MarketplaceTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MarketplaceTest.testBuildMold" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Boxit" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.MarketplaceTest" />
+      <option name="METHOD_NAME" value="testBuildMold" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MarketplaceTest.testFindAlts" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Boxit" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.MarketplaceTest" />
+      <option name="METHOD_NAME" value="testFindAlts" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MarketplaceTest.testLinearSearch" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Boxit" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="tests.MarketplaceTest" />
+      <option name="METHOD_NAME" value="testLinearSearch" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.MarketplaceTest.testBuildMold" />
+        <item itemvalue="TestNG.MarketplaceTest.testLinearSearch" />
+        <item itemvalue="TestNG.MarketplaceTest.testFindAlts" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+      <created>1359379246138</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1359379246138</updated>
+      <workItem from="1359379250712" duration="1302000" />
+      <workItem from="1557723989463" duration="34130000" />
+      <workItem from="1558058649355" duration="191000" />
+      <workItem from="1558058865251" duration="32695000" />
+      <workItem from="1561336567185" duration="573000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="MarketplaceTest_testFindAlts - 2019.05.17 at 01h 12m 07s.xml">
+      <configuration name="MarketplaceTest.testFindAlts" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="MarketplaceTest - 2019.05.17 at 01h 30m 45s.xml">
+      <configuration name="MarketplaceTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="MarketplaceTest_testFindAlts - 2019.05.17 at 01h 41m 12s.xml">
+      <configuration name="MarketplaceTest.testFindAlts" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="MarketplaceTest_testBuildMold - 2019.05.17 at 01h 41m 30s.xml">
+      <configuration name="MarketplaceTest.testBuildMold" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="MarketplaceTest_testLinearSearch - 2019.05.17 at 01h 45m 50s.xml">
+      <configuration name="MarketplaceTest.testLinearSearch" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="MarketplaceTest_testBuildMold - 2019.05.17 at 01h 46m 13s.xml">
+      <configuration name="MarketplaceTest.testBuildMold" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="MarketplaceTest_testBuildMold - 2019.05.17 at 01h 50m 02s.xml">
+      <configuration name="MarketplaceTest.testBuildMold" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="MarketplaceTest_testBuildMold - 2019.05.17 at 01h 51m 30s.xml">
+      <configuration name="MarketplaceTest.testBuildMold" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="MarketplaceTest_testBuildMold - 2019.05.17 at 01h 51m 40s.xml">
+      <configuration name="MarketplaceTest.testBuildMold" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="MarketplaceTest - 2019.05.17 at 12h 47m 46s.xml">
+      <configuration name="MarketplaceTest" configurationId="TestNG" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="68891000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.22051696" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26438355" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3990964" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3298193" />
+      <window_info anchor="bottom" id="Application Servers" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3298193" />
+      <window_info anchor="bottom" id="Problems" order="9" />
+      <window_info anchor="bottom" id="Changes" order="10" />
+      <window_info anchor="bottom" id="Profiler" order="11" />
+      <window_info anchor="bottom" id="Event Log" order="12" weight="0.3298193" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32876712" />
+      <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="15" />
+      <window_info anchor="bottom" id="Terminal" order="16" weight="0.3298193" />
+      <window_info anchor="bottom" id="Java Enterprise" order="17" />
+      <window_info anchor="bottom" id="JProfiler" order="18" weight="0.3" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="JetGradle" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Palette" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info anchor="right" id="Maven" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="CDI" order="9" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../exercise-04/src/Model/Catalog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-269" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../exercise-03/src/Model/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="64" column="70" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="70" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Lab.java" />
+    <entry file="file://$PROJECT_DIR$/../exercise-08/src/main/java/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="29" column="36" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../exercise-08/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../../lib/javafx-sdk-11.0.2/lib/javafx.graphics.jar!/com/sun/javafx/application/LauncherImpl.class" />
+    <entry file="file://$PROJECT_DIR$/../exercise-10/src/test/java/NodeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Boxit.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="85" selection-start-line="13" selection-start-column="85" selection-end-line="13" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/util/stream/ReferencePipeline.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="516" column="35" selection-start-line="516" selection-start-column="35" selection-end-line="516" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="106" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="106" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Box.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/assets/graphviz1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/assets/graphviz2.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/AppUI.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/AppUIController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3735">
+          <caret line="263" column="5" selection-start-line="263" selection-start-column="5" selection-end-line="263" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/MarketplaceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="33" column="52" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Marketplace.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="81" column="5" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#uploadInventory#0;class#Marketplace#0" />
+            <element signature="method#buildMolds#0;class#Marketplace#0" />
+            <element signature="method#buildMold#0;class#Marketplace#0" />
+            <element signature="method#linearSearch#0;class#Marketplace#0" />
+            <element signature="method#heapify#0;class#Marketplace#0" />
+            <element signature="method#saveBox#0;class#Marketplace#0" />
+            <element signature="e#6174#6175#0" expanded="true" />
+            <element signature="e#6202#6203#0" expanded="true" />
+            <element signature="e#6243#6244#0" expanded="true" />
+            <element signature="e#6277#6278#0" expanded="true" />
+            <element signature="e#6313#6314#0" expanded="true" />
+            <element signature="e#6346#6347#0" expanded="true" />
+            <element signature="e#6397#6398#0" expanded="true" />
+            <element signature="e#6441#6442#0" expanded="true" />
+            <element signature="e#6468#6469#0" expanded="true" />
+            <element signature="e#6494#6495#0" expanded="true" />
+            <element signature="e#6529#6530#0" expanded="true" />
+            <element signature="e#6559#6560#0" expanded="true" />
+            <element signature="e#6595#6596#0" expanded="true" />
+            <element signature="e#6627#6628#0" expanded="true" />
+            <element signature="e#6677#6678#0" expanded="true" />
+            <element signature="e#6719#6720#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/module-info.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>JavaFXApp</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.32413793" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.32413793" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>javafx-11</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.32413793" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>12</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.32413793" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>TheBoxit</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.32413793" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>org.testng:testng:6.14.3</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.32413793" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

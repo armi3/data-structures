@@ -2,20 +2,20 @@
 Course exercises implementing, testing and profiling data structures in Java, C and other languages.
 
 # table of contents
-1. [exercise 1](#exercise-1)
+1. [exercise 1 🧮](#exercise-1-)
 2. [exercise 2 (Stacks)](#exercise-2-stacks)
-3. [exercise 3 (Arrays)](#exercise-3-arrays-)
-4. [exercise 4 (Matrices)](#exercise-4-matrices)
-5. [exercise 5 (Strings)](#exercise-5-strings)
+3. [exercise 3 (Arrays) 💳](#exercise-3-arrays-)
+4. [exercise 4 (Matrices) 🛒](#exercise-4-matrices-)
+5. [exercise 5 (Strings) 📊](#exercise-5-strings-)
 6. [exercise 6 (Structs)](#exercise-6-structs)
-7. [exercise 7 (Circular Linked List)](#exercise-7-circular-linked-list)
-8. [exercise 8 (Queue and Simply Linked List)](#exercise-8-queue-and-simply-linked-list)
-9. [exercise 9 (B-tree)](#exercise-9-b-tree)
-10. [laboratory (Dijkstra's SPF algorithm)](#laboratory-dijkstra's-spf-algorithm)
-11. [final project (Boxit)](#final-project-boxit)
+7. [exercise 7 (Circular Linked List) 🎧](#exercise-7-circular-linked-list-)
+8. [exercise 8 (Queue and Simply Linked List) 📆](#exercise-8-queue-and-simply-linked-list-)
+9. [exercise 9 (B-tree) 🌳](#exercise-9-b-tree-)
+10. [laboratory (Dijkstra's SPF algorithm)](#laboratory-dijkstras-spf-algorithm-)
+11. [final project (Boxit) 📦](#final-project-boxit-)
 
 
-# exercise 1
+# exercise 1 🧮
 - Algorithm to find the sum of the first N natural numbers.
 - Code in C
 - Demo: https://youtu.be/8mKBWEocZ48
@@ -189,3 +189,7 @@ valgrind callgrind_annotate --tree=both --auto=yes profiling/callgrind_functions
 - **Unit testing** with TestNG
 - **Profiling** with JProfiler
 - **Front end** with JavaFX
+
+## screenshots
+![Spotlight](https://imgur.com/4q5cVZk)
+![Lab](https://imgur.com/2355aqr)

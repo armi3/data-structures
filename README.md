@@ -4,7 +4,7 @@ Course exercises implementing, testing and profiling data structures in Java, C 
 # table of contents
 1. [exercise 1](#exercise-1)
 2. [exercise 2 (Stacks)](#exercise-2-stacks)
-3. [exercise 3 (Arrays)](#exercise-3-arrays)
+3. [exercise 3 (Arrays)](#exercise-3-arrays-)
 4. [exercise 4 (Matrices)](#exercise-4-matrices)
 5. [exercise 5 (Strings)](#exercise-5-strings)
 6. [exercise 6 (Structs)](#exercise-6-structs)

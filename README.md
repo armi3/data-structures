@@ -10,8 +10,9 @@ Course exercises implementing, testing and profiling data structures in Java, C 
 6. [exercise 6 (Structs)](#exercise-6-structs)
 7. [exercise 7 (Circular Linked List)](#exercise-7-circular-linked-list)
 8. [exercise 8 (Queue and Simply Linked List)](#exercise-8-queue-and-simply-linked-list)
-9. [exercise 9 (Parse Tree)](#exercise-9-parse-tree)
-10. [exercise 10 (B-tree)](#exercise-10-b-tree)
+9. [exercise 9 (B-tree)](#exercise-9-b-tree)
+10. [laboratory (Dijkstra's SPF algorithm)](#laboratory-dijkstra's-spf-algorithm)
+11. [final project (Boxit)](#final-project-boxit)
 
 
 # exercise 1
@@ -95,7 +96,7 @@ valgrind callgrind_annotate --tree=both --auto=yes profiling/callgrind_functions
 - https://accu.org/index.php/journals/1884 
 
 
-# exercise 2 (Stacks)
+# exercise 2 (Stacks) 
 - Algorithm to implement a stack data structure.
 - Code in Java
 - Demo: https://youtu.be/9xWy4dNyj6g
@@ -109,7 +110,7 @@ valgrind callgrind_annotate --tree=both --auto=yes profiling/callgrind_functions
 - https://howtodoinjava.com/junit5/
 
 
-# exercise 3 (Arrays)
+# exercise 3 (Arrays) 💳
 - Debits and credits manager.
 - Code in Java
 - Demo: https://youtu.be/w2oijZ4PeYE
@@ -120,7 +121,7 @@ valgrind callgrind_annotate --tree=both --auto=yes profiling/callgrind_functions
 - https://www.youtube.com/watch?v=LiiZnYbcliw
 
 
-# exercise 4 (Matrices)
+# exercise 4 (Matrices) 🛒
 - Shopping cart and payment methods manager.
 - Code in Java
 - Demo: https://youtu.be/ERi7V_H97Us
@@ -128,7 +129,7 @@ valgrind callgrind_annotate --tree=both --auto=yes profiling/callgrind_functions
 - **Profiling** with JProfiler
 
 
-# exercise 5 (Strings)
+# exercise 5 (Strings) 📊
 - Returns a histogram with the top 10 most repeated chars.
 - Code in Java
 - Demo: https://youtu.be/uZgNDzgXhUM
@@ -152,23 +153,21 @@ valgrind callgrind_annotate --tree=both --auto=yes profiling/callgrind_functions
 ## resources
 - https://docs.google.com/presentation/d/1Is38TeAGZMuUgPuWvaB0-ltH3hd9G1y9TRDdYtVFI3o/edit#slide=id.g4ec0fab4d5_0_71
 
-# exercise 7 (Circular Linked List)
+# exercise 7 (Circular Linked List) 🎧
 - Music player simulation implementing a circular linked list.
 - Code in Java
 - Demo: https://youtu.be/dOMIVKmkuMM
 - **Unit testing** with JUnit 5
 - **Profiling** with JProfiler
 
-# exercise 8 (Queue and Simply Linked List)
+# exercise 8 (Queue and Simply Linked List) 📆
 - Stores scheduled jobs in queue and updates linked list of employees.
 - Code in Java
 - **Unit testing** with TestNG
 - **Profiling** with JProfiler
 - Demo: https://youtu.be/9Br9xS27suI
 
-# exercise 9 (Parse Tree)
-
-# exercise 10 (B-tree)
+# exercise 9 (B-tree) 🌳
 - Compares linked list performance versus b-tree.
 - Code in Java
 - Demo: https://youtu.be/1zJ_lNlY4vg
@@ -177,3 +176,16 @@ valgrind callgrind_annotate --tree=both --auto=yes profiling/callgrind_functions
 
 ## resources
 - https://www.cs.usfca.edu/~galles/visualization/BTree.html
+
+# lab: Dijkstra's SPF algorithm 💷
+- Uses the shortest path first algorithm to find exchange rates.
+- Code in Python
+
+# final project (Boxit) 📦
+- Boxit is a desktop prototype app for creating suscription boxes.
+- Implements the data structures learned throughout this course.
+- Code in Java
+- Demo: https://youtu.be/8nPCmNAcdlc
+- **Unit testing** with TestNG
+- **Profiling** with JProfiler
+- **Front end** with JavaFX

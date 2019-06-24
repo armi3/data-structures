@@ -191,5 +191,5 @@ valgrind callgrind_annotate --tree=both --auto=yes profiling/callgrind_functions
 - **Front end** with JavaFX
 
 ## screenshots
-![Spotlight](https://imgur.com/4q5cVZk)
-![Lab](https://imgur.com/2355aqr)
+![Spotlight](https://i.imgur.com/4q5cVZk.png)
+![Lab](https://i.imgur.com/2355aqr.png)

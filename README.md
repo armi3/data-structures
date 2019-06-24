@@ -1,5 +1,5 @@
 # data-structures
-Course exercises implementing, testing and profiling data structures in Java, C and other languages.
+This is a collection of implementations I did for my Data Structures Course. Each exercise has testing, profiling, a demo recording and some useful resources. Java, C and Python were used.
 
 # table of contents
 1. [exercise 1 🧮](#exercise-1-)

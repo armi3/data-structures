@@ -1,21 +1,21 @@
-# data-structures
+# Data structures
 This is a collection of implementations I did for my Data Structures Course. Each exercise has testing, profiling, a demo recording and some useful resources. Java, C and Python were used.
 
-# table of contents
-1. [exercise 1 🧮](#exercise-1-)
-2. [exercise 2 (Stacks)](#exercise-2-stacks)
-3. [exercise 3 (Arrays) 💳](#exercise-3-arrays-)
-4. [exercise 4 (Matrices) 🛒](#exercise-4-matrices-)
-5. [exercise 5 (Strings) 📊](#exercise-5-strings-)
-6. [exercise 6 (Structs)](#exercise-6-structs)
-7. [exercise 7 (Circular Linked List) 🎧](#exercise-7-circular-linked-list-)
-8. [exercise 8 (Queue and Simply Linked List) 📆](#exercise-8-queue-and-simply-linked-list-)
-9. [exercise 9 (B-tree) 🌳](#exercise-9-b-tree-)
-10. [laboratory (Dijkstra's SPF algorithm)](#laboratory-dijkstras-spf-algorithm-)
-11. [final project (Boxit) 📦](#final-project-boxit-)
+# Table of contents
+1. [Exercise 1 🧮](#exercise-1-)
+2. [Exercise 2 (Stacks)](#exercise-2-stacks)
+3. [Exercise 3 (Arrays) 💳](#exercise-3-arrays-)
+4. [Exercise 4 (Matrices) 🛒](#exercise-4-matrices-)
+5. [Exercise 5 (Strings) 📊](#exercise-5-strings-)
+6. [Exercise 6 (Structs)](#exercise-6-structs)
+7. [Exercise 7 (Circular Linked List) 🎧](#exercise-7-circular-linked-list-)
+8. [Exercise 8 (Queue and Simply Linked List) 📆](#exercise-8-queue-and-simply-linked-list-)
+9. [Exercise 9 (B-tree) 🌳](#exercise-9-b-tree-)
+10. [Laboratory (Dijkstra's SPF algorithm)](#laboratory-dijkstras-spf-algorithm-)
+11. [Final project (Boxit) 📦](#final-project-boxit-)
 
 
-# exercise 1 🧮
+# Exercise 1 🧮
 - Algorithm to find the sum of the first N natural numbers.
 - Code in C
 - Demo: https://youtu.be/8mKBWEocZ48
@@ -25,7 +25,7 @@ This is a collection of implementations I did for my Data Structures Course. Eac
   - Heap, allocation tree and stack profiling with Massif tool
   - Call profiling with Callgrind tool
   
-## walkthrough
+## Walkthrough
 Get the program compiled and running:
 ```
 git clone https://github.com/armi3/data-structures.git; \
@@ -88,7 +88,7 @@ valgrind --tool=callgrind --callgrind-out-file=profiling/callgrind_functions_tes
 valgrind callgrind_annotate --tree=both --auto=yes profiling/callgrind_functions_test"
 ```
 
-## resources
+## Resources
 - https://medium.com/@marinalimeira/tdd-using-cunit-first-steps-5c4c2a8655e6
 - http://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/
 - https://www.gungorbudak.com/blog/2018/06/13/memory-leak-testing-with-valgrind-on-macos-using-docker-containers/
@@ -96,21 +96,21 @@ valgrind callgrind_annotate --tree=both --auto=yes profiling/callgrind_functions
 - https://accu.org/index.php/journals/1884 
 
 
-# exercise 2 (Stacks) 
+# Exercise 2 (Stacks) 
 - Algorithm to implement a stack data structure.
 - Code in Java
 - Demo: https://youtu.be/9xWy4dNyj6g
 - **Unit testing** with JUnit 5
 - **Profiling** with JProfiler
 
-## resources
+## Resources
 - https://www.codejava.net/coding/java-getter-and-setter-tutorial-from-basics-to-best-practices
 - https://beginnersbook.com/2013/12/java-constructor-chaining-with-example/
 - https://medium.com/@isaacjumba/overview-of-inheritance-interfaces-and-abstract-classes-in-java-3fe22404baf8
 - https://howtodoinjava.com/junit5/
 
 
-# exercise 3 (Arrays) 💳
+# Exercise 3 (Arrays) 💳
 - Debits and credits manager.
 - Code in Java
 - Demo: https://youtu.be/w2oijZ4PeYE
@@ -121,7 +121,7 @@ valgrind callgrind_annotate --tree=both --auto=yes profiling/callgrind_functions
 - https://www.youtube.com/watch?v=LiiZnYbcliw
 
 
-# exercise 4 (Matrices) 🛒
+# Exercise 4 (Matrices) 🛒
 - Shopping cart and payment methods manager.
 - Code in Java
 - Demo: https://youtu.be/ERi7V_H97Us
@@ -129,59 +129,59 @@ valgrind callgrind_annotate --tree=both --auto=yes profiling/callgrind_functions
 - **Profiling** with JProfiler
 
 
-# exercise 5 (Strings) 📊
+# Exercise 5 (Strings) 📊
 - Returns a histogram with the top 10 most repeated chars.
 - Code in Java
 - Demo: https://youtu.be/uZgNDzgXhUM
 - **Unit testing** with JUnit 5
 - **Profiling** with JProfiler
 
-## resources
+## Resources
 - https://www.geeksforgeeks.org/sorting-2d-array-according-values-given-column-java/
 - https://loremipsum.io/
 - https://www.programiz.com/java-programming/examples/frequency-character
 - https://docs.google.com/presentation/d/1UfxPAHc7W4U5hQYChK7INW4Pm5MANKBbGUI0gLfLj5M/edit#slide=id.g4eb1243f07_0_148
 
 
-# exercise 6 (Structs)
+# Exercise 6 (Structs)
 - Returns point's quadrant implementing a struct (class without methods).
 - Code in Java
 - Demo: https://youtu.be/J9PImk7_7ho
 - **Unit testing** with JUnit 5
 - **Profiling** with JProfiler
 
-## resources
+## Resources
 - https://docs.google.com/presentation/d/1Is38TeAGZMuUgPuWvaB0-ltH3hd9G1y9TRDdYtVFI3o/edit#slide=id.g4ec0fab4d5_0_71
 
-# exercise 7 (Circular Linked List) 🎧
+# Exercise 7 (Circular Linked List) 🎧
 - Music player simulation implementing a circular linked list.
 - Code in Java
 - Demo: https://youtu.be/dOMIVKmkuMM
 - **Unit testing** with JUnit 5
 - **Profiling** with JProfiler
 
-# exercise 8 (Queue and Simply Linked List) 📆
+# Exercise 8 (Queue and Simply Linked List) 📆
 - Stores scheduled jobs in queue and updates linked list of employees.
 - Code in Java
 - **Unit testing** with TestNG
 - **Profiling** with JProfiler
 - Demo: https://youtu.be/9Br9xS27suI
 
-# exercise 9 (B-tree) 🌳
+# Exercise 9 (B-tree) 🌳
 - Compares linked list performance versus b-tree.
 - Code in Java
 - Demo: https://youtu.be/1zJ_lNlY4vg
 - **Unit testing** with TestNG
 - **Profiling** with JProfiler
 
-## resources
+## Resources
 - https://www.cs.usfca.edu/~galles/visualization/BTree.html
 
-# laboratory (Dijkstra's SPF algorithm) 💷
+# Laboratory (Dijkstra's SPF algorithm) 💷
 - Uses the shortest path first algorithm to find exchange rates.
 - Code in Python
 
-# final project (Boxit) 📦
+# Final project (Boxit) 📦
 - Boxit is a desktop prototype app for creating suscription boxes.
 - Implements the data structures learned throughout this course.
 - Code in Java
@@ -190,6 +190,6 @@ valgrind callgrind_annotate --tree=both --auto=yes profiling/callgrind_functions
 - **Profiling** with JProfiler
 - **Front end** with JavaFX
 
-## screenshots
+## Screenshots
 ![Spotlight](https://i.imgur.com/4q5cVZk.png)
 ![Lab](https://i.imgur.com/2355aqr.png)

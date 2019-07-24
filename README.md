@@ -1,5 +1,5 @@
 # Data structures
-This is a collection of implementations I did for my Data Structures Course. Each exercise has testing, profiling, a demo recording and some useful resources. Java, C and Python were used.
+This is a collection of implementations I did for my university data structures course. Each exercise has testing, profiling, a demo recording and some useful resources. Java, C and Python were used.
 
 # Table of contents
 1. [Exercise 1 🧮](#exercise-1-)
